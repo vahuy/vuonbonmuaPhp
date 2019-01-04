@@ -1,5 +1,81 @@
-@charset "ISO-8859-1";
-
 .hero {
-	background-image: url("./");
+	background: #efeee5;
+	margin-bottom: 2em;
+	background-image: url("../../img/hero_banner.jpg");
+	height: 540px;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	/* download bar */
+}
+
+.header {
+	width: 100%;
+	background: #2a5d84;
+	height: 64px;
+}
+
+.top-bar-section {
+	background: rgb(42, 93, 132);
+	height: 64px;
+}
+
+.header-navigation {
+	float: right;
+	position: relative;
+	display: inline-flex;
+	margin: 20px 20px;
+}
+
+.header-navigation a {
+	color: azure;
+	text-transform: uppercase;
+	padding: 0 30px;
+	text-decoration-line: none;
+}
+
+.contain {
+    margin: 30px 15px;
+}
+
+.contain h2 {
+	font-weight: 600;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: auto;	
+}
+
+.contain div p {
+	font-weight: 200;
+    font-size: 22px;
+    font-family: auto;	
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    height: auto;
+    text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.like-us-text a{
+	color: black;
+    padding: 10px;
+    font-weight: 400;
 }
