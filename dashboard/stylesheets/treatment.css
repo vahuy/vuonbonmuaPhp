@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+.product-list {
+	display: inline-flex;
+}
+
+.product-list div img {
+	width: 100%;
+	min-height:	250px;
+}
+
+.product-list div h1 {
+	color: red;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.container div h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 24px 0 50px;
+}
+.product-name {
+	font-weight: 700;
+}
+
