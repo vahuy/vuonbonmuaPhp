@@ -39,9 +39,9 @@
 				<!-- Right Nav Section -->
 				<div class="header-navigation">
 					<div><a href="/dashboard/homepage.html">Trang chủ</a></div>
-					<div><a href="/dashboard/clambing.html">Climbing - Hồng leo</a></div>
-					<div><a href="/dashboard/shrub.html">Shrub - Hồng bụi</a></div>
-					<div><a href="/dashboard/treatment.html">Thuốc hữu cơ</a></div>
+					<div><a href="/dashboard/clambing.php">Climbing - Hồng leo</a></div>
+					<div><a href="/dashboard/shrub.php">Shrub - Hồng bụi</a></div>
+					<div><a href="/dashboard/treatment.php">Thuốc hữu cơ</a></div>
 				</div>
 			</section>
 		</nav>
@@ -58,7 +58,7 @@
 		<div class="contain">
 			<div class="row">
 				<div class="large-12 columns">
-					<h2>Hoa hồng bụi</h2>
+					<h2>Hoa hồng leo</h2>
 				</div>
 			</div>
 			<div class="row">

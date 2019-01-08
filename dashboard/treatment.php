@@ -28,8 +28,8 @@
 				<!-- Right Nav Section -->
 				<div class="header-navigation">
 					<div><a href="/dashboard/homepage.html">Trang chủ</a></div>
-					<div><a href="/dashboard/clambing.html">Climbing - Hồng leo</a></div>
-					<div><a href="/dashboard/shrub.html">Shrub - Hồng bụi</a></div>
+					<div><a href="/dashboard/clambing.php">Climbing - Hồng leo</a></div>
+					<div><a href="/dashboard/shrub.php">Shrub - Hồng bụi</a></div>
 					<div><a href="/dashboard/treatment.php">Thuốc hữu cơ</a></div>
 				</div>
 			</div>
@@ -72,7 +72,7 @@
     									{name: 'Keo Bẫy Trĩ', id: '3', image: 'https://i.ibb.co/ydkFLMZ/meomo-7973.jpg'}];
     				</script>
     				<?php 
-    					require './Product.php';
+    					require './objects/Product.php';
     				?>
     				<?php
     					$product1 = new Product('1','Neem Oil','https://i.ibb.co/NVykwK4/NeemOil.jpg',1290000,'Dầu Neem Trị Bọ Trĩ, Rệp, Nhện Dyna-Gro Neem Oil Leaf Polish');
@@ -98,9 +98,7 @@
     					for($x = 0; $x < $arrlength; $x++) {
     					    echo $products[$x]->generateHtml();
     					}
-    				?>
-    				
-    				
+    				?>    				
     			</div>
 			</div>
 		</div>
