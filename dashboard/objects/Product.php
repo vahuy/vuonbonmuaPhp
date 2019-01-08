@@ -20,25 +20,28 @@ class Product {
 
   /*
    * define the sorting rules - we will sort all Animals by name.
-   */ 
-  public static function getName() {
-    return $this->name;
-  }
+   */
+    /**
+     * @return mixed
+     */
+    public function getName() {
+        return $this->name;
+    }
   
-  public static function getId() {
-    return $this->name;
-  }
+    public function getId() {
+        return $this->name;
+    }
   
-  public static function getImage() {
-    return $this->image;
-  }
+    public function getImage() {
+        return $this->image;
+    }
 
   /*
    * a String representation for all Animals.
    */
-  public function __toString() {
-    return "$this->name the $this->id goes $this->image";
-  }
+    public function __toString() {
+        return "$this->name the $this->id goes $this->image";
+    }
   
 	public function generateHtml() {
 		$currency = number_format($this->price)." vnđ<br>";
@@ -52,7 +55,6 @@ class Product {
 	}
 	
 	public function formatCurrency($number) {
-		return	number_format("1000000")." vnđ<br>";
+		return	number_format("$number")." vnđ<br>";
 	}
 }
-?>
