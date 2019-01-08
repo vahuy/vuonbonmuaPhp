@@ -5,6 +5,7 @@ class Product {
 	private $image;
 	private $price;
   	private $shortDescription;
+  	private $type;
   /*
    * called by Dog, Cat, Bird, etc.
    */
