@@ -34,18 +34,26 @@
 	text-decoration-line: none;
 }
 
-.contain {
+.container {
     margin: 30px 15px;
 }
 
-.contain h2 {
+
+.container h2 {
 	font-weight: 600;
     text-transform: uppercase;
     font-size: 25px;
     font-family: auto;	
 }
 
-.contain div p {
+.container h1 {
+	color: red;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 10px;	
+}
+
+.container .product-name div p {
 	font-weight: 200;
     font-size: 22px;
     font-family: auto;	
@@ -79,3 +87,18 @@
     padding: 10px;
     font-weight: 400;
 }
+
+.product-list {
+	display: inline-flex;
+}
+
+.product-list div img {
+	width: 100%;
+	min-height:	250px;
+}
+
+.product-name {
+	font-weight: 700;
+}
+
+

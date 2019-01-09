@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <!-- Always force latest IE rendering engine or request Chrome Frame -->
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -12,30 +13,19 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="lodash" href="https://raw.githubusercontent.com/lodash/lodash/4.17.11-npm/lodash.min.js">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link href="/dashboard/stylesheets/reset.css" rel="stylesheet" type="text/css" />
 <link href="/dashboard/stylesheets/vbm.css" rel="stylesheet" type="text/css" />
 
-<script src="/dashboard/javascripts/modernizr.js" type="text/javascript"></script>
+<script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
 
 </head>
 
 <body class="index">
-	<div id="fb-root"></div>
-	<script>
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id))
-				return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=277385395761685";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
 	<div class="header">
-		<nav class="top-bar">
-			<section class="top-bar-section">
+		<div class="top-bar">
+			<div class="top-bar-section">
 				<!-- Right Nav Section -->
 				<div class="header-navigation">
 					<div><a href="/dashboard/homepage.html">Trang chủ</a></div>
@@ -43,8 +33,8 @@
 					<div><a href="/dashboard/shrub.php">Shrub - Hồng bụi</a></div>
 					<div><a href="/dashboard/treatment.php">Thuốc hữu cơ</a></div>
 				</div>
-			</section>
-		</nav>
+			</div>
+		</div>
 	</div>
 
 	<div class="wrapper">
@@ -55,20 +45,45 @@
 				</div>
 			</div>
 		</div>
-		<div class="contain">
+		<div class="container">
 			<div class="row">
 				<div class="large-12 columns">
 					<h2>Hoa hồng bụi</h2>
 				</div>
 			</div>
-			<div class="row">
-				<div class="large-12 columns">
-					<p>Không tiếp khách tham quan hay không hẹn trước. Có rất nhiều
-						ảnh hoa thật, trồng và nở tại HCM, các bạn có thể xem để hình dung
-						hoa sẽ ra sao. Chúng tôi trồng hoa thân thiện với môi trường, cây
-						phát triển tự nhiên với phân bón hữu cơ là chính. Không kích thích
-						để nhìn cây xum xuê bán giá cao.</p>
-				</div>
+			<div class="product-list">
+    			<div class="row">
+    				<?php 
+    					require './objects/Product.php';
+                        require './objects/DatabaseConnector.php';
+    				?>
+    				<?php
+                        $products = null;
+                        $dbConnector = new DatabaseConnector();
+                        $dbConnector->createConnection();
+                        $result = $dbConnector->getShrub();
+                        $dbConnector->closeConnection();
+                        while ($row = $result->fetch_assoc()) {
+                            $id = $row['id'];
+                            $name = $row['name'];
+                            $image = $row['image'];
+                            $price = $row['price'];
+                            $shortDescription = $row['short_description'];
+
+                            $item = new Product($id,$name,$image,$price,$shortDescription);
+                            if ($products === null){
+                                $products = array($item);
+                            } else {
+                                array_push($products, $item);
+                            }
+                            $item = null;
+                        }
+                        $arrlength = count($products);
+                        for($x = 0; $x < $arrlength; $x++) {
+                            echo $products[$x]->generateHtml();
+                        }
+    				?>
+    			</div>
 			</div>
 		</div>
 		<div class="footer">
@@ -81,16 +96,9 @@
 							</li>
 						</ul>
 					</div>
-					<div class="large-4 columns">
-						&nbsp;
-					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-		<!-- JS Libraries -->
-		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-		<script src="/dashboard/javascripts/all.js" type="text/javascript"></script>
 </body>
 </html>

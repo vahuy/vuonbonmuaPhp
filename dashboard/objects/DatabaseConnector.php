@@ -15,6 +15,12 @@
             $username = "huy";
             $password = "123456";
             $dbname = "vuonbonmua";
+
+//            $servername = "localhost";
+//            $username = "laz87900_huy";
+//            $password = "vuonbonmuatx22";
+//            $dbname = "laz87900_vuonbonmua";
+            
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
 			$conn->set_charset("utf8");
@@ -36,8 +42,24 @@
 //            }
             return $result;
         }
+        
+    	function getClimbing(){
+            $sql = "SELECT * FROM product WHERE type='climbing'";
+            $result = $this->connector->query($sql);
+            return $result;
+        }
 
-
+    	function getShrub(){
+            $sql = "SELECT * FROM product WHERE type='shrub'";
+            $result = $this->connector->query($sql);
+            return $result;
+        }
+        
+    	function getTreatment(){
+            $sql = "SELECT * FROM product WHERE type='treatment'";
+            $result = $this->connector->query($sql);
+            return $result;
+        }
         /**
          * Close Database connection
          * @param $conn
