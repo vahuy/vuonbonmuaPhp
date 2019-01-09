@@ -46,7 +46,7 @@ class Product {
 	public function generateHtml() {
 		$currency = number_format($this->price)." vnđ<br>";
 		return "
-	        <div class='col-sm-6 col-md-3'>
+	        <div class='col-sm-6 col-md-4 col-lg-3'>
 	            <img src=$this->image alt=$this->name>
 	            <h1>$currency</h1>
 	            <p class='product-name'>$this->name</p>

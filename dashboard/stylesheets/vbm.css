@@ -36,8 +36,8 @@
 
 .container {
     margin: 30px 15px;
+    max-width: 100%;
 }
-
 
 .container h2 {
 	font-weight: 600;
@@ -90,6 +90,11 @@
 
 .product-list {
 	display: inline-flex;
+	width: 100%;
+}
+
+.product-list .row {
+	width: 100%;
 }
 
 .product-list div img {
@@ -99,6 +104,19 @@
 
 .product-name {
 	font-weight: 700;
+}
+
+.footer h3 {
+	text-align: center;
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 600;
+    border-bottom-style: groove;
+    padding-bottom: 12px;
 }
 
 

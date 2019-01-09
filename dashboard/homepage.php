@@ -37,7 +37,7 @@
 			<div class="top-bar-section">
 				<!-- Right Nav Section -->
 				<div class="header-navigation">
-					<div><a href="/dashboard/homepage.html">Trang chủ</a></div>
+					<div><a href="/dashboard/homepage.php">Trang chủ</a></div>
 					<div><a href="/dashboard/climbing.php">Climbing - Hồng leo</a></div>
 					<div><a href="/dashboard/shrub.php">Shrub - Hồng bụi</a></div>
 					<div><a href="/dashboard/treatment.php">Thuốc hữu cơ</a></div>
@@ -49,14 +49,14 @@
 	<div class="wrapper">
 		<div class="hero">
 			<div class="row">
-				<div class="large-12 columns">
+				<div class="col-md-12">
 					&nbsp;
 				</div>
 			</div>
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="large-12 columns">
+				<div class="col-md-12">
 					<h2>Giới thiệu vườn bốn mùa</h2>
 				</div>
 			</div>
@@ -71,25 +71,12 @@
 			</div>
 		</div>
 		<div class="footer">
-			<div class="large-12 columns">
-				<div class="row">
-					<div class="large-8 columns">
-						<ul class="social">
-							<li>
-								<a class="fa fa-facebook" href="https://www.facebook.com/vuonSGbonmua/"></a><span class="like-us-text"><a href="https://www.facebook.com/vuonSGbonmua/">Like us on facebook</a></span>
-							</li>
-						</ul>
-					</div>
-					<div class="large-4 columns">
-						&nbsp;
-					</div>
-				</div>
-			</div>
+			<?php
+				require './objects/PageContainer.php';
+				$footer = new PageContainer();
+				echo $footer->renderFooter();
+			?>
 		</div>
 	</div>
-
-		<!-- JS Libraries -->
-		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-		<script src="/dashboard/javascripts/all.js" type="text/javascript"></script>
 </body>
 </html>
