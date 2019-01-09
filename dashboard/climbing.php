@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <!-- Always force latest IE rendering engine or request Chrome Frame -->
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -65,9 +66,9 @@
                         while ($row = $result->fetch_assoc()) {
                             $id = $row['id'];
                             $name = $row['name'];
-                            $image = $row['type'];
+                            $image = $row['image'];
                             $price = $row['price'];
-                            $shortDescription = $row['name'];
+                            $shortDescription = $row['short_description'];
 
                             $item = new Product($id,$name,$image,$price,$shortDescription);
                             if ($products === null){

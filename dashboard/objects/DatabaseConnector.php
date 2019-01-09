@@ -13,12 +13,12 @@
         function createConnection(){
             $servername = "localhost";
             $username = "huy";
-            $password = "vuonbonmuatx22";
+            $password = "123456";
             $dbname = "vuonbonmua";
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
-
-            if ($conn->connect_error) {
+			$conn->set_charset("utf8");
+			if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
             }
             $this->connector=$conn;
