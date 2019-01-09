@@ -1,12 +1,8 @@
 .hero {
-	background: #efeee5;
-	margin-bottom: 2em;
-	background-image: url("../../img/hero_banner.jpg");
-	height: 540px;
+    margin-bottom: 2em;
+    height: 540px;
 	width: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	/* download bar */
+    background: #efeee5 url("../../img/hero_banner.jpg") no-repeat center;
 }
 
 .header {
@@ -21,10 +17,14 @@
 }
 
 .header-navigation {
-	float: right;
 	position: relative;
 	display: inline-flex;
 	margin: 20px 20px;
+	width: 100%;
+}
+
+.header-navigation .row div, .header-navigation .row div a {
+    padding: 0;
 }
 
 .header-navigation a {
@@ -43,7 +43,6 @@
 	font-weight: 600;
     text-transform: uppercase;
     font-size: 25px;
-    font-family: auto;	
 }
 
 .container h1 {
@@ -56,7 +55,6 @@
 .container .product-name div p {
 	font-weight: 200;
     font-size: 22px;
-    font-family: auto;	
 }
 
 /* Style all font awesome icons */
@@ -90,10 +88,6 @@
 
 .product-list {
 	display: inline-flex;
-	width: 100%;
-}
-
-.product-list .row {
 	width: 100%;
 }
 

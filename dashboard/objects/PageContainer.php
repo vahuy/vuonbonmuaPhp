@@ -29,4 +29,21 @@ class PageContainer {
 			</div>
 		";
 	}
+    function renderHeader() {
+        return "
+			<div class='top-bar'>
+			<div class='top-bar-section'>
+				<!-- Right Nav Section -->
+				<div class='header-navigation'>
+                    <div class='row'>
+                        <div class='col-md-3'><a href='./homepage.php'>Trang chủ</a></div>
+					    <div class='col-md-3'><a href='./climbing.php'>Climbing - Hồng leo</a></div>
+					    <div class='col-md-3'><a href='./shrub.php'>Shrub - Hồng bụi</a></div>
+					    <div class='col-md-3'><a href='./treatment.php'>Thuốc hữu cơ</a></div>
+                    </div>
+				</div>
+			</div>
+		</div>
+		";
+    }
 }

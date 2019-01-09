@@ -2,62 +2,52 @@
 <html lang="en">
 <head>
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<!-- Always force latest IE rendering engine or request Chrome Frame -->
-<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Use title if it's in the page YAML frontmatter -->
-<title>VuonBonMua</title>
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>VuonBonMua</title>
 
-<!-- CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="lodash" href="https://raw.githubusercontent.com/lodash/lodash/4.17.11-npm/lodash.min.js">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link href="/dashboard/stylesheets/reset.css" rel="stylesheet" type="text/css" />
-<link href="/dashboard/stylesheets/vbm.css" rel="stylesheet" type="text/css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="lodash" href="https://raw.githubusercontent.com/lodash/lodash/4.17.11-npm/lodash.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="./stylesheets/reset.css" rel="stylesheet" type="text/css" />
+    <link href="./stylesheets/vbm.css" rel="stylesheet" type="text/css" />
 
-<script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+    <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+    <?php
+        require './objects/PageContainer.php';
+        require './objects/Product.php';
+        require './objects/DatabaseConnector.php';
 
+        $footer = new PageContainer();
+    ?>
 </head>
 
 <body class="index">
-	<div class="header">
-		<div class="top-bar">
-			<div class="top-bar-section">
-				<!-- Right Nav Section -->
-				<div class="header-navigation">
-					<div><a href="/dashboard/homepage.php">Trang chủ</a></div>
-					<div><a href="/dashboard/climbing.php">Climbing - Hồng leo</a></div>
-					<div><a href="/dashboard/shrub.php">Shrub - Hồng bụi</a></div>
-					<div><a href="/dashboard/treatment.php">Thuốc hữu cơ</a></div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="header">
+        <?php
+            echo $footer->renderHeader();
+        ?>
+    </div>
 
-	<div class="wrapper">
-		<div class="hero">
-			<div class="row">
-				<div class="large-12 columns">
-					&nbsp;
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="large-12 columns">
-					<h2>Hoa hồng leo</h2>
-				</div>
-			</div>
-			<div class="product-list">
-    			<div class="row">
-    				<?php 
-    					require './objects/Product.php';
-                        require './objects/DatabaseConnector.php';
-    				?>
-    				<?php
+    <div class="wrapper">
+        <div class="hero">
+            &nbsp;
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="large-12 columns">
+                    <h2>Hoa hồng leo</h2>
+                </div>
+            </div>
+            <div class="product-list">
+                <div class="row">
+                    <?php
                         $products = null;
                         $dbConnector = new DatabaseConnector();
                         $dbConnector->createConnection();
@@ -82,17 +72,15 @@
                         for($x = 0; $x < $arrlength; $x++) {
                             echo $products[$x]->generateHtml();
                         }
-    				?>
-    			</div>
-			</div>
-		</div>
-		<div class="footer">
-			<?php
-				require './objects/PageContainer.php';
-				$footer = new PageContainer();
-				echo $footer->renderFooter();
-			?>
-		</div>
-	</div>
+                    ?>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <?php
+                echo $footer->renderFooter();
+            ?>
+        </div>
+    </div>
 </body>
 </html>

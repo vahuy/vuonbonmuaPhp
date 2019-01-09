@@ -13,7 +13,7 @@
         function createConnection(){
             $servername = "localhost";
             $username = "huy";
-            $password = "123456";
+            $password = "vuonbonmuatx22";
             $dbname = "vuonbonmua";
 
 //            $servername = "localhost";
@@ -28,7 +28,10 @@
                 die("Connection failed: " . $conn->connect_error);
             }
             $this->connector=$conn;
-            return $conn;
+        }
+
+        function getConnector() {
+            return $this->connector;
         }
 
         function getAllProduct(){
