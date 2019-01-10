@@ -2,13 +2,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>VuonBonMua</title>
 
@@ -21,9 +18,9 @@
 
     <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
     <?php
-    require './objects/Product.php';
-    require './objects/DatabaseConnector.php';
-    require './objects/PageContainer.php';
+        require './objects/Product.php';
+        require './objects/DatabaseConnector.php';
+        require './objects/PageContainer.php';
 
     $footer = new PageContainer();
     ?>
@@ -33,7 +30,7 @@
 <body class="index">
     <div class="header">
         <?php
-        echo $footer->renderHeader();
+            echo $footer->renderHeader();
         ?>
     </div>
 
@@ -59,7 +56,7 @@
         </div>
         <div class="footer">
             <?php
-            echo $footer->renderFooter();
+                echo $footer->renderFooter();
             ?>
         </div>
     </div>

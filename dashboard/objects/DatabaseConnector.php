@@ -23,8 +23,8 @@
             
             // Create connection
             $conn = new mysqli($servername, $username, $password, $dbname);
-			$conn->set_charset("utf8");
-			if ($conn->connect_error) {
+            $conn->set_charset("utf8");
+            if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
             }
             $this->connector=$conn;
@@ -46,19 +46,19 @@
             return $result;
         }
         
-    	function getClimbing(){
+        function getClimbing(){
             $sql = "SELECT * FROM product WHERE type='climbing'";
             $result = $this->connector->query($sql);
             return $result;
         }
 
-    	function getShrub(){
+        function getShrub(){
             $sql = "SELECT * FROM product WHERE type='shrub'";
             $result = $this->connector->query($sql);
             return $result;
         }
         
-    	function getTreatment(){
+        function getTreatment(){
             $sql = "SELECT * FROM product WHERE type='treatment'";
             $result = $this->connector->query($sql);
             return $result;
@@ -71,5 +71,11 @@
             $this->connector->close();
 //            mysqli::mysqli_get_server_info("localhost");
 //            echo "close connection successfully";
+        }
+
+        function getNote($noteName){
+            $sql = "SELECT * FROM note WHERE name='$noteName'";
+            $result = $this->connector->query($sql);
+            return $result;
         }
     }
