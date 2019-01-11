@@ -36,14 +36,51 @@ class PageContainer {
                 <!-- Right Nav Section -->
                 <div class='header-navigation'>
                     <div class='row'>
-                        <div class='col-md-3'><a href='/dashboard/homepage.php'>Trang chủ</a></div>
+                        <div class='col-md-2'><a href='/dashboard/homepage.php'>Trang chủ</a></div>
                         <div class='col-md-3'><a href='/dashboard/climbing.php'>Climbing - Hồng leo</a></div>
                         <div class='col-md-3'><a href='/dashboard/shrub.php'>Shrub - Hồng bụi</a></div>
-                        <div class='col-md-3'><a href='/dashboard/treatment.php'>Thuốc hữu cơ</a></div>
+                        <div class='col-md-2'><a href='/dashboard/treatment.php'>Thuốc hữu cơ</a></div>
+                        <div class='col-md-2'><button type='button' id='myBtn'>Đăng nhập</button></div>
                     </div>
                 </div>
             </div>
         </div>
         ";
     }
+
+    function renderModal($modalName, $modalContent, $modalButton) {
+        return "
+            <div class='modal-content'>
+              <div class='modal-header'>
+                <h4>$modalName</h4>
+                <span class='close'>&times;</span>
+              </div>
+              <div class='modal-body'>
+                $modalContent
+              </div>
+              <div class='modal-footer'>
+                <h3>Footer</h3>
+              </div>
+            </div>
+        ";
+    }
+
+    function renderModalLogin() {
+        return "
+            <div class='modal-content' id='myModal'>
+              <div class='modal-header'>
+                <h4>Đăng nhập</h4>
+                <span class='close'>&times;</span>
+              </div>
+              <div class='modal-body'>
+                <form action='/action_page.php'>
+                    Tên: <input type='text' name='name'><br>
+                    Mật khẩu: <input type='password' name='password'><br>
+                    <input type='submit' value='Submit'>
+                </form>
+              </div>
+            </div>
+        ";
+    }
+
 }

@@ -15,14 +15,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="./stylesheets/reset.css" rel="stylesheet" type="text/css" />
     <link href="./stylesheets/vbm.css" rel="stylesheet" type="text/css" />
+    <link href="./stylesheets/modal.css" rel="stylesheet" type="text/css" />
 
     <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+
     <?php
         require './objects/Product.php';
         require './objects/DatabaseConnector.php';
         require './objects/PageContainer.php';
 
-    $footer = new PageContainer();
+        $pageContainer = new PageContainer();
     ?>
 
 </head>
@@ -30,8 +32,42 @@
 <body class="index">
     <div class="header">
         <?php
-            echo $footer->renderHeader();
+            echo $pageContainer->renderHeader();
+            echo $pageContainer->renderModalLogin();
+            session_start();
+            $_SESSION["favcolor"] = "green";
+            $_SESSION["favanimal"] = "cat";
+            echo "Session variables are set.";
+
         ?>
+        <script>
+            // Get the modal
+            const modal = document.getElementById('myModal');
+
+            // Get the button that opens the modal
+            const btn = document.getElementById("myBtn");
+            console.log('mybutton', btn);
+
+            // Get the <span> element that closes the modal
+            const span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+                modal.style.display = "block";
+            };
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            };
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
     </div>
 
     <div class="wrapper">
@@ -56,7 +92,7 @@
         </div>
         <div class="footer">
             <?php
-                echo $footer->renderFooter();
+                echo $pageContainer->renderFooter();
             ?>
         </div>
     </div>

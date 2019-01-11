@@ -32,6 +32,8 @@
     <div class="header">
         <?php
             echo $footer->renderHeader();
+            session_start();
+            print_r($_SESSION);
         ?>
     </div>
 

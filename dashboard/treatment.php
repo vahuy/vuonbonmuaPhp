@@ -23,6 +23,7 @@
         require './objects/PageContainer.php';
 //      Init global variable
         $footer = new PageContainer();
+        session_start();
     ?>
 
 </head>
@@ -31,6 +32,10 @@
     <div class="header">
         <?php
             echo $footer->renderHeader();
+            session_unset();
+
+            // destroy the session
+            session_destroy();
         ?>
     </div>
 

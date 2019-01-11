@@ -33,6 +33,9 @@
     <div class="header">
         <?php
             echo $footer->renderHeader();
+            session_start();
+            echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
+            echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
         ?>
     </div>
 
