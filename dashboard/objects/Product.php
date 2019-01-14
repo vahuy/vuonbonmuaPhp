@@ -1,4 +1,5 @@
 <?php
+require_once('UTIL.php');
 class Product {
     private $id;
     private $name;
@@ -43,18 +44,16 @@ class Product {
         return "$this->name the $this->id goes $this->image";
     }
   
-	public function generateHtml() {
-		$currency = number_format($this->price)." vnđ<br>";
-		return "
-	        <div class='col-sm-6 col-md-4 col-lg-3'>
-	            <img src=$this->image alt=$this->name>
-	            <h1>$currency</h1>
-	            <p class='product-name'>$this->name</p>
-	            <p>$this->shortDescription</p>
-	        </div>";
-	}
-	
-	public function formatCurrency($number) {
-		return	number_format("$number")." vnđ<br>";
-	}
+    public function generateHtml() {
+        $currency = UTIL::formatCurrency($this->price);
+        return "
+            <div class='col-sm-6 col-md-4 col-lg-3'>
+                <a href='/dashboard/productdetail.php?id=$this->id'>
+                    <img src=$this->image alt=$this->name>
+                </a>
+                <h1>$currency</h1>
+                <a href='/dashboard/productdetail.php?id=$this->id'>$this->name</a>
+                <p>$this->shortDescription</p>
+            </div>";
+    }
 }

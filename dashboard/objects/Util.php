@@ -6,8 +6,8 @@
  * Time: 2:54 PM
  */
 
-class Util {
-    function getUrl() {
+class UTIL {
+    static function getUrl() {
         if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
             $link = "https";
         else
@@ -26,8 +26,12 @@ class Util {
         return $link;
     }
 
-    function getUrlForNote($url) {
+    static function getUrlForNote($url) {
         $notePosition = $url->indexOf("?");
         echo $notePosition;
+    }
+
+    static function formatCurrency($number) {
+        return	number_format("$number")." vnđ<br>";
     }
 }

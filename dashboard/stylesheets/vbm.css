@@ -45,6 +45,9 @@
     font-size: 25px;
 }
 
+.product-detail img {
+    width: 100%;
+}
 .container h1 {
 	color: red;
     font-size: 24px;
@@ -81,27 +84,27 @@
 }
 
 .like-us-text a{
-	color: black;
+    color: black;
     padding: 10px;
     font-weight: 400;
 }
 
 .product-list {
-	display: inline-flex;
-	width: 100%;
+    display: inline-flex;
+    width: 100%;
 }
 
 .product-list div img {
-	width: 100%;
-	min-height:	250px;
+    width: 100%;
+    min-height:	250px;
 }
 
 .product-name {
-	font-weight: 700;
+    font-weight: 700;
 }
 
 .footer h3 {
-	text-align: center;
+    text-align: center;
     display: block;
     font-size: 1.17em;
     margin-block-start: 1em;

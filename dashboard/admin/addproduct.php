@@ -13,16 +13,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="lodash" href="https://raw.githubusercontent.com/lodash/lodash/4.17.11-npm/lodash.min.js">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="./stylesheets/reset.css" rel="stylesheet" type="text/css" />
-    <link href="./stylesheets/vbm.css" rel="stylesheet" type="text/css" />
-    <link href="./stylesheets/modal.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/vbm.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/modal.css" rel="stylesheet" type="text/css" />
 
     <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
 
     <?php
-        require './objects/DatabaseConnector.php';
-        require './objects/PageContainer.php';
-        require './objects/UserAccount.php';
+        require '../objects/Product.php';
+        require '../objects/DatabaseConnector.php';
+        require '../objects/PageContainer.php';
+        require '../objects/UserAccount.php';
 
         $pageContainer = new PageContainer();
         $dbConnector = new DatabaseConnector();
@@ -80,7 +81,10 @@
                 $dbConnector->createConnection();
                 $result = $dbConnector->validateUserAccount($_POST["name"], $_POST["password"]);
                 $dbConnector->closeConnection();
-                if (!empty($result)) {
+                if ($result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                    $name = $row['name'];
+                    $type = $row['type'];
                     $_SESSION["userType"] = $type;
                     $_SESSION["userName"] = $name;
                     $_SESSION["isLogged"] = true;

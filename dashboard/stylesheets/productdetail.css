@@ -1,0 +1,11 @@
+.main-photo {
+    margin-bottom: 10px;
+}
+
+.sub-photo {
+    display: contents;
+}
+
+.col-md-2 {
+    padding: 5px;
+}

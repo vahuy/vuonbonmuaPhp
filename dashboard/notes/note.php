@@ -21,13 +21,12 @@
     <meta charset="UTF-8">
     <title>VuonBonMua-Note</title>
     <?php
-        require '../objects/Util.php';
+        require '../objects/UTIL.php';
         require '../objects/DatabaseConnector.php';
         require '../objects/PageContainer.php';
 
         $page = new PageContainer();
         $dbConnector = new DatabaseConnector();
-        $UTIL = new Util();
     ?>
 </head>
 <body class="index">
@@ -51,7 +50,7 @@
                 <div class="row">
                     <div class="large-12 columns">
                         <?php
-                            $url = $UTIL->getUrl();
+                            $url = UTIL::getUrl();
                             $array = (explode("?",$url));
                             $noteKey = ($array[1]);
 

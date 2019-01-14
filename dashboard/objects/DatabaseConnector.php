@@ -45,7 +45,17 @@
 //            }
             return $result;
         }
-        
+
+        function getProductDetail($id){
+            $sql = "SELECT * FROM product WHERE id='$id'";
+            $result = $this->connector->query($sql);
+            if ($result->num_rows > 0) {
+                return $result->fetch_assoc();
+            } else {
+                return null;
+            }
+        }
+
         function getClimbing(){
             $sql = "SELECT * FROM product WHERE type='climbing'";
             $result = $this->connector->query($sql);
@@ -81,6 +91,22 @@
 
         function  validateUserAccount($name, $password){
             $sql = "SELECT * FROM user_account WHERE name='$name' AND password='$password'";
+            $result = $this->connector->query($sql);
+            if ($result->num_rows > 0) {
+                return $result->fetch_assoc();
+            } else {
+                return null;
+            }
+        }
+
+        function  getProductImages($productId){
+            $sql = "SELECT * FROM image WHERE product_id='$productId'";
+            $result = $this->connector->query($sql);
+            return $result;
+        }
+
+        function  getProductChild($productId){
+            $sql = "SELECT * FROM product_child WHERE product_id='$productId'";
             $result = $this->connector->query($sql);
             return $result;
         }
