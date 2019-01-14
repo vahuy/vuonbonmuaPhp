@@ -24,7 +24,7 @@
         require './objects/DatabaseConnector.php';
         require './objects/PageContainer.php';
 
-        $footer = new PageContainer();
+        $pageContainer = new PageContainer();
     ?>
 
 </head>
@@ -32,10 +32,12 @@
 <body class="index">
     <div class="header">
         <?php
-            echo $footer->renderHeader();
             session_start();
-            echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
-            echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
+            $isLogged = false;
+            if (!empty($_SESSION["isLogged"])) {
+                $isLogged = $_SESSION["isLogged"];
+            }
+            echo $pageContainer->renderHeader($isLogged);
         ?>
     </div>
 
@@ -82,7 +84,7 @@
         </div>
         <div class="footer">
             <?php
-                echo $footer->renderFooter();
+                echo $pageContainer->renderFooter();
             ?>
         </div>
     </div>

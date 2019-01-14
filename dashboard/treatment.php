@@ -22,18 +22,21 @@
         require './objects/Product.php';
         require './objects/PageContainer.php';
 //      Init global variable
-        $footer = new PageContainer();
+        $pageContainer = new PageContainer();
         session_start();
     ?>
 
-</head>
 
+</head>
     <body class="index">
     <div class="header">
         <?php
-            echo $footer->renderHeader();
+            $isLogged = false;
+            if (!empty($_SESSION["isLogged"])) {
+                $isLogged = $_SESSION["isLogged"];
+            }
+            echo $pageContainer->renderHeader($isLogged);
             session_unset();
-
             // destroy the session
             session_destroy();
         ?>
@@ -86,7 +89,7 @@
         </div>
         <div class="footer">
             <?php
-                echo $footer->renderFooter();
+                echo $pageContainer->renderFooter();
             ?>
         </div>
     </div>

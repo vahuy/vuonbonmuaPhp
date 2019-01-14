@@ -1,11 +1,11 @@
 <?php
 class Product {
-	private $id;
-	private $name;
-	private $image;
-	private $price;
-  	private $shortDescription;
-  	private $type;
+    private $id;
+    private $name;
+    private $image;
+    private $price;
+    private $shortDescription;
+    private $type;
   /*
    * called by Dog, Cat, Bird, etc.
    */

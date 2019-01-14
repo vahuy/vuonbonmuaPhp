@@ -23,8 +23,11 @@
         require './objects/Product.php';
         require './objects/DatabaseConnector.php';
         require './objects/PageContainer.php';
+        require './objects/UserAccount.php';
 
         $pageContainer = new PageContainer();
+        $dbConnector = new DatabaseConnector();
+        session_start();
     ?>
 
 </head>
@@ -32,13 +35,12 @@
 <body class="index">
     <div class="header">
         <?php
-            echo $pageContainer->renderHeader();
+            $isLogged = false;
+            if (!empty($_SESSION["isLogged"])) {
+                $isLogged = $_SESSION["isLogged"];
+            }
+            echo $pageContainer->renderHeader($isLogged);
             echo $pageContainer->renderModalLogin();
-            session_start();
-            $_SESSION["favcolor"] = "green";
-            $_SESSION["favanimal"] = "cat";
-            echo "Session variables are set.";
-
         ?>
         <script>
             // Get the modal
@@ -74,6 +76,23 @@
         <div class="hero">
             &nbsp;
         </div>
+        <?php
+            if (!empty($_POST["name"]) && !empty($_POST["password"])) {
+                $dbConnector->createConnection();
+                $result = $dbConnector->validateUserAccount($_POST["name"], $_POST["password"]);
+                $dbConnector->closeConnection();
+                if ($result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                    $name = $row['name'];
+                    $type = $row['type'];
+                    $_SESSION["userType"] = $type;
+                    $_SESSION["userName"] = $name;
+                    $_SESSION["isLogged"] = true;
+                } else {
+                    echo "0 results";
+                }
+            }
+        ?>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

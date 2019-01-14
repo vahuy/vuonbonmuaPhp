@@ -24,16 +24,19 @@
         require './objects/Product.php';
         require './objects/DatabaseConnector.php';
 
-        $footer = new PageContainer();
+        $pageContainer = new PageContainer();
     ?>
 </head>
 
 <body class="index">
     <div class="header">
         <?php
-            echo $footer->renderHeader();
             session_start();
-            print_r($_SESSION);
+            $isLogged = false;
+            if (!empty($_SESSION["isLogged"])) {
+                $isLogged = $_SESSION["isLogged"];
+            }
+            echo $pageContainer->renderHeader($isLogged);
         ?>
     </div>
 
@@ -80,7 +83,7 @@
         </div>
         <div class="footer">
             <?php
-                echo $footer->renderFooter();
+                echo $pageContainer->renderFooter();
             ?>
         </div>
     </div>

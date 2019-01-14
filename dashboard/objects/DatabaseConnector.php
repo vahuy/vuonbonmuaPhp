@@ -78,4 +78,10 @@
             $result = $this->connector->query($sql);
             return $result;
         }
+
+        function  validateUserAccount($name, $password){
+            $sql = "SELECT * FROM user_account WHERE name='$name' AND password='$password'";
+            $result = $this->connector->query($sql);
+            return $result;
+        }
     }

@@ -29,7 +29,13 @@ class PageContainer {
             </div>
         ";
         }
-        function renderHeader() {
+        function renderHeader($isLogged) {
+            if ($isLogged===true) {
+                $action = 'Đăng xuất';
+            } else {
+                $action = 'Đăng nhập';
+            }
+            $button = "<div class='col-md-2'><button type='button' id='myBtn'>$action</button></div>";
             return "
             <div class='top-bar'>
             <div class='top-bar-section'>
@@ -40,7 +46,7 @@ class PageContainer {
                         <div class='col-md-3'><a href='/dashboard/climbing.php'>Climbing - Hồng leo</a></div>
                         <div class='col-md-3'><a href='/dashboard/shrub.php'>Shrub - Hồng bụi</a></div>
                         <div class='col-md-2'><a href='/dashboard/treatment.php'>Thuốc hữu cơ</a></div>
-                        <div class='col-md-2'><button type='button' id='myBtn'>Đăng nhập</button></div>
+                        $button
                     </div>
                 </div>
             </div>
@@ -65,7 +71,8 @@ class PageContainer {
         ";
     }
 
-    function renderModalLogin() {
+    function renderModalLogin()
+    {
         return "
             <div class='modal-content' id='myModal'>
               <div class='modal-header'>
@@ -73,7 +80,7 @@ class PageContainer {
                 <span class='close'>&times;</span>
               </div>
               <div class='modal-body'>
-                <form action='/action_page.php'>
+                <form action='/dashboard/homepage.php' method='post'>
                     Tên: <input type='text' name='name'><br>
                     Mật khẩu: <input type='password' name='password'><br>
                     <input type='submit' value='Submit'>
