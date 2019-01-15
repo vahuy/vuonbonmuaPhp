@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -24,7 +23,7 @@
     require '../objects/PageContainer.php';
     require '../objects/UserAccount.php';
     require '../objects/CONSTANT.php';
-
+    require_once '../objects/Product.php';
     $pageContainer = new PageContainer();
     $dbConnector = new DatabaseConnector();
     session_start();
@@ -128,15 +127,21 @@
         </div>
     </div>
     <?php
-        $name = $_POST["name"];
-        $type = $_POST["type"];
-        $price = $_POST["price"];
-        $color = $_POST["color"];
-        $short_description = $_POST["short_description"];
-        $description = $_POST["description"];
-        $main_photo = $_POST["main_photo"];
-        $origin = $_POST["origin"];
-        echo "name $name - type $type - price $price - color $color - short_description $short_description - description $description - main_photo $main_photo - origin $origin";
+       if (!empty( $_POST["type"])) {
+            $name = $_POST["name"];
+            $type = $_POST["type"];
+            $price = $_POST["price"];
+            $color = $_POST["color"];
+            $short_description = $_POST["short_description"];
+            $description = $_POST["description"];
+            $main_photo = $_POST["main_photo"];
+            $origin = $_POST["origin"];
+            $product = new Product(null, $name, $main_photo, $price, $short_description, $type, $description, $origin, $color);
+            $product->setId(spl_object_hash($product));
+            $dbConnector->createConnection();
+            $dbConnector->insertProduct($product);
+            $dbConnector->closeConnection();
+        }
     ?>
     <div class="footer">
         <?php

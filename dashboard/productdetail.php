@@ -22,7 +22,6 @@
     <?php
         require './objects/DatabaseConnector.php';
         require './objects/PageContainer.php';
-        require './objects/UTIL.php';
         require './objects/Image.php';
         require './objects/ProductChild.php';
 

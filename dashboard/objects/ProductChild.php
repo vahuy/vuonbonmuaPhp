@@ -6,6 +6,7 @@
  * Time: 2:15 PM
  */
 require_once('UTIL.php');
+
 class ProductChild {
     private $id;
     private $product_id;

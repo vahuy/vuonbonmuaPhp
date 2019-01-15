@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="localhost" uuid="ec226ad0-df32-4de9-b725-14741b68371a">
+    <data-source name="laz87900_vuonbonmua@localhost" uuid="2ebb6d6d-7d1e-4e45-91aa-f2c46a0891b3">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>huy</user-name>
+      <introspection-schemas>*:@</introspection-schemas>
     </data-source>
   </component>
 </project>

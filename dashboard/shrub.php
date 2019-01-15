@@ -61,8 +61,12 @@
                             $image = $row['image'];
                             $price = $row['price'];
                             $shortDescription = $row['short_description'];
+                            $type = $row['type'];
+                            $description = $row['description'];
+                            $origin = $row['origin'];
+                            $color = $row['color'];
 
-                            $item = new Product($id,$name,$image,$price,$shortDescription);
+                            $item = new Product($id, $name, $image, $price, $shortDescription, $type, $description, $origin, $color);
                             if ($products === null){
                                 $products = array($item);
                             } else {
