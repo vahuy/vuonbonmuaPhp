@@ -20,100 +20,129 @@
     <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
 
     <?php
-        require '../objects/Product.php';
-        require '../objects/DatabaseConnector.php';
-        require '../objects/PageContainer.php';
-        require '../objects/UserAccount.php';
+    require '../objects/DatabaseConnector.php';
+    require '../objects/PageContainer.php';
+    require '../objects/UserAccount.php';
+    require '../objects/CONSTANT.php';
 
-        $pageContainer = new PageContainer();
-        $dbConnector = new DatabaseConnector();
-        session_start();
+    $pageContainer = new PageContainer();
+    $dbConnector = new DatabaseConnector();
+    session_start();
     ?>
 
 </head>
 
 <body class="index">
-    <div class="header">
-        <?php
-            $isLogged = false;
-            if (!empty($_SESSION["isLogged"])) {
-                $isLogged = $_SESSION["isLogged"];
-            }
-            echo $pageContainer->renderHeader($isLogged);
-            echo $pageContainer->renderModalLogin();
-        ?>
-        <script>
-            // Get the modal
-            const modal = document.getElementById('myModal');
+<div class="header">
+    <?php
+    $isLogged = false;
+    if (!empty($_SESSION["isLogged"])) {
+        $isLogged = $_SESSION["isLogged"];
+    }
+    echo $pageContainer->renderHeaderWithLogin($isLogged);
+    echo $pageContainer->renderModalLogin();
+    ?>
+    <script>
+        // Get the modal
+        const modal = document.getElementById('myModal');
 
-            // Get the button that opens the modal
-            const btn = document.getElementById("myBtn");
-            console.log('mybutton', btn);
+        // Get the button that opens the modal
+        const btn = document.getElementById("myBtn");
+        console.log('mybutton', btn);
 
-            // Get the <span> element that closes the modal
-            const span = document.getElementsByClassName("close")[0];
+        // Get the <span> element that closes the modal
+        const span = document.getElementsByClassName("close")[0];
 
-            // When the user clicks on the button, open the modal
-            btn.onclick = function() {
-                modal.style.display = "block";
-            };
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+            console.log(btn);
+            modal.style.display = "block";
+        };
 
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target === modal) {
                 modal.style.display = "none";
-            };
-
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
             }
-        </script>
+        }
+    </script>
+</div>
+
+<div class="wrapper">
+    <div class="hero">
+        &nbsp;
     </div>
-
-    <div class="wrapper">
-        <div class="hero">
-            &nbsp;
-        </div>
-        <?php
-            if (!empty($_POST["name"]) && !empty($_POST["password"])) {
-                $dbConnector->createConnection();
-                $result = $dbConnector->validateUserAccount($_POST["name"], $_POST["password"]);
-                $dbConnector->closeConnection();
-                if ($result->num_rows > 0) {
-                    $row = $result->fetch_assoc();
-                    $name = $row['name'];
-                    $type = $row['type'];
-                    $_SESSION["userType"] = $type;
-                    $_SESSION["userName"] = $name;
-                    $_SESSION["isLogged"] = true;
-                } else {
-                    echo "0 results";
-                }
-            }
-        ?>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Giới thiệu vườn bốn mùa</h2>
-                </div>
+    <?php
+    if (!empty($_POST["name"]) && !empty($_POST["password"])) {
+        $dbConnector->createConnection();
+        $user = $dbConnector->validateUserAccount($_POST["name"], $_POST["password"]);
+        $dbConnector->closeConnection();
+        $type = $user['type'];
+        $name = $user['name'];
+        if (!empty($user)) {
+            $_SESSION["userType"] = $type;
+            $_SESSION["userName"] = $name;
+            $_SESSION["isLogged"] = true;
+        } else {
+            echo "0 results";
+        }
+    }
+    ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Tạo sản phẩm mới</h2>
             </div>
-            <div class="row">
-                <div class="large-12 columns">
-                    <p>Không tiếp khách tham quan hay không hẹn trước. Có rất nhiều
-                        ảnh hoa thật, trồng và nở tại HCM, các bạn có thể xem để hình dung
-                        hoa sẽ ra sao. Chúng tôi trồng hoa thân thiện với môi trường, cây
-                        phát triển tự nhiên với phân bón hữu cơ là chính. Không kích thích
-                        để nhìn cây xum xuê bán giá cao.</p>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
             <?php
-                echo $pageContainer->renderFooter();
+                if ($_SESSION["isLogged"]) {
+                    echo 'content';
+                }
             ?>
+            <form action="addproduct.php" method="post">
+                <div class="row">
+                    <div class="col-md-6"><label>Tên <input type="text" name="name"></label></div>
+                    <div class="col-md-6"><label>Loại <input type="text" name="type"></label></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><label>Giá từ <input type="text" name="price"></label></div>
+                    <div class="col-md-6"><label>Màu <input type="text" name="color"></label></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><label>Mô tả ngắn <input type="text" name="short_description"></label></div>
+                    <div class="col-md-6"><label>Mô tả <textarea name="description" rows="4" cols="70">Enter text here...</textarea></label></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><label>Hình chính <input type="text" name="main_photo"></label></div>
+                    <div class="col-md-6"><label>Xuất xứ <input type="text" name="origin"></label></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><button type="reset">Reset</button></div>
+                    <div class="col-md-6"><button type="submit">Save</button></div>
+                </div>
+            </form>
         </div>
     </div>
+    <?php
+        $name = $_POST["name"];
+        $type = $_POST["type"];
+        $price = $_POST["price"];
+        $color = $_POST["color"];
+        $short_description = $_POST["short_description"];
+        $description = $_POST["description"];
+        $main_photo = $_POST["main_photo"];
+        $origin = $_POST["origin"];
+        echo "name $name - type $type - price $price - color $color - short_description $short_description - description $description - main_photo $main_photo - origin $origin";
+    ?>
+    <div class="footer">
+        <?php
+            echo $pageContainer->renderFooter();
+        ?>
+    </div>
+</div>
 </body>
 </html>

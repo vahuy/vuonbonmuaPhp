@@ -29,14 +29,33 @@ class PageContainer {
             </div>
         ";
         }
-        function renderHeader($isLogged) {
-            if ($isLogged===true) {
-                $action = 'Đăng xuất';
-            } else {
-                $action = 'Đăng nhập';
-            }
-            $button = "<div class='col-md-2'><button type='button' id='myBtn'>$action</button></div>";
+
+    function renderHeader() {
             return "
+            <div class='top-bar'>
+            <div class='top-bar-section'>
+                <!-- Right Nav Section -->
+                <div class='header-navigation'>
+                    <div class='row'>
+                        <div class='col-md-2'><a href='/dashboard/homepage.php'>Trang chủ</a></div>
+                        <div class='col-md-3'><a href='/dashboard/climbing.php'>Climbing - Hồng leo</a></div>
+                        <div class='col-md-3'><a href='/dashboard/shrub.php'>Shrub - Hồng bụi</a></div>
+                        <div class='col-md-3'><a href='/dashboard/treatment.php'>Thuốc hữu cơ</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        ";
+    }
+
+    function renderHeaderWithLogin($isLogged) {
+        if ($isLogged===true) {
+            $action = 'Đăng xuất';
+        } else {
+            $action = 'Đăng nhập';
+        }
+        $button = "<div class='col-md-2'><button type='button' id='myBtn'>$action</button></div>";
+        return "
             <div class='top-bar'>
             <div class='top-bar-section'>
                 <!-- Right Nav Section -->
@@ -80,7 +99,7 @@ class PageContainer {
                 <span class='close'>&times;</span>
               </div>
               <div class='modal-body'>
-                <form action='/dashboard/homepage.php' method='post'>
+                <form action='/dashboard/admin/addproduct.php' method='post'>
                     Tên: <input type='text' name='name'><br>
                     Mật khẩu: <input type='password' name='password'><br>
                     <input type='submit' value='Submit'>

@@ -23,6 +23,7 @@
         require './objects/DatabaseConnector.php';
         require './objects/PageContainer.php';
         require './objects/UserAccount.php';
+        require './objects/CONSTANT.php';
 
         $pageContainer = new PageContainer();
         $dbConnector = new DatabaseConnector();
@@ -38,7 +39,7 @@
             if (!empty($_SESSION["isLogged"])) {
                 $isLogged = $_SESSION["isLogged"];
             }
-            echo $pageContainer->renderHeader($isLogged);
+            echo $pageContainer->renderHeaderWithLogin($isLogged);
             echo $pageContainer->renderModalLogin();
         ?>
         <script>
@@ -64,7 +65,7 @@
 
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
-                if (event.target == modal) {
+                if (event.target === modal) {
                     modal.style.display = "none";
                 }
             }
@@ -78,9 +79,11 @@
         <?php
             if (!empty($_POST["name"]) && !empty($_POST["password"])) {
                 $dbConnector->createConnection();
-                $result = $dbConnector->validateUserAccount($_POST["name"], $_POST["password"]);
+                $user = $dbConnector->validateUserAccount($_POST["name"], $_POST["password"]);
                 $dbConnector->closeConnection();
-                if (!empty($result)) {
+                $type = $user['type'];
+                $name = $user['name'];
+                if (!empty($user)) {
                     $_SESSION["userType"] = $type;
                     $_SESSION["userName"] = $name;
                     $_SESSION["isLogged"] = true;
@@ -90,20 +93,18 @@
             }
         ?>
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Giới thiệu vườn bốn mùa</h2>
+            <article>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Giới thiệu vườn bốn mùa</h2>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="large-12 columns">
-                    <p>Không tiếp khách tham quan hay không hẹn trước. Có rất nhiều
-                        ảnh hoa thật, trồng và nở tại HCM, các bạn có thể xem để hình dung
-                        hoa sẽ ra sao. Chúng tôi trồng hoa thân thiện với môi trường, cây
-                        phát triển tự nhiên với phân bón hữu cơ là chính. Không kích thích
-                        để nhìn cây xum xuê bán giá cao.</p>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <p><?php echo GIOI_THIEU_VBM ?></p>
+                    </div>
                 </div>
-            </div>
+            </article>
         </div>
         <div class="footer">
             <?php

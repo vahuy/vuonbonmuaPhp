@@ -33,11 +33,7 @@
     <div class="header">
         <?php
             session_start();
-            $isLogged = false;
-            if (!empty($_SESSION["isLogged"])) {
-                $isLogged = $_SESSION["isLogged"];
-            }
-            echo $pageContainer->renderHeader($isLogged);
+            echo $pageContainer->renderHeader();
         ?>
     </div>
 

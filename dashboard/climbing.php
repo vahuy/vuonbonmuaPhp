@@ -28,64 +28,58 @@
     ?>
 </head>
 
-<body class="index">
-    <div class="header">
+<div class="header">
+    <?php
+    session_start();
+    echo $pageContainer->renderHeader();
+    ?>
+</div>
+
+<div class="wrapper">
+    <div class="hero">
+        &nbsp;
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="large-12 columns">
+                <h2>Hoa hồng leo</h2>
+            </div>
+        </div>
+        <div class="product-list">
+            <div class="row">
+                <?php
+                $products = null;
+                $dbConnector = new DatabaseConnector();
+                $dbConnector->createConnection();
+                $result = $dbConnector->getClimbing();
+                $dbConnector->closeConnection();
+                while ($row = $result->fetch_assoc()) {
+                    $id = $row['id'];
+                    $name = $row['name'];
+                    $image = $row['image'];
+                    $price = $row['price'];
+                    $shortDescription = $row['short_description'];
+
+                    $item = new Product($id,$name,$image,$price,$shortDescription);
+                    if ($products === null){
+                        $products = array($item);
+                    } else {
+                        array_push($products, $item);
+                    }
+                    $item = null;
+                }
+                $arrlength = count($products);
+                for($x = 0; $x < $arrlength; $x++) {
+                    echo $products[$x]->generateHtml();
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
         <?php
-            session_start();
-            $isLogged = false;
-            if (!empty($_SESSION["isLogged"])) {
-                $isLogged = $_SESSION["isLogged"];
-            }
-            echo $pageContainer->renderHeader($isLogged);
+        echo $pageContainer->renderFooter();
         ?>
     </div>
-
-    <div class="wrapper">
-        <div class="hero">
-            &nbsp;
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="large-12 columns">
-                    <h2>Hoa hồng leo</h2>
-                </div>
-            </div>
-            <div class="product-list">
-                <div class="row">
-                    <?php
-                        $products = null;
-                        $dbConnector = new DatabaseConnector();
-                        $dbConnector->createConnection();
-                        $result = $dbConnector->getClimbing();
-                        $dbConnector->closeConnection();
-                        while ($row = $result->fetch_assoc()) {
-                            $id = $row['id'];
-                            $name = $row['name'];
-                            $image = $row['image'];
-                            $price = $row['price'];
-                            $shortDescription = $row['short_description'];
-
-                            $item = new Product($id,$name,$image,$price,$shortDescription);
-                            if ($products === null){
-                                $products = array($item);
-                            } else {
-                                array_push($products, $item);
-                            }
-                            $item = null;
-                        }
-                        $arrlength = count($products);
-                        for($x = 0; $x < $arrlength; $x++) {
-                            echo $products[$x]->generateHtml();
-                        }
-                    ?>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            <?php
-                echo $pageContainer->renderFooter();
-            ?>
-        </div>
-    </div>
-</body>
+</div>
 </html>

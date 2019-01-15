@@ -31,11 +31,7 @@
     <body class="index">
     <div class="header">
         <?php
-            $isLogged = false;
-            if (!empty($_SESSION["isLogged"])) {
-                $isLogged = $_SESSION["isLogged"];
-            }
-            echo $pageContainer->renderHeader($isLogged);
+            echo $pageContainer->renderHeader();
             session_unset();
             // destroy the session
             session_destroy();

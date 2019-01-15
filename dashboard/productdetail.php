@@ -111,9 +111,11 @@
                                     }
                                     $item = null;
                                 }
-                                $arrLength = count($imageList);
-                                for($x = 0; $x < $arrLength; $x++) {
-                                    echo $imageList[$x]->generateHtml();
+                                if (!empty($imageList)) {
+                                    $arrLength = count($imageList);
+                                    for($x = 0; $x < $arrLength; $x++) {
+                                        echo $imageList[$x]->generateHtml();
+                                    }
                                 }
                             ?>
                         </div>
@@ -169,7 +171,7 @@
                         $item = null;
                     }
                     if (empty($productChildList)) {
-                        echo "Giống hồng này hiện không có sẵn, xin hệ facebook vườn bốn mùa để order.";
+                        echo "Giống này hiện không có sẵn, xin hệ facebook vườn bốn mùa để order.";
                     } else {
                         $arrLength = count($productChildList);
                         for($x = 0; $x < $arrLength; $x++) {
