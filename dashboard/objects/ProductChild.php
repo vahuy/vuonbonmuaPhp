@@ -5,7 +5,7 @@
  * Date: 1/15/2019
  * Time: 2:15 PM
  */
-require_once('UTIL.php');
+require_once('Util.php');
 
 class ProductChild {
     private $id;

@@ -1,5 +1,5 @@
 <?php
-require_once('UTIL.php');
+require_once('Util.php');
 class Product {
     private $id;
     private $name;
@@ -22,7 +22,7 @@ class Product {
     /**
      * @param mixed $color
      */
-    public function setColor($color): void
+    public function setColor($color)
     {
         $this->color = $color;
     }
@@ -62,7 +62,7 @@ class Product {
     /**
      * @param mixed $id
      */
-    public function setId($id): void
+    public function setId($id)
     {
         $this->id = $id;
     }
@@ -78,7 +78,7 @@ class Product {
     /**
      * @param mixed $name
      */
-    public function setName($name): void
+    public function setName($name)
     {
         $this->name = $name;
     }
@@ -94,7 +94,7 @@ class Product {
     /**
      * @param mixed $image
      */
-    public function setImage($image): void
+    public function setImage($image)
     {
         $this->image = $image;
     }
@@ -110,7 +110,7 @@ class Product {
     /**
      * @param mixed $price
      */
-    public function setPrice($price): void
+    public function setPrice($price)
     {
         $this->price = $price;
     }
@@ -126,7 +126,7 @@ class Product {
     /**
      * @param mixed $shortDescription
      */
-    public function setShortDescription($shortDescription): void
+    public function setShortDescription($shortDescription)
     {
         $this->shortDescription = $shortDescription;
     }
@@ -142,7 +142,7 @@ class Product {
     /**
      * @param mixed $type
      */
-    public function setType($type): void
+    public function setType($type)
     {
         $this->type = $type;
     }
@@ -158,7 +158,7 @@ class Product {
     /**
      * @param mixed $description
      */
-    public function setDescription($description): void
+    public function setDescription($description)
     {
         $this->description = $description;
     }
@@ -174,7 +174,7 @@ class Product {
     /**
      * @param mixed $origin
      */
-    public function setOrigin($origin): void
+    public function setOrigin($origin)
     {
         $this->origin = $origin;
     }

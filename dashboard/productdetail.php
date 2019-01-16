@@ -50,6 +50,7 @@
             $images = $dbConnector->getProductImages($id);
             $productChild = $dbConnector->getProductChild($id);
             $dbConnector->closeConnection();
+            $productType = null;
         ?>
     </div>
 
@@ -71,6 +72,7 @@
                                 <?php
                                     $name = $result['name'];
                                     $image = $result['image'];
+                                    $productType = $result['type'];
                                     echo "<img id='mainPhoto' src=$image alt=$name>";
                                 ?>
                                 <script>
@@ -129,26 +131,38 @@
                     ?>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p>Danh sách cây đang bán</p>
-                </div>
-            </div>
-            <div class="child-table">
-                <div class="row">
-                    <div class="col-md-3">
-                        <p>Ngày nhập</p>
+            <?php
+                if ($productType !== 'treatment') {
+                    echo "
+                    <div class='row'>
+                        <div class='col-md-12'>
+                            <p>Danh sách cây đang bán</p>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <p>Mô tả</p>
-                    </div>
-                    <div class="col-md-3">
-                        <p>Nguồn nhập</p>
-                    </div>
-                    <div class="col-md-3">
-                        <p>Giá bán</p>
-                    </div>
-                </div>
+                    ";
+                }
+            ?>
+            <?php
+                if ($productType !== 'treatment') {
+                    echo "
+                        <div class='child-table'>
+                            <div class='row'>
+                                <div class='col-md-3'>
+                                    <p>Ngày nhập</p>
+                                </div>
+                                <div class='col-md-3'>
+                                    <p>Mô tả</p>
+                                </div>
+                                <div class='col-md-3'>
+                                    <p>Nguồn nhập</p>
+                                </div>
+                                <div class='col-md-3'>
+                                    <p>Giá bán</p>
+                                </div>
+                            </div>
+                    ";
+                }
+            ?>
                 <!--Get all product child-->
                 <?php
                     $productChildList = null;
@@ -169,17 +183,26 @@
                         }
                         $item = null;
                     }
-                    if (empty($productChildList)) {
+                    if (empty($productChildList) && $productType!== 'treatment') {
                         echo "Giống này hiện không có sẵn, xin hệ facebook vườn bốn mùa để order.";
                     } else {
-                        $arrLength = count($productChildList);
-                        for($x = 0; $x < $arrLength; $x++) {
-                            echo $productChildList[$x]->generateHtml();
+                        if (!empty($productChildList)) {
+                            $arrLength = count($productChildList);
+                            for ($x = 0; $x < $arrLength; $x++) {
+                                echo $productChildList[$x]->generateHtml();
+                            }
                         }
                     }
                 ?>
-            </div>
-        </div>
+            <?php
+            if ($productType !== 'treatment') {
+                echo "
+                        </div>
+                    </div>
+                    ";
+            }
+            ?>
+
         <div class="footer">
             <?php
                 echo $pageContainer->renderFooter();

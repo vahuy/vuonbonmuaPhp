@@ -32,6 +32,7 @@ class UTIL {
     }
 
     static function formatCurrency($number) {
+        $number = floatval($number);
         return	number_format("$number")." vnđ<br>";
     }
 }

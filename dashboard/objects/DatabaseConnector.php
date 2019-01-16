@@ -13,20 +13,16 @@ class DatabaseConnector
     private $connector;
 
     function createConnection(){
-//            $servername = "localhost";
-//            $username = "huy";
-//            $password = "vuonbonmuatx22";
-//            $dbname = "vuonbonmua";
+            $servername = "localhost";
+            $username = "huy";
+            $password = "vuonbonmuatx22";
+            $dbname = "vuonbonmua";
 
-//            $servername = "localhost";dd
+//            $servername = "localhost";
 //            $username = "laz87900_huy";
 //            $password = "vuonbonmuatx22";
 //            $dbname = "laz87900_vuonbonmua";
-//
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "laz87900_vuonbonmua";
+
 
         // Create connection
         if ($this->connector === null) {
@@ -36,7 +32,6 @@ class DatabaseConnector
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
             }
-        } else {
             return $this->connector;
         }
 

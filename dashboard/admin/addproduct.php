@@ -24,8 +24,10 @@
     require '../objects/UserAccount.php';
     require '../objects/CONSTANT.php';
     require_once '../objects/Product.php';
+    require_once '../objects/Component.php';
     $pageContainer = new PageContainer();
     $dbConnector = new DatabaseConnector();
+    $component = new Component();
     session_start();
     ?>
 
@@ -104,32 +106,32 @@
             ?>
             <form action="addproduct.php" method="post">
                 <div class="row">
-                    <div class="col-md-6"><label>Tên <input type="text" name="name"></label></div>
-                    <div class="col-md-6"><label>Loại <input type="text" name="type"></label></div>
+                    <div class="col-md-6"><label>Tên <input type="text" name="name" required></label></div>
+                    <div class="col-md-6"><label>Loại <?php echo $component->renderOption('productType', false, $PRODUCT_TYPE, $PRODUCT_TYPE_NAME) ?></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6"><label>Giá từ <input type="text" name="price"></label></div>
+                    <div class="col-md-6"><label>Giá từ <input type="number" min="1000" step="1000" name="price"></label></div>
                     <div class="col-md-6"><label>Màu <input type="text" name="color"></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6"><label>Mô tả ngắn <input type="text" name="short_description"></label></div>
-                    <div class="col-md-6"><label>Mô tả <textarea name="description" rows="4" cols="70">Enter text here...</textarea></label></div>
+                    <div class="col-md-6"><label>Mô tả ngắn <input type="text" name="short_description" required></label></div>
+                    <div class="col-md-6"><label>Mô tả <textarea name="description" rows="4" cols="70" placeholder="Describe yourself here...">&nbsp;</textarea></label></div>
                 </div>
                 <div class="row">
                     <div class="col-md-6"><label>Hình chính <input type="text" name="main_photo"></label></div>
                     <div class="col-md-6"><label>Xuất xứ <input type="text" name="origin"></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6"><button type="reset">Reset</button></div>
-                    <div class="col-md-6"><button type="submit">Save</button></div>
+                    <div class="col-md-6"><?php echo $component->renderButton('Reset','reset', 'disabled') ?></div>
+                    <div class="col-md-6"><?php echo $component->renderButton('Submit','submit', false) ?></div>
                 </div>
             </form>
         </div>
     </div>
     <?php
-       if (!empty( $_POST["type"])) {
+       if (!empty( $_POST["productType"])) {
             $name = $_POST["name"];
-            $type = $_POST["type"];
+            $type = $_POST["productType"];
             $price = $_POST["price"];
             $color = $_POST["color"];
             $short_description = $_POST["short_description"];
@@ -140,8 +142,11 @@
             $product->setId(spl_object_hash($product));
             $dbConnector->createConnection();
             $dbConnector->insertProduct($product);
+            $product = null;
             $dbConnector->closeConnection();
-        }
+        } else {
+           echo "missing parameter";
+       }
     ?>
     <div class="footer">
         <?php

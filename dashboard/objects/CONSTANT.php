@@ -14,3 +14,5 @@ define("LABEL_MO_TA_NGAN", "Mô tả ngắn");
 define("LABEL_MO_TA", "Mô tả");
 define("LABEL_HINH_CHINH", "Hình chính");
 define("LABEL_XUAT_XU", "Xuất xứ");
+$PRODUCT_TYPE=array("climbing","shrub","treatment");
+$PRODUCT_TYPE_NAME=array("Hồng leo","Hồng bụi","Thuốc hữu cơ");
