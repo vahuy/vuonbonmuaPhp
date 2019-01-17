@@ -6,7 +6,8 @@
  * Date: 1/8/2019
  * Time: 9:24 PM
  */
-require_once 'Product.php';
+require_once "Product.php";
+require_once "CONSTANT.php";
 
 class DatabaseConnector
 {
@@ -133,9 +134,31 @@ class DatabaseConnector
         $sql = "INSERT INTO product (id,name,color,description,short_description,image,price,type,origin)
           VALUES ('$id','$name', '$color','$description','$shortDescription','$image','$price','$type','$origin')";
         if (mysqli_query($this->connector, $sql)) {
-            echo "New record created successfully";
+            return QUERY_SUCCESS;
         } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($this->connector);
+            return "Error: " . $sql . "<br>" . mysqli_error($this->connector);
+        }
+    }
+
+    function insertPhoto($arrayPhoto) {
+        $sql = "INSERT INTO image (id, product_id, src) VALUE";
+        $sqlEnclose = ")";
+        if (!empty($arrayPhoto)) {
+            foreach ($arrayPhoto as $value) {
+                $id = $value->getId();
+                $productId = $value->getProductId();
+                $src = $value->getSrc();
+                $photoInfo = "('$id','$productId','$src'),";
+                $sql.=$photoInfo;
+            }
+            $sql=rtrim($sql,',');
+        }
+        echo $sql;
+        if (mysqli_query($this->connector, $sql)) {
+            echo "New record created successfully";
+            return QUERY_SUCCESS;
+        } else {
+            return "Error: " . $sql . "<br>" . mysqli_error($this->connector);
         }
     }
 }

@@ -7,13 +7,13 @@
  */
 
 class Component {
-    public function renderButton($name, $type, $disabled) {
+    public function renderButton($value, $name, $type, $disabled) {
         $isDisabled = null;
         if ($disabled === true || $disabled === 'disabled') {
             $isDisabled = 'disabled';
         }
         return "
-            <button type='$type' $isDisabled>$name</button>
+            <button type='$type' name='$name' $isDisabled>$value</button>
         ";
     }
 

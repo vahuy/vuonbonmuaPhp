@@ -19,14 +19,10 @@
     <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
 
     <?php
-    require '../objects/DatabaseConnector.php';
     require '../objects/PageContainer.php';
-    require '../objects/UserAccount.php';
     require '../objects/CONSTANT.php';
-    require_once '../objects/Product.php';
     require_once '../objects/Component.php';
     $pageContainer = new PageContainer();
-    $dbConnector = new DatabaseConnector();
     $component = new Component();
     session_start();
     ?>
@@ -40,7 +36,7 @@
     if (!empty($_SESSION["isLogged"])) {
         $isLogged = $_SESSION["isLogged"];
     }
-    echo $pageContainer->renderHeaderWithLogin($isLogged);
+    echo $pageContainer->renderAdminHeaderWithLogin($isLogged);
     echo $pageContainer->renderModalLogin();
     ?>
     <script>
@@ -78,22 +74,6 @@
     <div class="hero">
         &nbsp;
     </div>
-    <?php
-    if (!empty($_POST["name"]) && !empty($_POST["password"])) {
-        $dbConnector->createConnection();
-        $user = $dbConnector->validateUserAccount($_POST["name"], $_POST["password"]);
-        $dbConnector->closeConnection();
-        $type = $user['type'];
-        $name = $user['name'];
-        if (!empty($user)) {
-            $_SESSION["userType"] = $type;
-            $_SESSION["userName"] = $name;
-            $_SESSION["isLogged"] = true;
-        } else {
-            echo "0 results";
-        }
-    }
-    ?>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -104,7 +84,7 @@
                     echo 'content';
                 }
             ?>
-            <form action="addproduct.php" method="post">
+            <form action="../admin/processor/doaddproduct.php" method="post">
                 <div class="row">
                     <div class="col-md-6"><label>Tên <input type="text" name="name" required></label></div>
                     <div class="col-md-6"><label>Loại <?php echo $component->renderOption('productType', false, $PRODUCT_TYPE, $PRODUCT_TYPE_NAME) ?></label></div>
@@ -122,32 +102,12 @@
                     <div class="col-md-6"><label>Xuất xứ <input type="text" name="origin"></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6"><?php echo $component->renderButton('Reset','reset', 'disabled') ?></div>
-                    <div class="col-md-6"><?php echo $component->renderButton('Submit','submit', false) ?></div>
+                    <div class="col-md-6"><?php echo $component->renderButton('Reset','reset', 'reset',false) ?></div>
+                    <div class="col-md-6"><?php echo $component->renderButton('Submit','submit', 'submit', false) ?></div>
                 </div>
             </form>
         </div>
     </div>
-    <?php
-       if (!empty( $_POST["productType"])) {
-            $name = $_POST["name"];
-            $type = $_POST["productType"];
-            $price = $_POST["price"];
-            $color = $_POST["color"];
-            $short_description = $_POST["short_description"];
-            $description = $_POST["description"];
-            $main_photo = $_POST["main_photo"];
-            $origin = $_POST["origin"];
-            $product = new Product(null, $name, $main_photo, $price, $short_description, $type, $description, $origin, $color);
-            $product->setId(spl_object_hash($product));
-            $dbConnector->createConnection();
-            $dbConnector->insertProduct($product);
-            $product = null;
-            $dbConnector->closeConnection();
-        } else {
-           echo "missing parameter";
-       }
-    ?>
     <div class="footer">
         <?php
             echo $pageContainer->renderFooter();

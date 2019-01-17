@@ -42,9 +42,11 @@
         <?php
             $isLogged = true;
             echo $pageContainer->renderHeader($isLogged);
+            //Get PARAM from URL
             $url = $UTIL->getUrl();
             $array = (explode("=",$url));
             $id = ($array[1]);
+
             $dbConnector->createConnection();
             $result = $dbConnector->getProductDetail($id);
             $images = $dbConnector->getProductImages($id);

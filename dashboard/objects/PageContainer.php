@@ -73,6 +73,31 @@ class PageContainer {
         ";
     }
 
+    function renderAdminHeaderWithLogin($isLogged) {
+        if ($isLogged===true) {
+            $action = 'Đăng xuất';
+        } else {
+            $action = 'Đăng nhập';
+        }
+        $button = "<div class='col-md-2'><button type='button' id='myBtn'>$action</button></div>";
+        return "
+            <div class='top-bar'>
+            <div class='top-bar-section'>
+                <!-- Right Nav Section -->
+                <div class='header-navigation'>
+                    <div class='row'>
+                        <div class='col-md-2'><a href='/dashboard/homepage.php'>Trang chủ</a></div>
+                        <div class='col-md-3'><a href='/dashboard/admin/addproduct.php'>Add Product</a></div>
+                        <div class='col-md-3'><a href='/dashboard/admin/addphoto.php'>Add Photo</a></div>
+                        <div class='col-md-2'><a href='/dashboard/treatment.php'>Thuốc hữu cơ</a></div>
+                        $button
+                    </div>
+                </div>
+            </div>
+        </div>
+        ";
+    }
+
     function renderModal($modalName, $modalContent, $modalButton) {
         return "
             <div class='modal-content'>
