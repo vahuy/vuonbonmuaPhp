@@ -20,27 +20,66 @@
     <?php
     require '../objects/PageContainer.php';
     require_once '../objects/Component.php';
+    require_once '../objects/DatabaseConnector.php';
+
+    $dbConnector = new DatabaseConnector();
     $pageContainer = new PageContainer();
     $component = new Component();
     session_start();
     ?>
     <?php
-        $xml = new SimpleXMLElement('<xml/>');
-
-        for ($i = 1; $i <= 8; ++$i) {
+        $dbConnector->createConnection();
+        $products = $dbConnector->getAllProduct();
+        $dbConnector->closeConnection();
+        $numOfProduct =  count($products);
+        //create xml file
+        $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8" '.' standalone="yes"?><feed/>');
+        for ($i = 0; $i < $numOfProduct; ++$i) {
+            $id = $products[$i]->getId();
+            $name = $products[$i]->getName();
             $track = $xml->addChild('product');
-            $track->addChild('id', "$i");
-            $track->addChild('name', "$i +1");
+            $track->addChild('id', "$id");
+            $track->addChild('name', "$name");
         }
         $xml->asXML('.\xml\productname.xml');
     ?>
+<!--Handle input-->
+    <script>
+        function showResult(str) {
+            if (str.length===0) {
+                document.getElementById("livesearch").innerHTML="";
+                document.getElementById("livesearch").style.border="0px";
+                return;
+            }
+            if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            } else {  // code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function() {
+                if (this.readyState===4 && this.status===200) {
+                    document.getElementById("livesearch").innerHTML=this.responseText;
+                    document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+                }
+            };
+            console.log(str);
+            xmlhttp.open("GET","./processor/livesearch.php?q="+str,true);
+            xmlhttp.send();
+        }
+        function setProduct(object) {
+            console.log(object.getAttribute("href"));
+            console.log(object.getAttribute("target"));
+
+        }
+    </script>
 </head>
 
 <body class="index">
 <div class="header">
     <?php
-    $isLogged = false;
-    echo $pageContainer->renderAdminHeaderWithLogin($isLogged);
+        $isLogged = false;
+        echo $pageContainer->renderAdminHeaderWithLogin($isLogged);
     ?>
 </div>
 
@@ -53,20 +92,32 @@
             <div class="col-md-12">
                 <h2>Tạo sản phẩm mới</h2>
             </div>
-            <form method="get" enctype="multipart/form-data" action="processor/doaddphoto.php">
-                <div class="row">
-                    <div class="col-md-6"><label>Tên sản phẩm<input type="text" name="productId" required></label></div>
-                    <div class="col-md-6"><label>Mã sản phẩm<input type="text" name="productId" required></label></div>
-                </div><div class="row">
-                    <div class="col-md-6"><label>Link ảnh <textarea name="photo" rows="4" cols="70" placeholder="Describe yourself here...">&nbsp;</textarea></label></div>
-                    <div class="col-md-6">&nbsp;</label></div>
-                </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <form>
+                    <label>Nhập tên<input type="text" size="30" onkeyup="showResult(this.value)"></label>
+                    <div id="livesearch"></div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form method="get" enctype="multipart/form-data" action="processor/doaddphoto.php">
+                    <div class="row">
+                        <div class="col-md-6"><label>Tên sản phẩm<input type="text" name="productName" required></label></div>
+                        <div class="col-md-6"><label>Mã sản phẩm<input type="text" name="productId" required></label></div>
+                    </div><div class="row">
+                        <div class="col-md-6"><label>Link ảnh <textarea name="photo" rows="4" cols="70" placeholder="Describe yourself here...">&nbsp;</textarea></label></div>
+                        <div class="col-md-6">&nbsp;</label></div>
+                    </div>
 
-                <div class="row">
-                    <div class="col-md-6"><?php echo $component->renderButton('Reset','reset', 'reset',false) ?></div>
-                    <div class="col-md-6"><?php echo $component->renderButton('Submit','submit', 'submit', false) ?></div>
-                </div>
-            </form>
+                    <div class="row">
+                        <div class="col-md-6"><?php echo $component->renderButton('Reset','reset', 'reset',false) ?></div>
+                        <div class="col-md-6"><?php echo $component->renderButton('Submit','submit', 'submit', false) ?></div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <div class="footer">

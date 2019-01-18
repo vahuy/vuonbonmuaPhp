@@ -65,13 +65,11 @@ class DatabaseConnector
             }
             $item = null;
         }
-
-//            if ($result->num_rows > 0) {
-//                echo "data found";
-//            } else {
-//                echo "0 results";
-//            }
-        return $result;
+        if (count($products)>0) {
+            return $products;
+        } else {
+            return null;
+        }
     }
 
     function getProductDetail($id){
