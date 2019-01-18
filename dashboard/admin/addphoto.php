@@ -67,10 +67,13 @@
             xmlhttp.open("GET","./processor/livesearch.php?q="+str,true);
             xmlhttp.send();
         }
-        function setProduct(object) {
-            console.log(object.getAttribute("href"));
-            console.log(object.getAttribute("target"));
 
+        function setProduct(object) {
+            const id = object.getAttribute("href");
+            const name = object.getAttribute("target");
+
+            document.getElementById('productName').value = name.toString();
+            document.getElementById('productId').value = id.toString();
         }
     </script>
 </head>
@@ -105,8 +108,8 @@
             <div class="col-md-12">
                 <form method="get" enctype="multipart/form-data" action="processor/doaddphoto.php">
                     <div class="row">
-                        <div class="col-md-6"><label>Tên sản phẩm<input type="text" name="productName" required></label></div>
-                        <div class="col-md-6"><label>Mã sản phẩm<input type="text" name="productId" required></label></div>
+                        <div class="col-md-6"><label>Tên sản phẩm<input id="productName" type="text" name="productName" required></label></div>
+                        <div class="col-md-6"><label>Mã sản phẩm<input id="productId" type="text" name="productId" required></label></div>
                     </div><div class="row">
                         <div class="col-md-6"><label>Link ảnh <textarea name="photo" rows="4" cols="70" placeholder="Describe yourself here...">&nbsp;</textarea></label></div>
                         <div class="col-md-6">&nbsp;</label></div>

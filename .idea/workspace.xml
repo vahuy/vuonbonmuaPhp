@@ -50,14 +50,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashboard/admin/addphoto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="100" column="23" lean-forward="true" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
+            <state relative-caret-position="-779">
+              <caret line="59" column="51" lean-forward="true" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
               <folding>
                 <element signature="e#4411#4417#1#HTML" expanded="true" />
                 <element signature="e#4481#4487#1#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doaddphoto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="498">
+              <caret line="159" column="13" selection-start-line="159" selection-start-column="13" selection-end-line="159" selection-end-column="13" />
+              <folding>
+                <element signature="n#getConnector#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="n#getShrub#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="n#getTreatment#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="n#closeConnection#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="n#getNote#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="n#validateUserAccount#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="n#getProductImages#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="n#getProductChild#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="n#insertProduct#0;n#DatabaseConnector#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -75,7 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>data</find>
       <find>$component</find>
       <find>UserAccount</find>
       <find>CONSTANT</find>
@@ -105,6 +133,7 @@
       <find>responseText</find>
       <find>onclick</find>
       <find>$y-&gt;item(0)-&gt;childNodes-&gt;item(0)-&gt;nodeValue</find>
+      <find>productName</find>
     </findStrings>
     <replaceStrings>
       <replace>.</replace>
@@ -148,7 +177,6 @@
         <option value="$PROJECT_DIR$/dashboard/objects/Component.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/PageContainer.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/CONSTANT.php" />
-        <option value="$PROJECT_DIR$/dashboard/admin/processor/doaddphoto.php" />
         <option value="$PROJECT_DIR$/dashboard/productdetail.php" />
         <option value="$PROJECT_DIR$/dashboard/stylesheets/vbm.css" />
         <option value="$PROJECT_DIR$/dashboard/stylesheets/productdetail.css" />
@@ -164,6 +192,7 @@
         <option value="$PROJECT_DIR$/dashboard/admin/xml/productname.xml" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/livesearch.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/addphoto.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/processor/doaddphoto.php" />
       </list>
     </option>
   </component>
@@ -327,7 +356,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124434000" />
+    <option name="totallyTimeSpent" value="125049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="644" y="0" width="1450" height="1047" extended-state="0" />
@@ -527,13 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doaddphoto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="45" lean-forward="true" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/stylesheets/productdetail.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -618,26 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-          <folding>
-            <element signature="n#getConnector#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#getShrub#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#getTreatment#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#closeConnection#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#getNote#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#validateUserAccount#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#getProductImages#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#getProductChild#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#insertProduct#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#insertPhoto#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#4258#4616#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/admin/xml/productname.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -652,14 +654,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="159" column="13" selection-start-line="159" selection-start-column="13" selection-end-line="159" selection-end-column="13" />
+          <folding>
+            <element signature="n#getConnector#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#getShrub#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#getTreatment#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#closeConnection#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#getNote#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#validateUserAccount#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#getProductImages#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#getProductChild#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#insertProduct#0;n#DatabaseConnector#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/admin/addphoto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="100" column="23" lean-forward="true" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
+        <state relative-caret-position="-779">
+          <caret line="59" column="51" lean-forward="true" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
           <folding>
             <element signature="e#4411#4417#1#HTML" expanded="true" />
             <element signature="e#4481#4487#1#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doaddphoto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
         </state>
       </provider>
     </entry>

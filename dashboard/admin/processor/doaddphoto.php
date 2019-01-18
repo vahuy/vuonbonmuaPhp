@@ -31,8 +31,8 @@
             }
         }
         $dbConnector->createConnection();
-        $dbConnector->insertPhoto($arrayPhotoObject);
-        $queryResult = $dbConnector->closeConnection();
+        $queryResult = $dbConnector->insertPhoto($arrayPhotoObject);
+        $dbConnector->closeConnection();
         if ($queryResult === QUERY_SUCCESS) {
             header('Location: /dashboard/admin/addproduct.php');
         } else {
