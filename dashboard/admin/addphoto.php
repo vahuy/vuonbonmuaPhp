@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="../stylesheets/reset.css" rel="stylesheet" type="text/css" />
     <link href="../stylesheets/vbm.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/admin.css" rel="stylesheet" type="text/css" />
 
     <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
 
@@ -41,7 +42,7 @@
             $track->addChild('id', "$id");
             $track->addChild('name', "$name");
         }
-        $xml->asXML('.\xml\productname.xml');
+        $xml->asXML(XML_PRODUCT_LOCATION);
     ?>
 <!--Handle input-->
     <script>
@@ -61,6 +62,7 @@
                 if (this.readyState===4 && this.status===200) {
                     document.getElementById("livesearch").innerHTML=this.responseText;
                     document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+                    document.getElementById("livesearch").style.display="block";
                 }
             };
             console.log(str);
@@ -74,7 +76,13 @@
 
             document.getElementById('productName').value = name.toString();
             document.getElementById('productId').value = id.toString();
+            document.getElementById("livesearch").style.display="none";
         }
+
+        function clearSearch() {
+            document.getElementById('searchField').value = null;
+        }
+
     </script>
 </head>
 
@@ -90,18 +98,20 @@
     <div class="hero">
         &nbsp;
     </div>
-    <div class="container">
+    <div class="container admin">
         <div class="row">
             <div class="col-md-12">
-                <h2>Tạo sản phẩm mới</h2>
+                <h2>Thêm hình sản phẩm</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8">
-                <form>
-                    <label>Nhập tên<input type="text" size="30" onkeyup="showResult(this.value)"></label>
-                    <div id="livesearch"></div>
-                </form>
+            <div class="live-search">
+                <div class="col-md-8">
+                    <form>
+                        <label>Nhập tên<input id="searchField" type="text" size="30" onblur="clearSearch()" onkeyup="showResult(this.value)"></label>
+                        <div id="livesearch"></div>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -111,7 +121,7 @@
                         <div class="col-md-6"><label>Tên sản phẩm<input id="productName" type="text" name="productName" required></label></div>
                         <div class="col-md-6"><label>Mã sản phẩm<input id="productId" type="text" name="productId" required></label></div>
                     </div><div class="row">
-                        <div class="col-md-6"><label>Link ảnh <textarea name="photo" rows="4" cols="70" placeholder="Describe yourself here...">&nbsp;</textarea></label></div>
+                        <div class="col-md-6 col-lg-6"><label>Link ảnh <textarea name="photo" rows="4" cols="70" placeholder="Describe yourself here...">&nbsp;</textarea></label></div>
                         <div class="col-md-6">&nbsp;</label></div>
                     </div>
 

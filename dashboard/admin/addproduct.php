@@ -15,6 +15,7 @@
     <link href="../stylesheets/reset.css" rel="stylesheet" type="text/css" />
     <link href="../stylesheets/vbm.css" rel="stylesheet" type="text/css" />
     <link href="../stylesheets/modal.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/admin.css" rel="stylesheet" type="text/css" />
 
     <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
 
@@ -74,7 +75,7 @@
     <div class="hero">
         &nbsp;
     </div>
-    <div class="container">
+    <div class="container admin">
         <div class="row">
             <div class="col-md-12">
                 <h2>Tạo sản phẩm mới</h2>

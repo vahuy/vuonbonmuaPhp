@@ -1,0 +1,7 @@
+.admin .live-search {
+    margin: 15px;
+}
+
+.admin label {
+    display: grid;
+}
