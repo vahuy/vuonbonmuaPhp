@@ -125,12 +125,154 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <?php
-                        echo "Tên: ".$result['name']."<br>";
-                        echo "Màu sắc: ".$result['color']."<br>";
-                        echo "Chi tiết: ".$result['description']."<br>";
-                        echo "Xuất xứ: ".$result['origin']."<br>";
-                    ?>
+                    <div class="rose-info">
+                        <div><h1><?php echo $result['name'] ?></h1></div>
+                        <div><h5>Giống: <?php echo $result['origin'] ?></h5></div>
+                        <p>
+                            <?php echo $result['description'] ?>
+                        </p>
+                        <p>IN STOCK status</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row rose-more-info">
+                <div class="col-md-12">
+                    <div class="tab-title">Thông tin thêm</div>
+<!--                    BEST SELLER-->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            Best Seller
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            Yes
+                        </div>
+                    </div>
+<!--                    SKU-->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            SKU
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            EN435 GALLON
+                        </div>
+                    </div>
+<!--                    Alternate Name(s)-->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            Alternate Name(s)
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            English Yellow, Graham Stuart Thomas
+                        </div>
+                    </div>
+                    <!-- Specifc ARS Score-->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            Specifc ARS Score
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            8.2
+                        </div>
+                    </div>
+<!--                    Bloom Type-->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            Kiểu cánh
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            Double
+                        </div>
+                    </div>
+<!--                    Breeder Code-->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            Breeder Code
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            AUSmas
+                        </div>
+                    </div>
+<!--                    Characteristics-->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            Characteristics
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            Breeder, Fragrance, Shade
+                        </div>
+                    </div>
+<!--                    Specific Color-->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            Specific Color
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            Deep yellow
+                        </div>
+                    </div>
+<!--                    Fragrance-->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            Fragrance
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            Moderately Fragrant
+                        </div>
+                    </div>
+<!--                    Hardiness Zone(s)-->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            Hardiness Zone(s)
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            5 (-20° to -10°), 6 (-10° to 0°), 7 (0° to 10°), 8 (10° to 20°), 9 (20° to 30°), 10 (30° to 40°)
+                        </div>
+                    </div>
+<!--                    Height-->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            Height
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            Between 5' - 6', Between 6' - 7'
+                        </div>
+                    </div>
+<!--                    Rebloom-->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            Rebloom
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            Repeat Blooming
+                        </div>
+                    </div>
+<!--                    Shade Tolerant-->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            Shade Tolerant
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            No
+                        </div>
+                    </div>
+<!--                    Width-->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            Width
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            Between 3' - 4'
+                        </div>
+                    </div>
+<!--                    Year-->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            Year
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            1983
+                        </div>
+                    </div>
                 </div>
             </div>
             <?php

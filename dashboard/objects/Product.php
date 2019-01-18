@@ -3,29 +3,12 @@ require_once('Util.php');
 class Product {
     private $id;
     private $name;
-    private $image;
     private $price;
-    private $shortDescription;
     private $type;
+    private $image;
+    private $shortDescription;
     private $description;
     private $origin;
-    private $color;
-
-    /**
-     * @return mixed
-     */
-    public function getColor()
-    {
-        return $this->color;
-    }
-
-    /**
-     * @param mixed $color
-     */
-    public function setColor($color)
-    {
-        $this->color = $color;
-    }
 
     /**
      * Product constructor.
@@ -38,7 +21,7 @@ class Product {
      * @param $description
      * @param $origin
      */
-    public function __construct($id, $name, $image, $price, $shortDescription, $type, $description, $origin, $color)
+    public function __construct($id, $name, $image, $price, $shortDescription, $type, $description, $origin)
     {
         $this->id = $id;
         $this->name = $name;
@@ -48,7 +31,6 @@ class Product {
         $this->type = $type;
         $this->description = $description;
         $this->origin = $origin;
-        $this->color = $color;
     }
 
     /**
@@ -187,7 +169,7 @@ class Product {
                 <a href='/dashboard/productdetail.php?id=$this->id'>
                     <img src=$this->image alt=$this->name>
                 </a>
-                <h1>$currency</h1>
+                <div class='color-red'><h1>$currency</h1></div>
                 <a href='/dashboard/productdetail.php?id=$this->id'>$this->name</a>
                 <p>$this->shortDescription</p>
             </div>";

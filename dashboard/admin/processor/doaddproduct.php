@@ -8,12 +8,11 @@
         $name = $_POST["name"];
         $type = $_POST["productType"];
         $price = $_POST["price"];
-        $color = $_POST["color"];
         $short_description = $_POST["short_description"];
         $description = $_POST["description"];
         $main_photo = $_POST["main_photo"];
         $origin = $_POST["origin"];
-        $product = new Product(null, $name, $main_photo, $price, $short_description, $type, $description, $origin, $color);
+        $product = new Product(null, $name, $main_photo, $price, $short_description, $type, $description, $origin);
         $product->setId(spl_object_hash($product));
         $dbConnector->createConnection();
         $queryReqult = $dbConnector->insertProduct($product);

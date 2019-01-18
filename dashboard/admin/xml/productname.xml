@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xml>
+    <product>
+        <id>1</id>
+        <name>1 +1</name>
+    </product>
+    <product>
+        <id>2</id>
+        <name>2 +1</name>
+    </product>
+    <product>
+        <id>3</id>
+        <name>3 +1</name>
+    </product>
+    <product>
+        <id>4</id>
+        <name>4 +1</name>
+    </product>
+    <product>
+        <id>5</id>
+        <name>5 +1</name>
+    </product>
+    <product>
+        <id>6</id>
+        <name>6 +1</name>
+    </product>
+    <product>
+        <id>7</id>
+        <name>7 +1</name>
+    </product>
+    <product>
+        <id>8</id>
+        <name>8 +1</name>
+    </product>
+</xml>

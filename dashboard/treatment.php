@@ -69,7 +69,7 @@
                         $origin = $row['origin'];
                         $color = $row['color'];
 
-                        $item = new Product($id, $name, $image, $price, $shortDescription, $type, $description, $origin, $color);
+                        $item = new Product($id, $name, $image, $price, $shortDescription, $type, $description, $origin);
                         if ($products === null){
                             $products = array($item);
                         } else {

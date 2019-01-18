@@ -91,15 +91,14 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6"><label>Giá từ <input type="number" min="1000" step="1000" name="price"></label></div>
-                    <div class="col-md-6"><label>Màu <input type="text" name="color"></label></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6"><label>Mô tả ngắn <input type="text" name="short_description" required></label></div>
-                    <div class="col-md-6"><label>Mô tả <textarea name="description" rows="4" cols="70" placeholder="Describe yourself here...">&nbsp;</textarea></label></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6"><label>Hình chính <input type="text" name="main_photo"></label></div>
                     <div class="col-md-6"><label>Xuất xứ <input type="text" name="origin"></label></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><label>Mô tả ngắn <textarea name="short_description" required rows="4" cols="50" placeholder="Describe yourself here...">&nbsp;</textarea></label></div>
+                    <div class="col-md-6"><label>Mô tả <textarea name="description" rows="10" cols="50" placeholder="Describe yourself here...">&nbsp;</textarea></label></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12"><label>Hình chính <input type="text" name="main_photo"></label></div>
                 </div>
                 <div class="row">
                     <div class="col-md-6"><?php echo $component->renderButton('Reset','reset', 'reset',false) ?></div>

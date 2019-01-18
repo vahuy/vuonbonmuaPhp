@@ -20,10 +20,10 @@
     <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
 
     <?php
-        require './objects/DatabaseConnector.php';
-        require './objects/PageContainer.php';
-        require './objects/UserAccount.php';
-        require './objects/CONSTANT.php';
+        require_once './objects/DatabaseConnector.php';
+        require_once './objects/PageContainer.php';
+        require_once './objects/UserAccount.php';
+        require_once './objects/CONSTANT.php';
 
         $pageContainer = new PageContainer();
         $dbConnector = new DatabaseConnector();
@@ -48,7 +48,6 @@
 
             // Get the button that opens the modal
             const btn = document.getElementById("myBtn");
-            console.log('mybutton', btn);
 
             // Get the <span> element that closes the modal
             const span = document.getElementsByClassName("close")[0];

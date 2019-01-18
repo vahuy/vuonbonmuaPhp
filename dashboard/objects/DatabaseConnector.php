@@ -46,6 +46,26 @@ class DatabaseConnector
         $sql = "SELECT * FROM product";
         $result = $this->connector->query($sql);
 
+        $products = null;
+        while ($row = $result->fetch_assoc()) {
+            $id = $row['id'];
+            $name = $row['name'];
+            $image = $row['image'];
+            $price = $row['price'];
+            $shortDescription = $row['short_description'];
+            $type = $row['type'];
+            $description = $row['description'];
+            $origin = $row['origin'];
+
+            $item = new Product($id, $name, $image, $price, $shortDescription, $type, $description, $origin);
+            if ($products === null){
+                $products = array($item);
+            } else {
+                array_push($products, $item);
+            }
+            $item = null;
+        }
+
 //            if ($result->num_rows > 0) {
 //                echo "data found";
 //            } else {
@@ -129,10 +149,9 @@ class DatabaseConnector
         $type = $product->getType();
         $description = $product->getDescription();
         $origin = $product->getOrigin();
-        $color = $product->getColor();
 
-        $sql = "INSERT INTO product (id,name,color,description,short_description,image,price,type,origin)
-          VALUES ('$id','$name', '$color','$description','$shortDescription','$image','$price','$type','$origin')";
+        $sql = "INSERT INTO product (id,name,description,short_description,image,price,type,origin)
+          VALUES ('$id','$name','$description','$shortDescription','$image','$price','$type','$origin')";
         if (mysqli_query($this->connector, $sql)) {
             return QUERY_SUCCESS;
         } else {

@@ -24,6 +24,16 @@
     $component = new Component();
     session_start();
     ?>
+    <?php
+        $xml = new SimpleXMLElement('<xml/>');
+
+        for ($i = 1; $i <= 8; ++$i) {
+            $track = $xml->addChild('product');
+            $track->addChild('id', "$i");
+            $track->addChild('name', "$i +1");
+        }
+        $xml->asXML('.\xml\productname.xml');
+    ?>
 </head>
 
 <body class="index">
@@ -45,9 +55,13 @@
             </div>
             <form method="get" enctype="multipart/form-data" action="processor/doaddphoto.php">
                 <div class="row">
+                    <div class="col-md-6"><label>Tên sản phẩm<input type="text" name="productId" required></label></div>
                     <div class="col-md-6"><label>Mã sản phẩm<input type="text" name="productId" required></label></div>
-                    <div class="col-md-6"><label>Mô tả <textarea name="photo" rows="4" cols="70" placeholder="Describe yourself here...">&nbsp;</textarea></label></div>
+                </div><div class="row">
+                    <div class="col-md-6"><label>Link ảnh <textarea name="photo" rows="4" cols="70" placeholder="Describe yourself here...">&nbsp;</textarea></label></div>
+                    <div class="col-md-6">&nbsp;</label></div>
                 </div>
+
                 <div class="row">
                     <div class="col-md-6"><?php echo $component->renderButton('Reset','reset', 'reset',false) ?></div>
                     <div class="col-md-6"><?php echo $component->renderButton('Submit','submit', 'submit', false) ?></div>
