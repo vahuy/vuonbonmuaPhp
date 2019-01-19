@@ -95,8 +95,8 @@
                     <div class="col-md-6"><label>Xuất xứ <input type="text" name="origin"></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6"><label>Mô tả ngắn <textarea name="short_description" required rows="4" cols="50" placeholder="Describe yourself here...">&nbsp;</textarea></label></div>
-                    <div class="col-md-6"><label>Mô tả <textarea name="description" rows="10" cols="50" placeholder="Describe yourself here...">&nbsp;</textarea></label></div>
+                    <div class="col-md-6"><label>Mô tả ngắn <textarea name="short_description" required rows="4" cols="50" >&nbsp;</textarea></label></div>
+                    <div class="col-md-6"><label>Mô tả <textarea name="description" rows="10" cols="50" >&nbsp;</textarea></label></div>
                 </div>
                 <div class="row">
                     <div class="col-md-12"><label>Hình chính <input type="text" name="main_photo"></label></div>

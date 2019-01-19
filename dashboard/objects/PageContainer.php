@@ -89,7 +89,7 @@ class PageContainer {
                         <div class='col-md-2'><a href='/dashboard/homepage.php'>Trang chủ</a></div>
                         <div class='col-md-3'><a href='/dashboard/admin/addproduct.php'>Add Product</a></div>
                         <div class='col-md-3'><a href='/dashboard/admin/addphoto.php'>Add Photo</a></div>
-                        <div class='col-md-2'><a href='/dashboard/treatment.php'>Thuốc hữu cơ</a></div>
+                        <div class='col-md-2'><a href='/dashboard/admin/addproductmoreinfo.php'>Add more info</a></div>
                         $button
                     </div>
                 </div>

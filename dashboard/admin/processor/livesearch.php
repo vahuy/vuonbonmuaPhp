@@ -19,16 +19,17 @@ if (strlen($q)>0) {
     for($i=0; $i<($x->length); $i++) {
         $y=$x->item($i)->getElementsByTagName('name');
         $z=$x->item($i)->getElementsByTagName('id');
-
+        $p=$x->item($i)->getElementsByTagName('image');
         if ($y->item(0)->nodeType==1) {
             //find a link matching the search text
             $id = $z->item(0)->childNodes->item(0)->nodeValue;
             $target = $y->item(0)->childNodes->item(0)->nodeValue;
+            $image = $p->item(0)->childNodes->item(0)->nodeValue;
             if (stristr($target,$q)) {
                 if ($hint=="") {
-                    $hint="<p onclick='setProduct(this)' href='".$id ."' target='$target'>".$target . "</p>";
+                    $hint="<p onclick='setProduct(this)' image='".$image ."' href='".$id ."' target='$target'>".$target . "</p>";
                 } else {
-                    $hint=$hint . "<p onclick='setProduct(this)' href='".$id ."' target='$target'>".$target."</p>";
+                    $hint=$hint . "<p onclick='setProduct(this)' image='".$image ."' href='".$id ."' target='$target'>".$target."</p>";
                 }
             }
         }

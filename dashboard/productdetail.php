@@ -51,6 +51,7 @@
             $result = $dbConnector->getProductDetail($id);
             $images = $dbConnector->getProductImages($id);
             $productChild = $dbConnector->getProductChild($id);
+            $productMoreInfo = $dbConnector->getProductMoreInfo($id);
             $dbConnector->closeConnection();
             $productType = null;
         ?>
@@ -144,7 +145,7 @@
                             Best Seller
                         </div>
                         <div class="col-md-9 col-sm-9">
-                            Yes
+                            <?php echo $productMoreInfo->getBestSeller() ?>
                         </div>
                     </div>
 <!--                    SKU-->
@@ -153,7 +154,7 @@
                             SKU
                         </div>
                         <div class="col-md-9 col-sm-9">
-                            EN435 GALLON
+                            <?php echo $productMoreInfo->getSku() ?>
                         </div>
                     </div>
 <!--                    Alternate Name(s)-->
@@ -162,7 +163,7 @@
                             Alternate Name(s)
                         </div>
                         <div class="col-md-9 col-sm-9">
-                            English Yellow, Graham Stuart Thomas
+                            <?php echo $productMoreInfo->getAlternateName() ?>
                         </div>
                     </div>
                     <!-- Specifc ARS Score-->
@@ -171,7 +172,7 @@
                             Specifc ARS Score
                         </div>
                         <div class="col-md-9 col-sm-9">
-                            8.2
+                            <?php echo $productMoreInfo->getSpecificArsScore() ?>
                         </div>
                     </div>
 <!--                    Bloom Type-->
@@ -180,7 +181,7 @@
                             Kiểu cánh
                         </div>
                         <div class="col-md-9 col-sm-9">
-                            Double
+                            <?php echo $productMoreInfo->getBloomType() ?>
                         </div>
                     </div>
 <!--                    Breeder Code-->
@@ -189,7 +190,7 @@
                             Breeder Code
                         </div>
                         <div class="col-md-9 col-sm-9">
-                            AUSmas
+                            <?php echo $productMoreInfo->getBreederCode() ?>
                         </div>
                     </div>
 <!--                    Characteristics-->
@@ -198,7 +199,7 @@
                             Characteristics
                         </div>
                         <div class="col-md-9 col-sm-9">
-                            Breeder, Fragrance, Shade
+                            <?php echo $productMoreInfo->getCharacteristic() ?>
                         </div>
                     </div>
 <!--                    Specific Color-->
@@ -207,7 +208,7 @@
                             Specific Color
                         </div>
                         <div class="col-md-9 col-sm-9">
-                            Deep yellow
+                            <?php echo $productMoreInfo->getSpecificColor() ?>
                         </div>
                     </div>
 <!--                    Fragrance-->
@@ -216,7 +217,7 @@
                             Fragrance
                         </div>
                         <div class="col-md-9 col-sm-9">
-                            Moderately Fragrant
+                            <?php echo $productMoreInfo->getFragrance() ?>
                         </div>
                     </div>
 <!--                    Hardiness Zone(s)-->
@@ -225,7 +226,7 @@
                             Hardiness Zone(s)
                         </div>
                         <div class="col-md-9 col-sm-9">
-                            5 (-20° to -10°), 6 (-10° to 0°), 7 (0° to 10°), 8 (10° to 20°), 9 (20° to 30°), 10 (30° to 40°)
+                            <?php echo $productMoreInfo->getHardinessZone() ?>
                         </div>
                     </div>
 <!--                    Height-->
@@ -234,7 +235,7 @@
                             Height
                         </div>
                         <div class="col-md-9 col-sm-9">
-                            Between 5' - 6', Between 6' - 7'
+                            <?php echo $productMoreInfo->getHeight() ?>
                         </div>
                     </div>
 <!--                    Rebloom-->
@@ -243,7 +244,7 @@
                             Rebloom
                         </div>
                         <div class="col-md-9 col-sm-9">
-                            Repeat Blooming
+                            <?php echo $productMoreInfo->getRebloom() ?>
                         </div>
                     </div>
 <!--                    Shade Tolerant-->
@@ -252,7 +253,7 @@
                             Shade Tolerant
                         </div>
                         <div class="col-md-9 col-sm-9">
-                            No
+                            <?php echo $productMoreInfo->getShadeTolerant() ?>
                         </div>
                     </div>
 <!--                    Width-->
@@ -261,7 +262,7 @@
                             Width
                         </div>
                         <div class="col-md-9 col-sm-9">
-                            Between 3' - 4'
+                            <?php echo $productMoreInfo->getWidth() ?>
                         </div>
                     </div>
 <!--                    Year-->
@@ -270,7 +271,7 @@
                             Year
                         </div>
                         <div class="col-md-9 col-sm-9">
-                            1983
+                            <?php echo $productMoreInfo->getYear() ?>
                         </div>
                     </div>
                 </div>

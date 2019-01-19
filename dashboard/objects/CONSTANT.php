@@ -16,5 +16,7 @@ define("LABEL_HINH_CHINH", "Hình chính");
 define("LABEL_XUAT_XU", "Xuất xứ");
 $PRODUCT_TYPE=array("climbing","shrub","treatment");
 $PRODUCT_TYPE_NAME=array("Hồng leo","Hồng bụi","Thuốc hữu cơ");
+$OPTION_YES_NO=array("yes","no");
+$OPTION_YES_NO_NAME=array("Yes","No");
 define("QUERY_SUCCESS", "1");
 define("XML_PRODUCT_LOCATION", ".\xml\productname.xml");

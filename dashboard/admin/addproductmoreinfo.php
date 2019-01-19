@@ -22,6 +22,7 @@
     require '../objects/PageContainer.php';
     require_once '../objects/Component.php';
     require_once '../objects/DatabaseConnector.php';
+    require_once '../objects/CONSTANT.php';
 
     $dbConnector = new DatabaseConnector();
     $pageContainer = new PageContainer();
@@ -33,6 +34,7 @@
         $products = $dbConnector->getAllProduct();
         $dbConnector->closeConnection();
         $numOfProduct =  count($products);
+        echo "numofproduct $numOfProduct";
 
         $xmlDoc=new DOMDocument();
         $xmlDoc->load(".\xml\productname.xml");
@@ -44,11 +46,9 @@
             for ($i = 0; $i < $numOfProduct; ++$i) {
                 $id = $products[$i]->getId();
                 $name = $products[$i]->getName();
-                $image = $products[$i]->getImage();
                 $track = $xml->addChild('product');
                 $track->addChild('id', "$id");
                 $track->addChild('name', "$name");
-                $track->addChild('image', "$image");
             }
             $xml->asXML(XML_PRODUCT_LOCATION);
         }
@@ -112,13 +112,13 @@
     <div class="container admin add-photo">
         <div class="row">
             <div class="col-md-12">
-                <h2>Thêm hình sản phẩm</h2>
+                <h2>Thêm chi tiết sản phẩm</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="main-photo">
-                    <img id="mainphoto" src="">
+                    <img id="mainphoto" src="" alt="">
                 </div>
             </div>
         </div>
@@ -134,15 +134,43 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <form method="get" enctype="multipart/form-data" action="processor/doaddphoto.php">
+                <form method="get" enctype="multipart/form-data" action="processor/doaddproductmoreinfo.php">
                     <div class="row">
                         <div class="col-md-6"><label>Tên sản phẩm<input id="productName" type="text" name="productName" required></label></div>
                         <div class="col-md-6"><label>Mã sản phẩm<input id="productId" type="text" name="productId" required></label></div>
-                    </div><div class="row">
-                        <div class="col-md-6 col-lg-6"><label>Link ảnh <textarea name="photo" rows="4" cols="70" >&nbsp;</textarea></label></div>
-                        <div class="col-md-6">&nbsp;</label></div>
                     </div>
-
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6"><label>Best Seller<?php $component->renderOption('bestSeller',false, $OPTION_YES_NO, $OPTION_YES_NO_NAME) ?></label></div>
+                        <div class="col-md-6"><label>SKU<input type="text" id="sku" name="sku"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6"><label>Alternate Name<input type="text" id="alternateName" name="alternateName"></label></div>
+                        <div class="col-md-6"><label>Specifc ARS Score<input type="text" id="specificArsScore" name="specificArsScore"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6"><label>Bloom Type<input type="text" id="bloomType" name="bloomType"></label></div>
+                        <div class="col-md-6"><label>Breed Code<input type="text" id="breederCode" name="breederCode"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6"><label>Characteristics<input type="text" id="characteristic" name="characteristic" ></label></div>
+                        <div class="col-md-6"><label>Specific Color<input type="text" name="specificColor" id="specificColor"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6"><label>Fragrance<input type="text" id="fragrance" name="fragrance" ></></label></div>
+                        <div class="col-md-6"><label>Height<input type="text" id="height" name="height" </label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6"><label>Patent #<input type="text" id="patent" name="patent" ></label></div>
+                        <div class="col-md-6"><label>Rebloom<input type="text" id="rebloom" name="rebloom"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6"><label>Shade Tolerant<?php $component->renderOption('shadeTolerant',false, $OPTION_YES_NO, $OPTION_YES_NO_NAME) ?></label></div>
+                        <div class="col-md-6"><label>Width<input type="text" id="width" name="width"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><label>Hardiness Zone<input type="text" id="hardinessZone" name="hardinessZone"></label></div>
+                        <div class="col-md-6 col-lg-6"><label>Year<input type="text" id="year" name="year" ></label></div>
+                    </div>
                     <div class="row">
                         <div class="col-md-6"><?php echo $component->renderButton('Reset','reset', 'reset',false) ?></div>
                         <div class="col-md-6"><?php echo $component->renderButton('Submit','submit', 'submit', false) ?></div>

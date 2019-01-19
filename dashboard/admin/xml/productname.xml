@@ -1,2 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<feed><product><id>0000000001b16b1d000000007e5dc11b</id><name>huy</name></product><product><id>000000003266cc9000000000615faede</id><name>@</name></product><product><id>0000000046bbd297000000003eb3bac1</id><name>test1</name></product><product><id>0001</id><name>Red Eden</name></product><product><id>0002</id><name>Claude Monet</name></product><product><id>0003</id><name>La Nina / Petit Trianon</name></product><product><id>0004</id><name>Cổ Sapa</name></product></feed>
+<feed>
+    <product>
+        <id>0001</id>
+        <name>Red Eden</name>
+        <image>https://i.ibb.co/tctWwfB/red-eden.jpg</image>
+    </product>
+    <product>
+        <id>0002</id>
+        <name>Claude Monet</name>
+        <image>https://i.ibb.co/Fs2RTqB/Claude-Monet.jpg</image>
+    </product>
+    <product>
+        <id>0003</id>
+        <name>La Nina / Petit Trianon</name>
+        <image>https://i.ibb.co/YyJshgM/lanina.jpg</image>
+    </product>
+    <product>
+        <id>0004</id>
+        <name>Cổ Sapa</name>
+        <image>https://i.ibb.co/GxGXpSQ/cosapa.jpg</image>
+    </product>
+    <product>
+        <id>0484491295</id>
+        <name>The Poet's Wife</name>
+        <image>https://i.ibb.co/NmTb1kT/poetwife.jpg</image>
+    </product>
+    <product>
+        <id>2140992474</id>
+        <name>Angela Floribunda</name>
+        <image>https://i.ibb.co/YdHtGjR/angela.jpg</image>
+    </product>
+    <product>
+        <id>8016534457</id>
+        <name>St Ethelbulga Rose</name>
+        <image>https://i.ibb.co/Jkgg11b/ethelburga.jpg</image>
+    </product>
+    <product>
+        <id>8775623032</id>
+        <name>Darlow's Enigma</name>
+        <image>https://i.ibb.co/cyR5WLm/Darlow.jpg</image>
+    </product>
+</feed>

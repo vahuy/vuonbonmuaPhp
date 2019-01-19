@@ -5,3 +5,11 @@
 .admin label {
     display: grid;
 }
+
+.add-photo .main-photo img {
+    width: 60%;
+}
+
+.add-photo .main-photo {
+    text-align: center;
+}

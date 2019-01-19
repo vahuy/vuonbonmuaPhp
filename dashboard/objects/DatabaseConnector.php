@@ -7,6 +7,7 @@
  * Time: 9:24 PM
  */
 require_once "Product.php";
+require_once "ProductMoreInfo.php";
 require_once "CONSTANT.php";
 
 class DatabaseConnector
@@ -19,10 +20,10 @@ class DatabaseConnector
             $password = "vuonbonmuatx22";
             $dbname = "vuonbonmua";
 
-//            $servername = "localhost";
-//            $username = "laz87900_huy";
-//            $password = "vuonbonmuatx22";
-//            $dbname = "laz87900_vuonbonmua";
+            $servername = "localhost";
+            $username = "laz87900_huy";
+            $password = "vuonbonmuatx22";
+            $dbname = "laz87900_vuonbonmua";
 
 
         // Create connection
@@ -137,6 +138,39 @@ class DatabaseConnector
         $result = $this->connector->query($sql);
         return $result;
     }
+
+    function getProductMoreInfo($productId) {
+        $sql = "SELECT * FROM product_more_info WHERE product_id='$productId'";
+        $result = $this->connector->query($sql);
+        $row = $result->fetch_assoc();
+
+        $id = $row['id'];
+        $product_id = $row['product_id'];
+        $best_seller = $row['best_seller'];
+        $sku = $row['sku'];
+        $alternate_name = $row['alternate_name'];
+        $specific_ars_score=$row['specific_ars_score'];
+        $bloom_type=$row['bloom_type'];
+        $breeder_code=$row['breeder_code'];
+        $characteristic=$row['characteristic'];
+        $specific_color=$row['specific_color'];
+        $fragrance=$row['fragrance'];
+        $hardiness_zone=$row['hardiness_zone'];
+        $height=$row['height'];
+        $patent=$row['patent'];
+        $rebloom=$row['rebloom'];
+        $shade_tolerant=$row['shade_tolerant'];
+        $width=$row['width'];
+        $year=$row['year'];
+
+        $productInfo = new ProductMoreInfo($id,$product_id,$best_seller,$sku,$alternate_name,$specific_ars_score,
+            $bloom_type, $breeder_code, $characteristic,$specific_color,$fragrance,$hardiness_zone,$height,
+            $patent,$rebloom,$shade_tolerant,$width,$year);
+
+        return $productInfo;
+
+    }
+
 //        SQL INSERT QUERY
     function insertProduct(Product $product) {
         $id = $product->getId();
@@ -170,7 +204,6 @@ class DatabaseConnector
             }
             $sql=rtrim($sql,',');
         }
-        echo $sql;
         if (mysqli_query($this->connector, $sql)) {
             echo "New record created successfully";
             return QUERY_SUCCESS;
@@ -178,4 +211,66 @@ class DatabaseConnector
             return "Error: " . $sql . "<br>" . mysqli_error($this->connector);
         }
     }
+
+    function insertProductMoreInfo(ProductMoreInfo $info) {
+        $id = $info->getId();
+        $product_id = $info->getProductId();
+        $best_seller = $info->getBestSeller();
+        $sku = $info->getSku();
+        $alternate_name = $info->getAlternateName();
+        $specific_ars_score=$info->getSpecificArsScore();
+        $bloom_type=$info->getBloomType();
+        $breeder_code=$info->getBreederCode();
+        $characteristic=$info->getCharacteristic();
+        $specific_color=$info->getSpecificColor();
+        $fragrance=$info->getFragrance();
+        $hardiness_zone=$info->getHardinessZone();
+        $height=$info->getHeight();
+        $patent=$info->getPatent();
+        $rebloom=$info->getRebloom();
+        $shade_tolerant=$info->getShadeTolerant();
+        $width=$info->getWidth();
+        $year=$info->getYear();
+
+        $sqlsearch = "SELECT * FROM product_more_info WHERE product_id = '$product_id'";
+        $result = $this->connector->query($sqlsearch);
+
+        $bloom_type = $bloom_type === 'yes' ? true : false;
+        $best_seller = $best_seller === 'yes' ? true : false;
+        if ($result->num_rows > 0) {
+            //update
+            $sql = "UPDATE product_more_info
+                SET 
+                    best_seller = '$best_seller',
+                    sku = '$sku',
+                    alternate_name = '$alternate_name',
+                    specific_ars_score= '$specific_ars_score',
+                    bloom_type = '$bloom_type',
+                    breeder_code = '$breeder_code',
+                    characteristic = '$characteristic',
+                    specific_color = '$specific_color',
+                    fragrance = '$fragrance',
+                    hardiness_zone = '$hardiness_zone',
+                    height = '$height',
+                    patent = '$patent',
+                    rebloom = '$rebloom',
+                    shade_tolerant = '$shade_tolerant',
+                    width = '$width',
+                    year = '$year'
+                WHERE product_id = '$product_id';
+            ";
+        } else {
+            //insert
+            $sql = "INSERT INTO product_more_info (id, product_id, best_seller, sku, alternate_name, specific_ars_score, bloom_type, breeder_code, characteristic, specific_color, fragrance, hardiness_zone, height, patent, rebloom, shade_tolerant, width, year)
+                    VALUE ('$id','$product_id','$best_seller','$sku','$alternate_name','$specific_ars_score','$bloom_type','$breeder_code','$characteristic','$specific_color','$fragrance','$hardiness_zone','$height','$patent','$rebloom','$shade_tolerant','$width','$year')
+                ";
+        }
+        if (mysqli_query($this->connector, $sql)) {
+            echo "New record created successfully";
+            return QUERY_SUCCESS;
+        } else {
+            return "Error: " . $sql . "<br>" . mysqli_error($this->connector);
+        }
+    }
+
 }
