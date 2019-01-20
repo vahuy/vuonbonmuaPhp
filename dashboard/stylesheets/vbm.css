@@ -19,8 +19,9 @@
 .header-navigation {
 	position: relative;
 	display: inline-flex;
-	margin: 20px 20px;
+    padding: 20px;
 	width: 100%;
+    background: rgb(42, 93, 132);
 }
 
 .header-navigation .row div, .header-navigation .row div a {
