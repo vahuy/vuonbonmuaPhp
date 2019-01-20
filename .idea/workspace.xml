@@ -50,44 +50,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dashboard/admin/addproductmoreinfo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="827">
-              <caret line="138" column="143" lean-forward="true" selection-start-line="138" selection-start-column="143" selection-end-line="138" selection-end-column="143" />
-              <folding>
-                <element signature="e#1517#1522#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="238" column="61" lean-forward="true" selection-start-line="238" selection-start-column="61" selection-end-line="238" selection-end-column="61" />
-              <folding>
-                <element signature="n#getConnector#0;n#DatabaseConnector#0;n#!!top" />
-                <element signature="n#getAllProduct#0;n#DatabaseConnector#0;n#!!top" />
-                <element signature="n#getProductDetail#0;n#DatabaseConnector#0;n#!!top" />
-                <element signature="n#getClimbing#0;n#DatabaseConnector#0;n#!!top" />
-                <element signature="n#getShrub#0;n#DatabaseConnector#0;n#!!top" />
-                <element signature="n#getTreatment#0;n#DatabaseConnector#0;n#!!top" />
-                <element signature="n#closeConnection#0;n#DatabaseConnector#0;n#!!top" />
-                <element signature="n#getNote#0;n#DatabaseConnector#0;n#!!top" />
-                <element signature="n#insertProduct#0;n#DatabaseConnector#0;n#!!top" />
-                <element signature="n#insertPhoto#0;n#DatabaseConnector#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doaddproductmoreinfo.php">
+        <entry file="file://$PROJECT_DIR$/dashboard/admin/addproduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+            <state relative-caret-position="357">
+              <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -104,16 +71,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>p</find>
-      <find>place</find>
-      <find>placeholder=&quot;Describe yourself here...&quot;</find>
-      <find>GET[&quot;$</find>
-      <find>$shadeToleran</find>
-      <find>hardinessZone</find>
-      <find>.&quot;&lt;br&gt;&quot;</find>
-      <find>reederCode</find>
-      <find>has</find>
-      <find>header</find>
       <find>fra</find>
       <find>get</find>
       <find>THÊM</find>
@@ -134,6 +91,16 @@
       <find>renderOption</find>
       <find>characeristic</find>
       <find>num_rows</find>
+      <find>SESSION</find>
+      <find>isset</find>
+      <find>header</find>
+      <find>$_SE</find>
+      <find>l</find>
+      <find>đăng xuất</find>
+      <find>require_once (&quot;../objects/CONSTANT.php&quot;);</find>
+      <find>num</find>
+      <find>LABEL_TEN</find>
+      <find>print_</find>
     </findStrings>
     <replaceStrings>
       <replace>.</replace>
@@ -155,8 +122,9 @@
       <dir>D:\xampp\htdocs\dashboard</dir>
       <dir>D:\xampp\htdocs</dir>
       <dir>C:\xampp\htdocs\dashboard\admin\processor</dir>
-      <dir>C:\xampp\htdocs\dashboard</dir>
       <dir>C:\xampp\htdocs\dashboard\objects</dir>
+      <dir>C:\xampp\htdocs\dashboard\admin</dir>
+      <dir>C:\xampp\htdocs\dashboard</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -184,25 +152,26 @@
         <option value="$PROJECT_DIR$/dashboard/stylesheets/productdetail.css" />
         <option value="$PROJECT_DIR$/dashboard/treatment.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/doaddproduct.php" />
-        <option value="$PROJECT_DIR$/dashboard/homepage.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/Product.php" />
         <option value="$PROJECT_DIR$/dashboard/stylesheets/reset.css" />
         <option value="$PROJECT_DIR$/dashboard/climbing.php" />
         <option value="$PROJECT_DIR$/dashboard/shrub.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/doaddphoto.php" />
         <option value="$PROJECT_DIR$/dashboard/stylesheets/vbm.css" />
-        <option value="$PROJECT_DIR$/dashboard/objects/PageContainer.php" />
-        <option value="$PROJECT_DIR$/dashboard/admin/addproduct.php" />
-        <option value="$PROJECT_DIR$/dashboard/objects/ProductMoreInfo.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/xml/productname.xml" />
-        <option value="$PROJECT_DIR$/dashboard/admin/processor/livesearch.php" />
         <option value="$PROJECT_DIR$/dashboard/stylesheets/admin.css" />
-        <option value="$PROJECT_DIR$/dashboard/admin/addphoto.php" />
         <option value="$PROJECT_DIR$/dashboard/productdetail.php" />
-        <option value="$PROJECT_DIR$/dashboard/objects/CONSTANT.php" />
-        <option value="$PROJECT_DIR$/dashboard/admin/addproductmoreinfo.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/doaddproductmoreinfo.php" />
+        <option value="$PROJECT_DIR$/dashboard/objects/ProductMoreInfo.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/processor/livesearch.php" />
+        <option value="$PROJECT_DIR$/dashboard/homepage.php" />
+        <option value="$PROJECT_DIR$/dashboard/objects/PageContainer.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/processor/login.php" />
+        <option value="$PROJECT_DIR$/dashboard/objects/CONSTANT.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/addphoto.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/addproductmoreinfo.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/addproduct.php" />
       </list>
     </option>
   </component>
@@ -249,14 +218,46 @@
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
               <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="processor" type="462c0819:PsiDirectoryNode" />
+              <item name="objects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
               <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="objects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="processor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -326,16 +327,20 @@
       <workItem from="1547651393686" duration="432000" />
       <workItem from="1547890527284" duration="5632000" />
       <workItem from="1547896371536" duration="2063000" />
+      <workItem from="1547910558209" duration="33000" />
+      <workItem from="1547910844426" duration="1045000" />
+      <workItem from="1547977457015" duration="3017000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139499000" />
+    <option name="totallyTimeSpent" value="143594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="326" y="0" width="1118" height="920" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2410208" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25519848" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -501,13 +506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/homepage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="86" column="50" lean-forward="true" selection-start-line="86" selection-start-column="50" selection-end-line="86" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/stylesheets/reset.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -552,47 +550,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/admin/xml/addproductmoreinfo.php" />
-    <entry file="file://$PROJECT_DIR$/dashboard/objects/PageContainer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="76" column="31" lean-forward="true" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
-          <folding>
-            <element signature="n#renderFooter#0;n#PageContainer#0;n#!!top" />
-            <element signature="n#renderHeader#0;n#PageContainer#0;n#!!top" />
-            <element signature="n#renderHeaderWithLogin#0;n#PageContainer#0;n#!!top" />
-            <element signature="n#renderModal#0;n#PageContainer#0;n#!!top" />
-            <element signature="e#157#164#1" expanded="true" />
-            <element signature="n#renderModalLogin#0;n#PageContainer#0;n#!!top" />
-            <element signature="e#166#173#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doaddproduct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="64" lean-forward="true" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/objects/Product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doaddphoto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/livesearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -610,31 +571,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/addproduct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="99" column="6" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/addphoto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="111" column="41" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/stylesheets/productdetail.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/objects/ProductMoreInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="63" column="240" selection-start-line="63" selection-start-column="234" selection-end-line="63" selection-end-column="240" />
         </state>
       </provider>
     </entry>
@@ -652,27 +592,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/objects/CONSTANT.php">
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doaddproductmoreinfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="19" selection-start-line="19" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="714">
+          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/addproductmoreinfo.php">
+    <entry file="file://$PROJECT_DIR$/dashboard/objects/ProductMoreInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="827">
-          <caret line="138" column="143" lean-forward="true" selection-start-line="138" selection-start-column="143" selection-end-line="138" selection-end-column="143" />
-          <folding>
-            <element signature="e#1517#1522#0#PHP" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="324" column="5" lean-forward="true" selection-start-line="324" selection-start-column="5" selection-end-line="324" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/livesearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doaddphoto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doaddproduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="64" lean-forward="true" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/homepage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="76" column="14" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="238" column="61" lean-forward="true" selection-start-line="238" selection-start-column="61" selection-end-line="238" selection-end-column="61" />
+        <state relative-caret-position="254">
+          <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
           <folding>
             <element signature="n#getConnector#0;n#DatabaseConnector#0;n#!!top" />
             <element signature="n#getAllProduct#0;n#DatabaseConnector#0;n#!!top" />
@@ -688,10 +653,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doaddproductmoreinfo.php">
+    <entry file="file://$PROJECT_DIR$/dashboard/objects/PageContainer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+        <state relative-caret-position="204">
+          <caret line="56" column="81" selection-start-line="56" selection-start-column="74" selection-end-line="56" selection-end-column="81" />
+          <folding>
+            <element signature="n#renderFooter#0;n#PageContainer#0;n#!!top" />
+            <element signature="n#renderHeader#0;n#PageContainer#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/objects/CONSTANT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/addproductmoreinfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="44" column="34" lean-forward="true" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/addphoto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/addproduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
         </state>
       </provider>
     </entry>

@@ -75,22 +75,6 @@
         <div class="hero">
             &nbsp;
         </div>
-        <?php
-            if (!empty($_POST["name"]) && !empty($_POST["password"])) {
-                $dbConnector->createConnection();
-                $user = $dbConnector->validateUserAccount($_POST["name"], $_POST["password"]);
-                $dbConnector->closeConnection();
-                $type = $user['type'];
-                $name = $user['name'];
-                if (!empty($user)) {
-                    $_SESSION["userType"] = $type;
-                    $_SESSION["userName"] = $name;
-                    $_SESSION["isLogged"] = true;
-                } else {
-                    echo "0 results";
-                }
-            }
-        ?>
         <div class="container">
             <article>
                 <div class="row">

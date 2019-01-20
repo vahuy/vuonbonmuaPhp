@@ -21,7 +21,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $id
      */
-    public function setId($id): void
+    public function setId($id)
     {
         $this->id = $id;
     }
@@ -95,7 +95,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $productId
      */
-    public function setProductId($productId): void
+    public function setProductId($productId)
     {
         $this->productId = $productId;
     }
@@ -111,7 +111,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $bestSeller
      */
-    public function setBestSeller($bestSeller): void
+    public function setBestSeller($bestSeller)
     {
         $this->bestSeller = $bestSeller;
     }
@@ -127,7 +127,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $sku
      */
-    public function setSku($sku): void
+    public function setSku($sku)
     {
         $this->sku = $sku;
     }
@@ -143,7 +143,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $alternateName
      */
-    public function setAlternateName($alternateName): void
+    public function setAlternateName($alternateName)
     {
         $this->alternateName = $alternateName;
     }
@@ -159,7 +159,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $specificArsScore
      */
-    public function setSpecificArsScore($specificArsScore): void
+    public function setSpecificArsScore($specificArsScore)
     {
         $this->specificArsScore = $specificArsScore;
     }
@@ -175,7 +175,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $bloomType
      */
-    public function setBloomType($bloomType): void
+    public function setBloomType($bloomType)
     {
         $this->bloomType = $bloomType;
     }
@@ -191,7 +191,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $breederCode
      */
-    public function setReederCode($breederCode): void
+    public function setReederCode($breederCode)
     {
         $this->breederCode = $breederCode;
     }
@@ -207,7 +207,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $characteristic
      */
-    public function setCharacteristic($characteristic): void
+    public function setCharacteristic($characteristic)
     {
         $this->characteristic = $characteristic;
     }
@@ -223,7 +223,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $specificColor
      */
-    public function setSpecificColor($specificColor): void
+    public function setSpecificColor($specificColor)
     {
         $this->specificColor = $specificColor;
     }
@@ -239,7 +239,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $fragrance
      */
-    public function setFragrance($fragrance): void
+    public function setFragrance($fragrance)
     {
         $this->fragrance = $fragrance;
     }
@@ -255,7 +255,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $hardinessZone
      */
-    public function setHardinessZone($hardinessZone): void
+    public function setHardinessZone($hardinessZone)
     {
         $this->hardinessZone = $hardinessZone;
     }
@@ -271,7 +271,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $height
      */
-    public function setHeight($height): void
+    public function setHeight($height)
     {
         $this->height = $height;
     }
@@ -287,7 +287,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $patent
      */
-    public function setPatent($patent): void
+    public function setPatent($patent)
     {
         $this->patent = $patent;
     }
@@ -303,7 +303,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $rebloom
      */
-    public function setRebloom($rebloom): void
+    public function setRebloom($rebloom)
     {
         $this->rebloom = $rebloom;
     }
@@ -319,7 +319,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $shadeTolerant
      */
-    public function setShadeTolerant($shadeTolerant): void
+    public function setShadeTolerant($shadeTolerant)
     {
         $this->shadeTolerant = $shadeTolerant;
     }
@@ -335,7 +335,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $width
      */
-    public function setWidth($width): void
+    public function setWidth($width)
     {
         $this->width = $width;
     }
@@ -351,7 +351,7 @@ class ProductMoreInfo {
     /**
      * @param mixed $year
      */
-    public function setYear($year): void
+    public function setYear($year)
     {
         $this->year = $year;
     }

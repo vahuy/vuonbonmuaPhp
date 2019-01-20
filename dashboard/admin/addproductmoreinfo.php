@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <?php
+    require_once ("../objects/CONSTANT.php");
+    session_start();
+    $userType = $_SESSION['userType'];
+    $userName = $_SESSION['userName'];
+    if (empty($_SESSION) || empty($userName) || $userType !== ADMIN) {
+        header('Location: /dashboard/homepage.php');
+    }
+    ?>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -22,19 +31,16 @@
     require '../objects/PageContainer.php';
     require_once '../objects/Component.php';
     require_once '../objects/DatabaseConnector.php';
-    require_once '../objects/CONSTANT.php';
 
     $dbConnector = new DatabaseConnector();
     $pageContainer = new PageContainer();
     $component = new Component();
-    session_start();
     ?>
     <?php
         $dbConnector->createConnection();
         $products = $dbConnector->getAllProduct();
         $dbConnector->closeConnection();
         $numOfProduct =  count($products);
-        echo "numofproduct $numOfProduct";
 
         $xmlDoc=new DOMDocument();
         $xmlDoc->load(".\xml\productname.xml");

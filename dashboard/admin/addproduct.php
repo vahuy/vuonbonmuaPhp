@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <?php
+    require_once ("../objects/CONSTANT.php");
+    session_start();
+    $userType = $_SESSION['userType'];
+    $userName = $_SESSION['userName'];
+    if (empty($_SESSION) || empty($userName) || $userType !== ADMIN) {
+        header('Location: /dashboard/homepage.php');
+    }
+    ?>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -21,11 +30,9 @@
 
     <?php
     require '../objects/PageContainer.php';
-    require '../objects/CONSTANT.php';
     require_once '../objects/Component.php';
     $pageContainer = new PageContainer();
     $component = new Component();
-    session_start();
     ?>
 
 </head>
@@ -33,11 +40,7 @@
 <body class="index">
 <div class="header">
     <?php
-    $isLogged = false;
-    if (!empty($_SESSION["isLogged"])) {
-        $isLogged = $_SESSION["isLogged"];
-    }
-    echo $pageContainer->renderAdminHeaderWithLogin($isLogged);
+    echo $pageContainer->renderAdminHeaderWithLogin(false);
     echo $pageContainer->renderModalLogin();
     ?>
     <script>
@@ -46,7 +49,6 @@
 
         // Get the button that opens the modal
         const btn = document.getElementById("myBtn");
-        console.log('mybutton', btn);
 
         // Get the <span> element that closes the modal
         const span = document.getElementsByClassName("close")[0];
@@ -80,11 +82,6 @@
             <div class="col-md-12">
                 <h2>Tạo sản phẩm mới</h2>
             </div>
-            <?php
-                if ($_SESSION["isLogged"]) {
-                    echo 'content';
-                }
-            ?>
             <form action="../admin/processor/doaddproduct.php" method="post">
                 <div class="row">
                     <div class="col-md-6"><label>Tên <input type="text" name="name" required></label></div>

@@ -7,7 +7,7 @@
  */
 $hint="";
 $xmlDoc=new DOMDocument();
-$xmlDoc->load("..\xml\productname.xml");
+$xmlDoc->load('../xml/productname.xml');
 
 $x=$xmlDoc->getElementsByTagName('product');
 

@@ -124,10 +124,10 @@ class PageContainer {
                 <span class='close'>&times;</span>
               </div>
               <div class='modal-body'>
-                <form action='/dashboard/admin/addproduct.php' method='post'>
+                <form action='/dashboard/admin/processor/login.php' method='post'>
                     Tên: <input type='text' name='name'><br>
                     Mật khẩu: <input type='password' name='password'><br>
-                    <input type='submit' value='Submit'>
+                    <input type='submit' name='submit' value='Submit'>
                 </form>
               </div>
             </div>
