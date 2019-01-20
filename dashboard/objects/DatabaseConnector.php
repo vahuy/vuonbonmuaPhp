@@ -182,8 +182,29 @@ class DatabaseConnector
         $description = $product->getDescription();
         $origin = $product->getOrigin();
 
-        $sql = "INSERT INTO product (id,name,description,short_description,image,price,type,origin)
+        $sqlsearch = "SELECT * FROM product WHERE id='$id'";
+
+        $result = $this->connector->query($sqlsearch);
+
+        if ($result->num_rows > 0) {
+            //update
+            $sql = "UPDATE product
+                SET 
+                    name = '$name',
+                    image = '$image',
+                    price = '$price',
+                    short_description = '$shortDescription',
+                    type = '$type',
+                    description = '$description',
+                    origin = '$origin'
+                WHERE id='$id';
+            ";
+        } else {
+//          insert
+            $sql = "INSERT INTO product (id,name,description,short_description,image,price,type,origin)
           VALUES ('$id','$name','$description','$shortDescription','$image','$price','$type','$origin')";
+        }
+
         if (mysqli_query($this->connector, $sql)) {
             return QUERY_SUCCESS;
         } else {

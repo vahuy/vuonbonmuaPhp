@@ -51,10 +51,96 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="199" column="31" lean-forward="true" selection-start-line="199" selection-start-column="31" selection-end-line="199" selection-end-column="31" />
+              <folding>
+                <element signature="e#6#107#0#PHP" />
+                <element signature="n#createConnection#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="e#640#992#0#PHP" />
+                <element signature="e#837#945#0#PHP" />
+                <element signature="n#getConnector#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="n#getAllProduct#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="e#0#21#2" />
+                <element signature="e#1241#1902#0#PHP" />
+                <element signature="e#1719#1866#0#PHP" />
+                <element signature="e#1800#1866#0#PHP" />
+                <element signature="e#1911#2018#0#PHP" />
+                <element signature="e#1977#2018#0#PHP" />
+                <element signature="n#getProductDetail#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="e#0#39#2" />
+                <element signature="e#2174#2297#0#PHP" />
+                <element signature="e#2256#2297#0#PHP" />
+                <element signature="n#getClimbing#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="e#0#43#2" />
+                <element signature="n#getShrub#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="e#0#40#2" />
+                <element signature="n#getTreatment#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="e#0#44#2" />
+                <element signature="e#2814#2878#0#PHP" />
+                <element signature="n#closeConnection#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="n#getNote#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="e#0#44#2" />
+                <element signature="n#validateUserAccount#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="e#0#76#2" />
+                <element signature="e#3436#3559#0#PHP" />
+                <element signature="e#3518#3559#0#PHP" />
+                <element signature="n#getProductImages#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="e#0#52#2" />
+                <element signature="n#getProductChild#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="e#0#60#2" />
+                <element signature="n#getProductMoreInfo#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="e#0#64#2" />
+                <element signature="n#insertPhoto#0;n#DatabaseConnector#0;n#!!top" />
+                <element signature="e#0#45#1" />
+                <element signature="e#6172#6530#0#PHP" />
+                <element signature="e#6211#6486#0#PHP" />
+                <element signature="e#6539#6774#0#PHP" />
+                <element signature="e#6679#6774#0#PHP" />
+                <element signature="e#0#67#2" />
+                <element signature="e#0#913#0" />
+                <element signature="e#0#566#0" />
+                <element signature="e#9453#9688#0#PHP" />
+                <element signature="e#9593#9688#0#PHP" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashboard/admin/addproduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+            <state relative-caret-position="119">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
+              <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" />
+                <element signature="e#44#49#0#PHP" />
+                <element signature="e#199#324#0#PHP" />
+                <element signature="e#1586#1591#0#PHP" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#1820#1825#0#PHP" />
+                <element signature="n#script#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#2355#2439#0#HTML" />
+                <element signature="e#2539#2592#0#HTML" />
+                <element signature="e#2708#2821#0#HTML" />
+                <element signature="e#2750#2811#0#HTML" />
+                <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#form#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#form#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#3346#3351#0#PHP" />
+                <element signature="n#div#1;n#form#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#form#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#form#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#4;n#form#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#4365#4370#0#PHP" />
+                <element signature="e#4484#4489#0#PHP" />
+                <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#4667#4672#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,7 +157,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fra</find>
       <find>get</find>
       <find>THÊM</find>
       <find>image</find>
@@ -101,6 +186,7 @@
       <find>num</find>
       <find>LABEL_TEN</find>
       <find>print_</find>
+      <find>$sql</find>
     </findStrings>
     <replaceStrings>
       <replace>.</replace>
@@ -161,7 +247,6 @@
         <option value="$PROJECT_DIR$/dashboard/admin/xml/productname.xml" />
         <option value="$PROJECT_DIR$/dashboard/stylesheets/admin.css" />
         <option value="$PROJECT_DIR$/dashboard/productdetail.php" />
-        <option value="$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/doaddproductmoreinfo.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/ProductMoreInfo.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/livesearch.php" />
@@ -172,6 +257,7 @@
         <option value="$PROJECT_DIR$/dashboard/admin/addphoto.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/addproductmoreinfo.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/addproduct.php" />
+        <option value="$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php" />
       </list>
     </option>
   </component>
@@ -201,63 +287,33 @@
           <expand>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
               <item name="dashboard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
               <item name="dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="objects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="processor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -329,12 +385,12 @@
       <workItem from="1547896371536" duration="2063000" />
       <workItem from="1547910558209" duration="33000" />
       <workItem from="1547910844426" duration="1045000" />
-      <workItem from="1547977457015" duration="3017000" />
+      <workItem from="1547977457015" duration="4659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143594000" />
+    <option name="totallyTimeSpent" value="145236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="326" y="0" width="1118" height="920" extended-state="0" />
@@ -634,25 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
-          <folding>
-            <element signature="n#getConnector#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#getAllProduct#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#getProductDetail#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#getClimbing#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#getShrub#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#getTreatment#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#closeConnection#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#getNote#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#insertProduct#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#insertPhoto#0;n#DatabaseConnector#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/objects/PageContainer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -694,8 +731,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/admin/addproduct.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+        <state relative-caret-position="119">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="e#44#49#0#PHP" />
+            <element signature="e#199#324#0#PHP" />
+            <element signature="e#1586#1591#0#PHP" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#1820#1825#0#PHP" />
+            <element signature="n#script#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#2355#2439#0#HTML" />
+            <element signature="e#2539#2592#0#HTML" />
+            <element signature="e#2708#2821#0#HTML" />
+            <element signature="e#2750#2811#0#HTML" />
+            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#form#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#form#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#3346#3351#0#PHP" />
+            <element signature="n#div#1;n#form#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#form#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#form#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#form#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#4365#4370#0#PHP" />
+            <element signature="e#4484#4489#0#PHP" />
+            <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#4667#4672#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="199" column="31" lean-forward="true" selection-start-line="199" selection-start-column="31" selection-end-line="199" selection-end-column="31" />
+          <folding>
+            <element signature="e#6#107#0#PHP" />
+            <element signature="n#createConnection#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#640#992#0#PHP" />
+            <element signature="e#837#945#0#PHP" />
+            <element signature="n#getConnector#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#getAllProduct#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#0#21#2" />
+            <element signature="e#1241#1902#0#PHP" />
+            <element signature="e#1719#1866#0#PHP" />
+            <element signature="e#1800#1866#0#PHP" />
+            <element signature="e#1911#2018#0#PHP" />
+            <element signature="e#1977#2018#0#PHP" />
+            <element signature="n#getProductDetail#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#0#39#2" />
+            <element signature="e#2174#2297#0#PHP" />
+            <element signature="e#2256#2297#0#PHP" />
+            <element signature="n#getClimbing#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#0#43#2" />
+            <element signature="n#getShrub#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#0#40#2" />
+            <element signature="n#getTreatment#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#0#44#2" />
+            <element signature="e#2814#2878#0#PHP" />
+            <element signature="n#closeConnection#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#getNote#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#0#44#2" />
+            <element signature="n#validateUserAccount#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#0#76#2" />
+            <element signature="e#3436#3559#0#PHP" />
+            <element signature="e#3518#3559#0#PHP" />
+            <element signature="n#getProductImages#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#0#52#2" />
+            <element signature="n#getProductChild#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#0#60#2" />
+            <element signature="n#getProductMoreInfo#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#0#64#2" />
+            <element signature="n#insertPhoto#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#0#45#1" />
+            <element signature="e#6172#6530#0#PHP" />
+            <element signature="e#6211#6486#0#PHP" />
+            <element signature="e#6539#6774#0#PHP" />
+            <element signature="e#6679#6774#0#PHP" />
+            <element signature="e#0#67#2" />
+            <element signature="e#0#913#0" />
+            <element signature="e#0#566#0" />
+            <element signature="e#9453#9688#0#PHP" />
+            <element signature="e#9593#9688#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>
