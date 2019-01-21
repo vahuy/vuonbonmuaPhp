@@ -106,8 +106,11 @@
 <body class="index">
 <div class="header">
     <?php
-        $isLogged = false;
-        echo $pageContainer->renderAdminHeaderWithLogin($isLogged);
+    $isLogged = false;
+    if (!empty($_SESSION["isLogged"])) {
+        $isLogged = $_SESSION["isLogged"];
+    }
+    echo $pageContainer->renderAdminHeaderWithLogin($isLogged);
     ?>
 </div>
 

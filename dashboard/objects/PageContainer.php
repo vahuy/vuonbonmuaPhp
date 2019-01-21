@@ -50,11 +50,16 @@ class PageContainer {
 
     function renderHeaderWithLogin($isLogged) {
         if ($isLogged===true) {
-            $action = 'Đăng xuất';
+            $button = "
+                <div class='col-md-2'>
+                    <form method='post'>
+                        <button type='submit' name='logout' id='logout' formaction='/dashboard/admin/processor/login.php'>Đăng xuất</button>
+                    </form>
+                </div>
+                ";
         } else {
-            $action = 'Đăng nhập';
+            $button = "<div class='col-md-2'><button type='submit' id='login'>Đăng nhập</button></div>";
         }
-        $button = "<div class='col-md-2'><button type='button' id='myBtn'>$action</button></div>";
         return "
             <div class='top-bar'>
             <div class='top-bar-section'>
@@ -75,11 +80,16 @@ class PageContainer {
 
     function renderAdminHeaderWithLogin($isLogged) {
         if ($isLogged===true) {
-            $action = 'Đăng xuất';
+            $button = "
+                <div class='col-md-2'>
+                    <form method='post'>
+                        <button type='submit' name='logout' id='logout' formaction='/dashboard/admin/processor/login.php'>Đăng xuất</button>
+                    </form>
+                </div>
+                ";
         } else {
-            $action = 'Đăng nhập';
+            $button = "<div class='col-md-2'><button type='submit' id='login'>Đăng nhập</button></div>";
         }
-        $button = "<div class='col-md-2'><button type='button' id='myBtn'>$action</button></div>";
         return "
             <div class='top-bar'>
             <div class='top-bar-section'>

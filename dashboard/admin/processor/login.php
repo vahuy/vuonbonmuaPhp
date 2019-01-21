@@ -6,23 +6,30 @@
  * Time: 4:57 PM
  */
 require_once ("../../objects/DatabaseConnector.php");
-$name = $_POST["name"];
-$password = $_POST["password"];
+session_start();
 if (isset($_POST["submit"])) {
+    $name = $_POST["name"];
+    $password = $_POST["password"];
+
     $dbConnector = new DatabaseConnector();
     $dbConnector->createConnection();
+
     $password = base64_encode($password);
     $result = $dbConnector->validateUserAccount($name,$password);
     $dbConnector->closeConnection();
-    if ($result===null) {
-        header('Location: /dashboard/homepage.php');
-    } else {
-        session_start();
+
+    if ($result!==null) {
         $_SESSION["userType"] = $result['type'];
         $_SESSION["userName"] = $result['name'];
         $_SESSION["isLogged"] = true;
         header('Location: /dashboard/admin/addproduct.php');
+        echo "to admin";
+        return;
     }
-} else {
-    header('Location: /dashboard/homepage.php');
 }
+if (isset($_POST["logout"])) {
+    session_unset();
+    // destroy the session
+    session_destroy();
+}
+header('Location: /dashboard/homepage.php');

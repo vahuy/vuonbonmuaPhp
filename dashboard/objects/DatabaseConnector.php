@@ -20,10 +20,10 @@ class DatabaseConnector
             $password = "vuonbonmuatx22";
             $dbname = "vuonbonmua";
 
-            $servername = "localhost";
-            $username = "laz87900_huy";
-            $password = "vuonbonmuatx22";
-            $dbname = "laz87900_vuonbonmua";
+//            $servername = "localhost";
+//            $username = "laz87900_huy";
+//            $password = "vuonbonmuatx22";
+//            $dbname = "laz87900_vuonbonmua";
 
 
         // Create connection

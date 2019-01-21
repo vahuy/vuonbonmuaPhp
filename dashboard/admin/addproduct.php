@@ -40,8 +40,11 @@
 <body class="index">
 <div class="header">
     <?php
-    echo $pageContainer->renderAdminHeaderWithLogin(false);
-    echo $pageContainer->renderModalLogin();
+    $isLogged = false;
+    if (!empty($_SESSION["isLogged"])) {
+        $isLogged = $_SESSION["isLogged"];
+    }
+    echo $pageContainer->renderAdminHeaderWithLogin($isLogged);
     ?>
     <script>
         // Get the modal
