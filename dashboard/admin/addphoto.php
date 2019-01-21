@@ -49,17 +49,7 @@
 
         if($numOfProduct !== $x->length) {
             //create xml file
-            $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8" '.' standalone="yes"?><feed/>');
-            for ($i = 0; $i < $numOfProduct; ++$i) {
-                $id = $products[$i]->getId();
-                $name = $products[$i]->getName();
-                $image = $products[$i]->getImage();
-                $track = $xml->addChild('product');
-                $track->addChild('id', "$id");
-                $track->addChild('name', "$name");
-                $track->addChild('image', "$image");
-            }
-            $xml->asXML(XML_PRODUCT_LOCATION);
+            $dbConnector->createXMPProductList($products, XML_PRODUCT_LOCATION);
         }
     ?>
 <!--Handle input-->

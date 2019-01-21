@@ -294,4 +294,20 @@ class DatabaseConnector
         }
     }
 
+    function createXMPProductList($products, $location) {
+        $numOfProduct = count($products);
+        $xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8" '.' standalone="yes"?><feed/>');
+        for ($i = 0; $i < $numOfProduct; ++$i) {
+            $id = $products[$i]->getId();
+            $name = $products[$i]->getName();
+            $image = $products[$i]->getImage();
+            $image = empty($image) ? "#" : $image;
+            $track = $xml->addChild('product');
+            $track->addChild('id', "$id");
+            $track->addChild('name', "$name");
+            $track->addChild('image', "$image");
+        }
+        $xml->asXML($location);
+    }
+
 }

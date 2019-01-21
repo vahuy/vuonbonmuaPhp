@@ -47,32 +47,37 @@
     echo $pageContainer->renderAdminHeaderWithLogin($isLogged);
     ?>
     <script>
-        // Get the modal
-        const modal = document.getElementById('myModal');
-
-        // Get the button that opens the modal
-        const btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        const span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on the button, open the modal
-        btn.onclick = function() {
-            console.log(btn);
-            modal.style.display = "block";
-        };
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        };
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
+        function showResult(str) {
+            if (str.length===0) {
+                document.getElementById("livesearch").innerHTML="";
+                document.getElementById("livesearch").style.border="0px";
+                return;
             }
+            if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            } else {  // code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function() {
+                if (this.readyState===4 && this.status===200) {
+                    document.getElementById("livesearch").innerHTML=this.responseText;
+                    document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+                    document.getElementById("livesearch").style.display="block";
+                }
+            };
+            xmlhttp.open("GET","./processor/livesearch.php?q="+str,true);
+            xmlhttp.send();
         }
+
+        function setProduct(object) {
+           document.getElementById("livesearch").style.display="none";
+        }
+
+        function clearSearch() {
+            document.getElementById('searchField').value = null;
+        }
+
     </script>
 </div>
 
@@ -85,21 +90,32 @@
             <div class="col-md-12">
                 <h2>Tạo sản phẩm mới</h2>
             </div>
+            <div class="row">
+                <div class="live-search">
+                    <div class="col-md-8">
+                        <form>
+                            <label>Nhập tên<input id="searchField" type="text" size="30" onblur="clearSearch()" onkeyup="showResult(this.value)"></label>
+                            <div id="livesearch"></div>
+                            <button type="submit">Load product</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <form action="../admin/processor/doaddproduct.php" method="post">
                 <div class="row">
                     <div class="col-md-6"><label>Tên <input type="text" name="name" required></label></div>
                     <div class="col-md-6"><label>Loại <?php echo $component->renderOption('productType', false, $PRODUCT_TYPE, $PRODUCT_TYPE_NAME) ?></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6"><label>Giá từ <input type="number" min="1000" step="1000" name="price"></label></div>
-                    <div class="col-md-6"><label>Xuất xứ <input type="text" name="origin"></label></div>
+                    <div class="col-md-6"><label>Giá từ <input type="number" id="price" min="1000" step="1000" name="price"></label></div>
+                    <div class="col-md-6"><label>Xuất xứ <input type="text" id="origin" name="origin"></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6"><label>Mô tả ngắn <textarea name="short_description" required rows="4" cols="50" >&nbsp;</textarea></label></div>
-                    <div class="col-md-6"><label>Mô tả <textarea name="description" rows="10" cols="50" >&nbsp;</textarea></label></div>
+                    <div class="col-md-6"><label>Mô tả ngắn <textarea id="shortDescription" name="short_description" required rows="4" cols="50" >&nbsp;</textarea></label></div>
+                    <div class="col-md-6"><label>Mô tả <textarea id="description" name="description" rows="10" cols="50" >&nbsp;</textarea></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12"><label>Hình chính <input type="text" name="main_photo"></label></div>
+                    <div class="col-md-12"><label>Hình chính <input type="text" id="mainphoto" name="main_photo"></label></div>
                 </div>
                 <div class="row">
                     <div class="col-md-6"><?php echo $component->renderButton('Reset','reset', 'reset',false) ?></div>
