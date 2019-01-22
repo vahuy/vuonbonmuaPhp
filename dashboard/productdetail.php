@@ -71,7 +71,7 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="main-photo">
-                            <div class="col">
+                            <div class="col-md-12">
                                 <?php
                                     $name = $result['name'];
                                     $image = $result['image'];
@@ -136,146 +136,148 @@
                     </div>
                 </div>
             </div>
-            <div class="row rose-more-info">
-                <div class="col-md-12">
-                    <div class="tab-title">Thông tin thêm</div>
+            <?php echo (!empty($productMoreInfo) ?
+             "<div class='row rose-more-info'>
+                <div class='col-md-12'>
+                    <div class='tab-title'>Thông tin thêm</div>
 <!--                    BEST SELLER-->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3">
+                    <div class='row'>
+                        <div class='col-md-3 col-sm-3'>
                             Best Seller
                         </div>
-                        <div class="col-md-9 col-sm-9">
-                            <?php echo $productMoreInfo->getBestSeller() ?>
-                        </div>
+                        <div class='col-md-9 col-sm-9'>".
+                            $productMoreInfo->getBestSeller()
+                        ."</div>
                     </div>
 <!--                    SKU-->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3">
+                    <div class='row'>
+                        <div class='col-md-3 col-sm-3'>
                             SKU
                         </div>
-                        <div class="col-md-9 col-sm-9">
-                            <?php echo $productMoreInfo->getSku() ?>
-                        </div>
+                        <div class='col-md-9 col-sm-9'>".
+                            $productMoreInfo->getSku()
+                        ."</div>
                     </div>
 <!--                    Alternate Name(s)-->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3">
+                    <div class='row'>
+                        <div class='col-md-3 col-sm-3'>
                             Alternate Name(s)
                         </div>
-                        <div class="col-md-9 col-sm-9">
-                            <?php echo $productMoreInfo->getAlternateName() ?>
-                        </div>
+                        <div class='col-md-9 col-sm-9'>".
+                            $productMoreInfo->getAlternateName()
+                        ."</div>
                     </div>
                     <!-- Specifc ARS Score-->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3">
+                    <div class='row'>
+                        <div class='col-md-3 col-sm-3'>
                             Specifc ARS Score
                         </div>
-                        <div class="col-md-9 col-sm-9">
-                            <?php echo $productMoreInfo->getSpecificArsScore() ?>
-                        </div>
+                        <div class='col-md-9 col-sm-9'>".
+                            $productMoreInfo->getSpecificArsScore()
+                        ."</div>
                     </div>
 <!--                    Bloom Type-->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3">
+                    <div class='row'>
+                        <div class='col-md-3 col-sm-3'>
                             Kiểu cánh
                         </div>
-                        <div class="col-md-9 col-sm-9">
-                            <?php echo $productMoreInfo->getBloomType() ?>
-                        </div>
+                        <div class='col-md-9 col-sm-9'>".
+                            $productMoreInfo->getBloomType()
+                        ."</div>
                     </div>
 <!--                    Breeder Code-->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3">
+                    <div class='row'>
+                        <div class='col-md-3 col-sm-3'>
                             Breeder Code
                         </div>
-                        <div class="col-md-9 col-sm-9">
-                            <?php echo $productMoreInfo->getBreederCode() ?>
-                        </div>
+                        <div class='col-md-9 col-sm-9'>".
+                            $productMoreInfo->getBreederCode()
+                        ."</div>
                     </div>
 <!--                    Characteristics-->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3">
+                    <div class='row'>
+                        <div class='col-md-3 col-sm-3'>
                             Characteristics
                         </div>
-                        <div class="col-md-9 col-sm-9">
-                            <?php echo $productMoreInfo->getCharacteristic() ?>
-                        </div>
+                        <div class='col-md-9 col-sm-9'>".
+                            $productMoreInfo->getCharacteristic()
+                        ."</div>
                     </div>
 <!--                    Specific Color-->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3">
+                    <div class='row'>
+                        <div class='col-md-3 col-sm-3'>
                             Specific Color
                         </div>
-                        <div class="col-md-9 col-sm-9">
-                            <?php echo $productMoreInfo->getSpecificColor() ?>
-                        </div>
+                        <div class='col-md-9 col-sm-9'>".
+                            $productMoreInfo->getSpecificColor()
+                        ."</div>
                     </div>
 <!--                    Fragrance-->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3">
+                    <div class='row'>
+                        <div class='col-md-3 col-sm-3'>
                             Fragrance
                         </div>
-                        <div class="col-md-9 col-sm-9">
-                            <?php echo $productMoreInfo->getFragrance() ?>
-                        </div>
+                        <div class='col-md-9 col-sm-9'>".
+                            $productMoreInfo->getFragrance()
+                        ."</div>
                     </div>
 <!--                    Hardiness Zone(s)-->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3">
+                    <div class='row'>
+                        <div class='col-md-3 col-sm-3'>
                             Hardiness Zone(s)
                         </div>
-                        <div class="col-md-9 col-sm-9">
-                            <?php echo $productMoreInfo->getHardinessZone() ?>
-                        </div>
+                        <div class='col-md-9 col-sm-9'>".
+                            $productMoreInfo->getHardinessZone()
+                        ."</div>
                     </div>
 <!--                    Height-->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3">
+                    <div class='row'>
+                        <div class='col-md-3 col-sm-3'>
                             Height
                         </div>
-                        <div class="col-md-9 col-sm-9">
-                            <?php echo $productMoreInfo->getHeight() ?>
-                        </div>
+                        <div class='col-md-9 col-sm-9'>".
+                            $productMoreInfo->getHeight()
+                        ."</div>
                     </div>
 <!--                    Rebloom-->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3">
+                    <div class='row'>
+                        <div class='col-md-3 col-sm-3'>
                             Rebloom
                         </div>
-                        <div class="col-md-9 col-sm-9">
-                            <?php echo $productMoreInfo->getRebloom() ?>
-                        </div>
+                        <div class='col-md-9 col-sm-9'>".
+                            $productMoreInfo->getRebloom()
+                        ."</div>
                     </div>
 <!--                    Shade Tolerant-->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3">
+                    <div class='row'>
+                        <div class='col-md-3 col-sm-3'>
                             Shade Tolerant
                         </div>
-                        <div class="col-md-9 col-sm-9">
-                            <?php echo $productMoreInfo->getShadeTolerant() ?>
-                        </div>
+                        <div class='col-md-9 col-sm-9'>".
+                            $productMoreInfo->getShadeTolerant()
+                        ."</div>
                     </div>
 <!--                    Width-->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3">
+                    <div class='row'>
+                        <div class='col-md-3 col-sm-3'>
                             Width
                         </div>
-                        <div class="col-md-9 col-sm-9">
-                            <?php echo $productMoreInfo->getWidth() ?>
-                        </div>
+                        <div class='col-md-9 col-sm-9'>".
+                            $productMoreInfo->getWidth()
+                        ."</div>
                     </div>
 <!--                    Year-->
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3">
+                    <div class='row'>
+                        <div class='col-md-3 col-sm-3'>
                             Year
                         </div>
-                        <div class="col-md-9 col-sm-9">
-                            <?php echo $productMoreInfo->getYear() ?>
-                        </div>
+                        <div class='col-md-9 col-sm-9'>".
+                            $productMoreInfo->getYear()
+                        ."</div>
                     </div>
                 </div>
-            </div>
+            </div>":"")
+            ?>
             <?php
                 if ($productType !== 'treatment') {
                     echo "

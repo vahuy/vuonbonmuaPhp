@@ -166,11 +166,13 @@ class Product {
         $currency = UTIL::formatCurrency($this->price);
         return "
             <div class='col-sm-6 col-md-4 col-lg-3'>
-                <a href='/dashboard/productdetail.php?id=$this->id'>
-                    <img src=$this->image alt=$this->name>
-                </a>
-                <div class='color-red'><h1>$currency</h1></div>
-                <a href='/dashboard/productdetail.php?id=$this->id'>$this->name</a>
+                <div class='product-image'>
+                    <a href='/dashboard/productdetail.php?id=$this->id'>
+                        <img src=$this->image alt=$this->name>
+                    </a>
+                </div>
+                <div class='product-price color-red'><h1>$currency</h1></div>
+                <div class='product-name'><a href='/dashboard/productdetail.php?id=$this->id'><h5>$this->name</h5></a></div>
                 <p>$this->shortDescription</p>
             </div>";
     }

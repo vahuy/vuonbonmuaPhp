@@ -18,15 +18,16 @@
 .modal-content {
     position: fixed;
     right: 5%;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     animation-name: animatetop;
     animation-duration: 0.4s;
     width: 222px;
     display: none;
+    z-index: 1;
+}
+
+.modal-content button {
+    width: 100%;
 }
 
 /* Add Animation */

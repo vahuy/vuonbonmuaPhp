@@ -84,7 +84,7 @@ class Image {
 
     public function generateHtmlWithTag($image, $name) {
         return "
-            <div class='col-md-2 col-xs-2 col-sm-2'>
+            <div class='col-md-2 col-xs-2 col-sm-12'>
                 <a onclick=changeMainPhoto('$image')>
                     <img src='$image' alt='$name'>
                 </a>

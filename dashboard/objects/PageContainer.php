@@ -137,7 +137,7 @@ class PageContainer {
                 <form action='/dashboard/admin/processor/login.php' method='post'>
                     Tên: <input type='text' name='name'><br>
                     Mật khẩu: <input type='password' name='password'><br>
-                    <input type='submit' name='submit' value='Submit'>
+                    <button type='submit' id='submit' name='submit'>Submit</button>
                 </form>
               </div>
             </div>

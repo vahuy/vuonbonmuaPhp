@@ -26,6 +26,7 @@
 
 .header-navigation .row div, .header-navigation .row div a {
     padding: 0;
+    text-align: center;
 }
 
 .header-navigation a {
@@ -33,11 +34,6 @@
     text-transform: uppercase;
     padding: 0 30px;
     text-decoration-line: none;
-}
-
-.container {
-    margin: 30px 15px;
-    max-width: 100%;
 }
 
 .container h2 {
@@ -61,9 +57,24 @@
     color: red;
 }
 
+.product-price {
+    margin-top: 5px
+}
+
+.product-list .product-image {
+    margin: 15px 0;
+}
 .container .product-name div p {
     font-weight: 200;
     font-size: 22px;
+}
+
+.product-list .product-name {
+    margin: 5px 0;
+}
+
+.product-list .product-name a:hover {
+    text-decoration: none;
 }
 
 /* Style all font awesome icons */

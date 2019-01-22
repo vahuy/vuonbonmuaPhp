@@ -7,10 +7,6 @@
     display: contents;
 }
 
-.col-md-2 {
-    padding: 5px;
-}
-
 .product-detail .rose-info h1 {
     font-family: "Roboto Slab",georgia,serif;
     color: rgb(51, 51, 51);
@@ -20,8 +16,8 @@
     line-height: 44px;
 }
 
-.rose-info {
-
+.sub-photo div {
+    margin: 15px 0;
 }
 
 .product-detail .rose-more-info .row div:first-child {
