@@ -71,7 +71,11 @@
         }
 
         function setProduct(object) {
-           document.getElementById("livesearch").style.display="none";
+            const id = object.getAttribute("href");
+            const name = object.getAttribute("target");
+            document.getElementById("livesearch").style.display="none";
+            document.getElementById('productName').value = name.toString();
+            document.getElementById('productId').value = id.toString();
         }
 
         function clearSearch() {
@@ -88,20 +92,29 @@
     <div class="container admin">
         <div class="row">
             <div class="col-md-12">
-                <h2>Tạo sản phẩm mới</h2>
+                <h2>Tìm sản phẩm</h2>
             </div>
-            <div class="row">
-                <div class="live-search">
-                    <div class="col-md-8">
-                        <form>
+            <form action="updateProduct.php" method="get">
+                <div class="row">
+                    <div class="col-md-6">
                             <label>Nhập tên<input id="searchField" type="text" size="30" onblur="clearSearch()" onkeyup="showResult(this.value)"></label>
                             <div id="livesearch"></div>
-                            <button type="submit">Load product</button>
-                        </form>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-6"><label>Tên sản phẩm<input id="productName" type="text" name="productName" required disabled></label></div>
+                    <div class="col-md-6"><label>Mã sản phẩm<input id="productId" type="text" name="productId" required></label></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="submit" name="gotoUpdate">Load product</button>
+                    </div>
+                </div>
+            </form>
+            <div class="col-md-12">
+                <h2>Tạo sản phẩm mới</h2>
             </div>
-            <form action="../admin/processor/doaddproduct.php" method="post">
+            <form action="/processor/doaddproduct.php" method="post">
                 <div class="row">
                     <div class="col-md-6"><label>Tên <input type="text" name="name" required></label></div>
                     <div class="col-md-6"><label>Loại <?php echo $component->renderOption('productType', false, $PRODUCT_TYPE, $PRODUCT_TYPE_NAME) ?></label></div>
@@ -122,6 +135,9 @@
                     <div class="col-md-6"><?php echo $component->renderButton('Submit','submit', 'submit', false) ?></div>
                 </div>
             </form>
+            <div class="col-md-12">
+                <h2>Danh sách sản phẩm</h2>
+            </div>
         </div>
     </div>
     <div class="footer">

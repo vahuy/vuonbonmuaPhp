@@ -140,11 +140,11 @@
                     <div class="row">
                         <div class="col-md-6"><label>Tên sản phẩm<input id="productName" type="text" name="productName" required></label></div>
                         <div class="col-md-6"><label>Mã sản phẩm<input id="productId" type="text" name="productId" required></label></div>
-                    </div><div class="row">
+                    </div>
+                    <div class="row">
                         <div class="col-md-6 col-lg-6"><label>Link ảnh <textarea name="photo" rows="4" cols="70" >&nbsp;</textarea></label></div>
                         <div class="col-md-6">&nbsp;</label></div>
                     </div>
-
                     <div class="row">
                         <div class="col-md-6"><?php echo $component->renderButton('Reset','reset', 'reset',false) ?></div>
                         <div class="col-md-6"><?php echo $component->renderButton('Submit','submit', 'submit', false) ?></div>
