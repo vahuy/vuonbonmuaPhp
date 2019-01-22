@@ -152,6 +152,21 @@
                 </form>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Danh sách hình</h2>
+            </div>
+        </div>
+        <div>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="">
+                </div><div class="col-md-6">
+                    <button>delete</button>
+                </div>
+
+            </div>
+        </div>
     </div>
     <div class="footer">
         <?php
