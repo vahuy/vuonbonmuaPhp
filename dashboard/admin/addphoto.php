@@ -132,7 +132,6 @@
     echo $pageContainer->renderAdminHeaderWithLogin($isLogged);
     ?>
 </div>
-
 <div class="wrapper">
     <div class="hero">
         &nbsp;

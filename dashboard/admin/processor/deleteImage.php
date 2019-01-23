@@ -16,17 +16,20 @@ if (empty($_SESSION) || empty($userName)) {
 
 
 $id = ($_GET['id']);
-$productId = ($_GET['productId']);
+$productId = ($_GET['product']);
 
 if (!empty($id)) {
-    $dbConnector = new DatabaseConnector();
-    $dbConnector->createConnection();
-    $result = $dbConnector->deleteById(TABLE_IMAGE,$id);
-    if($result === QUERY_SUCCESS) {
-        header('Location:/dashboard/admin/addphoto.php?productId=');
-    } else {
-        echo $result;
-    }
-
-    $dbConnector->closeConnection();
+    echo "product id $id";
+    $url = 'Location:/dashboard/admin/manageProductImage.php?productId='.$productId;
+    header($url);
+//    $dbConnector = new DatabaseConnector();
+//    $dbConnector->createConnection();
+//    $result = $dbConnector->deleteById(TABLE_IMAGE,$id);
+//    if($result === QUERY_SUCCESS) {
+//        header('Location:/dashboard/admin/addphoto.php?productId=');
+//    } else {
+//        echo $result;
+//    }
+//
+//    $dbConnector->closeConnection();
 }

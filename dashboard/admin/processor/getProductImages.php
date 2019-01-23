@@ -42,11 +42,11 @@ echo "<table>
 while ($row = $images->fetch_assoc()) {
     $id = $row['id'];
     $src = $row['src'];
-    $productId = $row['id'];
+    $productId = $row['product_id'];
     echo "<tr>";
     echo "<td><img src="."'$src'" ."alt='Smiley face' height='42' width='42'></td>";
     echo "<td>$id</td>";
-    echo "<td><a href='./processor/deleteImage.php?id=$id'>X</a></td>";
+    echo "<td><a href='./processor/deleteImage.php?id=$id&product=$productId'>X</a></td>";
     echo "</tr>";
 }
 echo "</table>";
