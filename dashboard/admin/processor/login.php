@@ -5,6 +5,14 @@
  * Date: 1/20/2019
  * Time: 4:57 PM
  */
+
+session_start();
+$userType = $_SESSION['userType'];
+$userName = $_SESSION['userName'];
+if (empty($_SESSION) || empty($userName)) {
+    header('Location: /dashboard/homepage.php');
+}
+
 require_once ("../../objects/DatabaseConnector.php");
 session_start();
 if (isset($_POST["submit"])) {

@@ -87,12 +87,38 @@
             document.getElementById('productId').value = id.toString();
             document.getElementById("livesearch").style.display="none";
             document.getElementById('mainphoto').src = mainPhoto;
+            getImageList(id);
         }
 
         function clearSearch() {
             document.getElementById('searchField').value = null;
         }
 
+    </script>
+<!--    get image list-->
+    <script>
+        function getImageList(str) {
+            if (str === "") {
+                document.getElementById("txtHint").innerHTML = "empty";
+                return;
+            } else {
+                console.log("get list");
+                if (window.XMLHttpRequest) {
+                    // code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                } else {
+                    // code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState === 4 && this.status === 200) {
+                        document.getElementById("txtHint").innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("GET","./processor/getProductImages.php?id="+str,true);
+                xmlhttp.send();
+            }
+        }
     </script>
 </head>
 
@@ -154,17 +180,12 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h2>Danh sách hình</h2>
+                <h2>Quản lý hình</h2>
             </div>
         </div>
-        <div>
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="">
-                </div><div class="col-md-6">
-                    <button>delete</button>
-                </div>
-
+        <div class="row">
+            <div class="col-md-12">
+                <div id="txtHint"><b>Images info will be listed here...</b></div>
             </div>
         </div>
     </div>

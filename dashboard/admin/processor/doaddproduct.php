@@ -1,4 +1,12 @@
+
 <?php
+
+session_start();
+$userType = $_SESSION['userType'];
+$userName = $_SESSION['userName'];
+if (empty($_SESSION) || empty($userName)) {
+    header('Location: /dashboard/homepage.php');
+}
     require_once ("../../objects/Product.php");
     require_once ("../../objects/DatabaseConnector.php");
     require_once ("../../objects/CONSTANT.php");

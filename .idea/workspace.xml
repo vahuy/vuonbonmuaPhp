@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php" line="313" />
+    <bookmark url="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php" line="322" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5b4505b-2b1f-4943-8570-1ea6dd8330a6" name="Default Changelist" comment="" />
@@ -26,7 +26,35 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/deleteImage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dashboard/admin/addphoto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="121" column="13" lean-forward="true" selection-start-line="121" selection-start-column="13" selection-end-line="121" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/getProductImages.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="48" column="57" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,10 +66,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>session_un</find>
-      <find>echo</find>
-      <find>btn.onclick</find>
-      <find>myBtn</find>
       <find>login</find>
       <find>set</find>
       <find>header-navigation</find>
@@ -58,30 +82,35 @@
       <find>sub-photo</find>
       <find>.modal-content</find>
       <find>modal-content</find>
-      <find>\&quot;</find>
       <find>setPr</find>
       <find>Load</find>
       <find>?productId</find>
-      <find>header</find>
       <find>Load pro</find>
       <find>;</find>
       <find>price</find>
       <find>id</find>
       <find>print</find>
+      <find>num_rows</find>
+      <find>$images</find>
+      <find>\&quot;</find>
+      <find>header</find>
+      <find>deleteImage</find>
+      <find>showUser</find>
     </findStrings>
     <replaceStrings>
       <replace>.</replace>
       <replace>$pageContainer</replace>
-      <replace>'</replace>
       <replace>= [''];</replace>
       <replace>= $product[''];</replace>
+      <replace>'</replace>
+      <replace>getImageList</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\xampp\htdocs\dashboard\objects</dir>
       <dir>D:\xampp\htdocs\dashboard\stylesheets</dir>
       <dir>D:\xampp\htdocs\dashboard.modal-content</dir>
-      <dir>D:\xampp\htdocs</dir>
       <dir>D:\xampp\htdocs\dashboard</dir>
+      <dir>D:\xampp\htdocs</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -103,17 +132,14 @@
         <option value="$PROJECT_DIR$/dashboard/objects/Util.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/UTIL.php" />
         <option value="$PROJECT_DIR$/dashboard/treatment.php" />
-        <option value="$PROJECT_DIR$/dashboard/objects/CONSTANT.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/ProductChild.php" />
         <option value="$PROJECT_DIR$/dashboard/climbing.php" />
         <option value="$PROJECT_DIR$/dashboard/shrub.php" />
         <option value="$PROJECT_DIR$/dashboard/homepage.php" />
-        <option value="$PROJECT_DIR$/dashboard/admin/processor/login.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/livesearch.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/xml/productname.xml" />
         <option value="$PROJECT_DIR$/dashboard/admin/addproductmoreinfo.php" />
         <option value="$PROJECT_DIR$/dashboard/index.html" />
-        <option value="$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/Product.php" />
         <option value="$PROJECT_DIR$/dashboard/stylesheets/vbm.css" />
         <option value="$PROJECT_DIR$/dashboard/objects/Image.php" />
@@ -121,12 +147,19 @@
         <option value="$PROJECT_DIR$/dashboard/stylesheets/productdetail.css" />
         <option value="$PROJECT_DIR$/dashboard/objects/PageContainer.php" />
         <option value="$PROJECT_DIR$/dashboard/stylesheets/modal.css" />
-        <option value="$PROJECT_DIR$/dashboard/admin/addphoto.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/updateProduct.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/Component.php" />
-        <option value="$PROJECT_DIR$/dashboard/admin/processor/doaddproduct.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/updateProduct.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/addproduct.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/processor/doaddphoto.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/processor/doaddproduct.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/processor/doaddproductmoreinfo.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/processor/login.php" />
+        <option value="$PROJECT_DIR$/dashboard/objects/CONSTANT.php" />
+        <option value="$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/processor/deleteImage.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/addphoto.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/processor/getProductImages.php" />
       </list>
     </option>
   </component>
@@ -150,7 +183,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -162,6 +194,19 @@
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
               <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="processor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
@@ -217,6 +262,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -285,16 +331,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104890000" />
+    <option name="totallyTimeSpent" value="116051000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="395" y="0" width="1536" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35704607" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21205962" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32932165" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40262583" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -421,13 +468,6 @@
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2ebb6d6d-7d1e-4e45-91aa-f2c46a0891b3/console.sql" />
-    <entry file="file://$PROJECT_DIR$/dashboard/objects/CONSTANT.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/block.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -442,13 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/treatment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -460,13 +493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/livesearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -486,66 +512,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/homepage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/objects/ProductMoreInfo.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="147" column="41" lean-forward="true" selection-start-line="147" selection-start-column="41" selection-end-line="147" selection-end-column="41" />
-          <folding>
-            <element signature="e#6#107#0#PHP" />
-            <element signature="n#createConnection#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#435#475#0#PHP" />
-            <element signature="e#648#1000#0#PHP" />
-            <element signature="e#845#953#0#PHP" />
-            <element signature="n#getConnector#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#1808#1874#0#PHP" />
-            <element signature="n#getProductDetail#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#2182#2305#0#PHP" />
-            <element signature="e#2264#2305#0#PHP" />
-            <element signature="n#getClimbing#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#getShrub#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#getTreatment#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#2822#2886#0#PHP" />
-            <element signature="n#closeConnection#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#getNote#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#validateUserAccount#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#3444#3567#0#PHP" />
-            <element signature="e#3526#3567#0#PHP" />
-            <element signature="n#getProductImages#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#getProductChild#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="n#insertProduct#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#5762#6468#0#PHP" />
-            <element signature="e#6223#6468#0#PHP" />
-            <element signature="e#6478#6661#0#PHP" />
-            <element signature="e#6566#6661#0#PHP" />
-            <element signature="n#insertPhoto#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#6808#7166#0#PHP" />
-            <element signature="e#6847#7122#0#PHP" />
-            <element signature="e#7175#7410#0#PHP" />
-            <element signature="e#7315#7410#0#PHP" />
-            <element signature="n#insertProductMoreInfo#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#8532#10080#0#PHP" />
-            <element signature="e#9491#10080#0#PHP" />
-            <element signature="e#10089#10324#0#PHP" />
-            <element signature="e#10229#10324#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/shrub.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="43" column="29" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="29" />
+        <state relative-caret-position="442">
+          <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -570,17 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/productdetail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="85" column="30" lean-forward="true" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
-          <folding>
-            <element signature="e#6102#6107#0#PHP" />
-            <element signature="e#12136#12441#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/stylesheets/productdetail.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -598,20 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/addphoto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/climbing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/objects/Product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -621,10 +574,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/objects/PageContainer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="131" column="40" lean-forward="true" selection-start-line="131" selection-start-column="40" selection-end-line="131" selection-end-column="40" />
+        <state relative-caret-position="764">
+          <caret line="146" column="1" selection-start-line="146" selection-start-column="1" selection-end-line="146" selection-end-column="1" />
           <folding>
-            <element signature="n#renderFooter#0;n#PageContainer#0;n#!!top" />
             <element signature="n#renderHeader#0;n#PageContainer#0;n#!!top" />
             <element signature="n#renderModal#0;n#PageContainer#0;n#!!top" />
           </folding>
@@ -638,24 +590,153 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doaddproduct.php">
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/updateProduct.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state relative-caret-position="648">
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/admin/addproduct.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="144" column="48" lean-forward="true" selection-start-line="144" selection-start-column="48" selection-end-line="144" selection-end-column="48" />
+        <state relative-caret-position="544">
+          <caret line="32" column="44" lean-forward="true" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/updateProduct.php">
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doGetImageList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+        <state relative-caret-position="102">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/productdetail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="104" column="39" lean-forward="true" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_5.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/climbing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="72" column="17" lean-forward="true" selection-start-line="55" selection-start-column="16" selection-end-line="72" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doaddproduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doaddphoto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doaddproductmoreinfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/livesearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/objects/CONSTANT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="316" column="33" selection-start-line="316" selection-start-column="33" selection-end-line="316" selection-end-column="33" />
+          <folding>
+            <element signature="e#6#107#0#PHP" />
+            <element signature="n#createConnection#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#435#475#0#PHP" />
+            <element signature="e#648#1000#0#PHP" />
+            <element signature="e#845#953#0#PHP" />
+            <element signature="n#getConnector#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#1808#1874#0#PHP" />
+            <element signature="n#getProductDetail#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#2182#2305#0#PHP" />
+            <element signature="e#2264#2305#0#PHP" />
+            <element signature="n#getClimbing#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#getShrub#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#getTreatment#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#2822#2886#0#PHP" />
+            <element signature="n#closeConnection#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#getNote#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#validateUserAccount#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#3444#3567#0#PHP" />
+            <element signature="e#3526#3567#0#PHP" />
+            <element signature="n#getProductChild#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#getProductMoreInfo#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="n#insertProduct#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#5762#6468#0#PHP" />
+            <element signature="e#6223#6468#0#PHP" />
+            <element signature="e#6478#6661#0#PHP" />
+            <element signature="e#6566#6661#0#PHP" />
+            <element signature="n#insertPhoto#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#6808#7166#0#PHP" />
+            <element signature="e#6847#7122#0#PHP" />
+            <element signature="e#7175#7410#0#PHP" />
+            <element signature="e#7315#7410#0#PHP" />
+            <element signature="n#insertProductMoreInfo#0;n#DatabaseConnector#0;n#!!top" />
+            <element signature="e#8532#10080#0#PHP" />
+            <element signature="e#9491#10080#0#PHP" />
+            <element signature="e#10089#10324#0#PHP" />
+            <element signature="e#10229#10324#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/addphoto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="121" column="13" lean-forward="true" selection-start-line="121" selection-start-column="13" selection-end-line="121" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/deleteImage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/getProductImages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="48" column="57" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="57" />
         </state>
       </provider>
     </entry>

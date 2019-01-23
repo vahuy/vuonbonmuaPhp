@@ -310,4 +310,13 @@ class DatabaseConnector
         $xml->asXML($location);
     }
 
+    // SQL DELETE QUERY;
+    function deleteById($tableName, $id) {
+        $sql = "DELETE FROM $tableName WHERE id='$id'";
+        if ($this->connector->query($sql) === TRUE) {
+            return QUERY_SUCCESS;
+        } else {
+            return "Error deleting record: " . $this->connector->error;
+        }
+    }
 }
