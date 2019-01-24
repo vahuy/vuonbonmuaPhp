@@ -1,19 +1,10 @@
-.hero {
-    margin-bottom: 2em;
-    height: 540px;
-    width: 100%;
-    background: #efeee5 url("../../img/hero_banner.jpg") no-repeat center;
-}
-
 .header {
     width: 100%;
     background: #2a5d84;
-    height: 64px;
 }
 
 .top-bar-section {
     background: rgb(42, 93, 132);
-    height: 64px;
 }
 
 .header-navigation {
@@ -22,6 +13,17 @@
     padding: 20px;
     width: 100%;
     background: rgb(42, 93, 132);
+}
+
+.hero-banner {
+    text-align: center;
+    background-color: #E9EED0;
+}
+
+.hero-banner img {
+    border: 0;
+    width: 100%;
+    max-width: 700px;
 }
 
 .header-navigation .row div, .header-navigation .row div a {

@@ -26,21 +26,12 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dashboard/productdetail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="237" column="3" selection-start-line="237" selection-start-column="3" selection-end-line="237" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dashboard/objects/Product.php">
+        <entry file="file://$PROJECT_DIR$/dashboard/stylesheets/vbm.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="184" column="16" selection-start-line="184" selection-start-column="16" selection-end-line="184" selection-end-column="16" />
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -58,10 +49,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>setPr</find>
-      <find>Load</find>
-      <find>?productId</find>
-      <find>Load pro</find>
       <find>;</find>
       <find>price</find>
       <find>id</find>
@@ -88,6 +75,10 @@
       <find>shade</find>
       <find>: void</find>
       <find>void</find>
+      <find>.hero</find>
+      <find>hero</find>
+      <find>hero&quot;</find>
+      <find>hero-banner</find>
     </findStrings>
     <replaceStrings>
       <replace>.</replace>
@@ -115,51 +106,51 @@
       <list>
         <option value="$PROJECT_DIR$/dashboard/clambing.php" />
         <option value="$PROJECT_DIR$/dashboard/homepage.html" />
-        <option value="$PROJECT_DIR$/dashboard/404.html" />
         <option value="$PROJECT_DIR$/dashboard/notes/phanbiet_giam_chiet_ghep.html" />
         <option value="$PROJECT_DIR$/dashboard/notes/abc.html" />
         <option value="$PROJECT_DIR$/dashboard/stylesheets/reset.css" />
         <option value="$PROJECT_DIR$/dashboard/objects/SessionHandler.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/UserAccount.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/image.php" />
-        <option value="$PROJECT_DIR$/dashboard/notes/note.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/Util.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/UTIL.php" />
-        <option value="$PROJECT_DIR$/dashboard/treatment.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/ProductChild.php" />
-        <option value="$PROJECT_DIR$/dashboard/climbing.php" />
-        <option value="$PROJECT_DIR$/dashboard/shrub.php" />
-        <option value="$PROJECT_DIR$/dashboard/homepage.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/livesearch.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/xml/productname.xml" />
-        <option value="$PROJECT_DIR$/dashboard/index.html" />
-        <option value="$PROJECT_DIR$/dashboard/stylesheets/vbm.css" />
         <option value="$PROJECT_DIR$/dashboard/objects/Image.php" />
         <option value="$PROJECT_DIR$/dashboard/stylesheets/productdetail.css" />
         <option value="$PROJECT_DIR$/dashboard/objects/PageContainer.php" />
         <option value="$PROJECT_DIR$/dashboard/stylesheets/modal.css" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/updateProduct.php" />
-        <option value="$PROJECT_DIR$/dashboard/admin/updateProduct.php" />
-        <option value="$PROJECT_DIR$/dashboard/admin/addproduct.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/doaddphoto.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/doaddproduct.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/login.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/getProductImages.php" />
-        <option value="$PROJECT_DIR$/dashboard/admin/manageProductImage.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/deleteImage.php" />
         <option value="$PROJECT_DIR$/dashboard/js/image_handler.js" />
-        <option value="$PROJECT_DIR$/dashboard/admin/addphoto.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/ProductMoreInfo.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/getproductmoreinfo.php" />
-        <option value="$PROJECT_DIR$/dashboard/admin/addproductmoreinfo.php" />
         <option value="$PROJECT_DIR$/dashboard/js/live_search.js" />
         <option value="$PROJECT_DIR$/dashboard/admin/getproductmoreinfo.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/doaddproductmoreinfo.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/CONSTANT.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/Component.php" />
-        <option value="$PROJECT_DIR$/dashboard/productdetail.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/Product.php" />
+        <option value="$PROJECT_DIR$/dashboard/homepage.php" />
+        <option value="$PROJECT_DIR$/dashboard/404.html" />
+        <option value="$PROJECT_DIR$/dashboard/climbing.php" />
+        <option value="$PROJECT_DIR$/dashboard/treatment.php" />
+        <option value="$PROJECT_DIR$/dashboard/shrub.php" />
+        <option value="$PROJECT_DIR$/dashboard/index.html" />
+        <option value="$PROJECT_DIR$/dashboard/productdetail.php" />
+        <option value="$PROJECT_DIR$/dashboard/notes/note.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/updateProduct.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/addproduct.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/addphoto.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/manageProductImage.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/addproductmoreinfo.php" />
+        <option value="$PROJECT_DIR$/dashboard/stylesheets/vbm.css" />
       </list>
     </option>
   </component>
@@ -199,7 +190,13 @@
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
               <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="objects" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
@@ -209,32 +206,6 @@
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -306,18 +277,19 @@
       <workItem from="1548044265618" duration="7911000" />
       <workItem from="1548140080228" duration="12541000" />
       <workItem from="1548256340152" duration="3221000" />
-      <workItem from="1548297648338" duration="13655000" />
+      <workItem from="1548297648338" duration="14494000" />
+      <workItem from="1548322344053" duration="2460000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132927000" />
+    <option name="totallyTimeSpent" value="136226000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="367" y="0" width="1555" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21204014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21471572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -376,13 +348,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.buildpath">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/notes/phanbiet_giam_chiet_ghep.html" />
     <entry file="file://$PROJECT_DIR$/dashboard/notes/abc.html" />
     <entry file="file://$PROJECT_DIR$/dashboard/stylesheets/reset.css">
@@ -421,13 +386,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/addproduct.php" />
-    <entry file="file://$PROJECT_DIR$/dashboard/notes/note.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/objects/Util.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -464,13 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/homepage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/shrub.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -492,22 +443,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/stylesheets/vbm.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="69" column="1" lean-forward="true" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/stylesheets/productdetail.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/hero_banner.jpg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/stylesheets/modal.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -718,8 +659,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/objects/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="184" column="16" selection-start-line="184" selection-start-column="16" selection-end-line="184" selection-end-column="16" />
+        <state relative-caret-position="475">
+          <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/notes/note.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="45" column="49" lean-forward="true" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/hero_banner.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/homepage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/stylesheets/vbm.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

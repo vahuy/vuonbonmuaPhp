@@ -77,8 +77,8 @@
 </div>
 
 <div class="wrapper">
-    <div class="hero">
-        &nbsp;
+    <div class="hero-banner">
+        <img src="../../img/hero_banner.jpg" alt="home page">
     </div>
     <div class="container admin">
         <div class="row">
