@@ -24,9 +24,11 @@
         require './objects/PageContainer.php';
         require './objects/Image.php';
         require './objects/ProductChild.php';
+        require './objects/Component.php';
 
         $pageContainer = new PageContainer();
         $dbConnector = new DatabaseConnector();
+        $component = new Component();
         $UTIL = new UTIL();
     ?>
     <script>
@@ -132,7 +134,7 @@
                         <p>
                             <?php echo $result['description'] ?>
                         </p>
-                        <p>IN STOCK status</p>
+                        <p>IN STOCK: <?php echo $component->getValueFromBoolean($result['is_instock']) ?></p>
                     </div>
                 </div>
             </div>
@@ -146,7 +148,7 @@
                             Best Seller
                         </div>
                         <div class='col-md-9 col-sm-9'>".
-                            $productMoreInfo->getBestSeller()
+                            $component->getValueFromBoolean($productMoreInfo->getBestSeller())
                         ."</div>
                     </div>
 <!--                    SKU-->
@@ -254,7 +256,7 @@
                             Shade Tolerant
                         </div>
                         <div class='col-md-9 col-sm-9'>".
-                            $productMoreInfo->getShadeTolerant()
+                            $component->getValueFromBoolean($productMoreInfo->getShadeTolerant())
                         ."</div>
                     </div>
 <!--                    Width-->

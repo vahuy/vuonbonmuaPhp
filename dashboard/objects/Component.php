@@ -62,4 +62,8 @@ class Component {
         }
         return null;
     }
+
+    public function getValueFromBoolean($boolean) {
+        return $boolean === true ? 'YES' : 'NO';
+    }
 }

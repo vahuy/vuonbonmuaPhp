@@ -9,6 +9,23 @@ class Product {
     private $shortDescription;
     private $description;
     private $origin;
+    private $isInStock;
+
+    /**
+     * @return mixed
+     */
+    public function getIsInStock()
+    {
+        return $this->isInStock;
+    }
+
+    /**
+     * @param mixed $isInStock
+     */
+    public function setIsInStock($isInStock)
+    {
+        $this->isInStock = $isInStock;
+    }
 
     /**
      * Product constructor.

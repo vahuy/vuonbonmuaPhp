@@ -184,7 +184,7 @@ class DatabaseConnector
         $type = $product->getType();
         $description = $product->getDescription();
         $origin = $product->getOrigin();
-
+        $isInStrock = $product->getIsInStock();
         $sqlsearch = "SELECT * FROM product WHERE id='$id'";
 
         $result = $this->connector->query($sqlsearch);
@@ -199,13 +199,14 @@ class DatabaseConnector
                     short_description = '$shortDescription',
                     type = '$type',
                     description = '$description',
-                    origin = '$origin'
+                    origin = '$origin',
+                    is_instrock = '$isInStrock'
                 WHERE id='$id';
             ";
         } else {
 //          insert
-            $sql = "INSERT INTO product (id,name,description,short_description,image,price,type,origin)
-          VALUES ('$id','$name','$description','$shortDescription','$image','$price','$type','$origin')";
+            $sql = "INSERT INTO product (id,name,description,short_description,image,price,type,origin,is_instrock)
+          VALUES ('$id','$name','$description','$shortDescription','$image','$price','$type','$origin','$isInStrock')";
         }
 
         if (mysqli_query($this->connector, $sql)) {
