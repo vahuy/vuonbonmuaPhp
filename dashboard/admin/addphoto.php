@@ -25,8 +25,6 @@
     <link href="../stylesheets/vbm.css" rel="stylesheet" type="text/css" />
     <link href="../stylesheets/admin.css" rel="stylesheet" type="text/css" />
 
-    <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
-
     <?php
     require '../objects/PageContainer.php';
     require_once '../objects/Component.php';
@@ -35,49 +33,25 @@
     $dbConnector = new DatabaseConnector();
     $pageContainer = new PageContainer();
     $component = new Component();
-    ?>
-    <?php
-        libxml_disable_entity_loader(false);
-        $dbConnector->createConnection();
-        $products = $dbConnector->getAllProduct();
-        $dbConnector->closeConnection();
-        $numOfProduct =  count($products);
 
-        $xmlDoc=new DOMDocument();
-        $xmlDoc->load('./xml/productname.xml');
-        $x=$xmlDoc->getElementsByTagName('product');
+    libxml_disable_entity_loader(false);
+    $dbConnector->createConnection();
+    $products = $dbConnector->getAllProduct();
+    $dbConnector->closeConnection();
+    $numOfProduct =  count($products);
 
-        if($numOfProduct !== $x->length) {
-            //create xml file
-            $dbConnector->createXMPProductList($products, XML_PRODUCT_LOCATION);
-        }
+    $xmlDoc=new DOMDocument();
+    $xmlDoc->load('./xml/productname.xml');
+    $x=$xmlDoc->getElementsByTagName('product');
+
+    if($numOfProduct !== $x->length) {
+        //create xml file
+        $dbConnector->createXMPProductList($products, XML_PRODUCT_LOCATION);
+    }
     ?>
 <!--Handle input-->
+    <script src="../js/live_search.js"></script>
     <script>
-        function showResult(str) {
-            if (str.length===0) {
-                document.getElementById("livesearch").innerHTML="";
-                document.getElementById("livesearch").style.border="0px";
-                return;
-            }
-            if (window.XMLHttpRequest) {
-                // code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp=new XMLHttpRequest();
-            } else {  // code for IE6, IE5
-                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.onreadystatechange=function() {
-                if (this.readyState===4 && this.status===200) {
-                    document.getElementById("livesearch").innerHTML=this.responseText;
-                    document.getElementById("livesearch").style.border="1px solid #A5ACB2";
-                    document.getElementById("livesearch").style.display="block";
-                }
-            };
-            console.log(str);
-            xmlhttp.open("GET","./processor/livesearch.php?q="+str,true);
-            xmlhttp.send();
-        }
-
         function setProduct(object) {
             const id = object.getAttribute("href");
             const name = object.getAttribute("target");
@@ -88,36 +62,6 @@
             document.getElementById("livesearch").style.display="none";
             document.getElementById('mainphoto').src = mainPhoto;
             getImageList(id);
-        }
-
-        function clearSearch() {
-            document.getElementById('searchField').value = null;
-        }
-
-    </script>
-<!--    get image list-->
-    <script>
-        function getImageList(str) {
-            if (str === "") {
-                document.getElementById("txtHint").innerHTML = "empty";
-                return;
-            } else {
-                console.log("get list");
-                if (window.XMLHttpRequest) {
-                    // code for IE7+, Firefox, Chrome, Opera, Safari
-                    xmlhttp = new XMLHttpRequest();
-                } else {
-                    // code for IE6, IE5
-                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-                }
-                xmlhttp.onreadystatechange = function() {
-                    if (this.readyState === 4 && this.status === 200) {
-                        document.getElementById("txtHint").innerHTML = this.responseText;
-                    }
-                };
-                xmlhttp.open("GET","./processor/getProductImages.php?id="+str,true);
-                xmlhttp.send();
-            }
         }
     </script>
 </head>

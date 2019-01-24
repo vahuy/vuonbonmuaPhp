@@ -25,8 +25,6 @@
     <link href="../stylesheets/vbm.css" rel="stylesheet" type="text/css" />
     <link href="../stylesheets/admin.css" rel="stylesheet" type="text/css" />
 
-    <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
-
     <?php
     require '../objects/PageContainer.php';
     require_once '../objects/Component.php';
@@ -35,48 +33,24 @@
     $dbConnector = new DatabaseConnector();
     $pageContainer = new PageContainer();
     $component = new Component();
-    ?>
-    <?php
-        $dbConnector->createConnection();
-        $products = $dbConnector->getAllProduct();
-        $dbConnector->closeConnection();
-        $numOfProduct =  count($products);
 
-        $xmlDoc=new DOMDocument();
-        $xmlDoc->load(".\xml\productname.xml");
-        $x=$xmlDoc->getElementsByTagName('product');
+    $dbConnector->createConnection();
+    $products = $dbConnector->getAllProduct();
+    $dbConnector->closeConnection();
+    $numOfProduct =  count($products);
 
-        if($numOfProduct !== $x->length) {
-            //create xml file
-            $dbConnector->createXMPProductList($products, XML_PRODUCT_LOCATION);
-        }
+    $xmlDoc=new DOMDocument();
+    $xmlDoc->load(".\xml\productname.xml");
+    $x=$xmlDoc->getElementsByTagName('product');
+
+    if($numOfProduct !== $x->length) {
+        //create xml file
+        $dbConnector->createXMPProductList($products, XML_PRODUCT_LOCATION);
+    }
     ?>
-<!--Handle input-->
+    <!--Handle input-->
+    <script src="../js/live_search.js"></script>
     <script>
-        function showResult(str) {
-            if (str.length===0) {
-                document.getElementById("livesearch").innerHTML="";
-                document.getElementById("livesearch").style.border="0px";
-                return;
-            }
-            if (window.XMLHttpRequest) {
-                // code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp=new XMLHttpRequest();
-            } else {  // code for IE6, IE5
-                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.onreadystatechange=function() {
-                if (this.readyState===4 && this.status===200) {
-                    document.getElementById("livesearch").innerHTML=this.responseText;
-                    document.getElementById("livesearch").style.border="1px solid #A5ACB2";
-                    document.getElementById("livesearch").style.display="block";
-                }
-            };
-            console.log(str);
-            xmlhttp.open("GET","./processor/livesearch.php?q="+str,true);
-            xmlhttp.send();
-        }
-
         function setProduct(object) {
             const id = object.getAttribute("href");
             const name = object.getAttribute("target");
@@ -86,12 +60,8 @@
             document.getElementById('productId').value = id.toString();
             document.getElementById("livesearch").style.display="none";
             document.getElementById('mainphoto').src = mainPhoto;
+            getProductMoreInfo(id);
         }
-
-        function clearSearch() {
-            document.getElementById('searchField').value = null;
-        }
-
     </script>
 </head>
 
@@ -135,47 +105,12 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <form method="get" enctype="multipart/form-data" action="processor/doaddproductmoreinfo.php">
+                <form method="get" enctype="multipart/form-data" action="./processor/doaddproductmoreinfo.php">
                     <div class="row">
                         <div class="col-md-6"><label>Tên sản phẩm<input id="productName" type="text" name="productName" required></label></div>
                         <div class="col-md-6"><label>Mã sản phẩm<input id="productId" type="text" name="productId" required></label></div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6"><label>Best Seller<?php $component->renderOption('bestSeller',false, $OPTION_YES_NO, $OPTION_YES_NO_NAME) ?></label></div>
-                        <div class="col-md-6"><label>SKU<input type="text" id="sku" name="sku"></label></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6"><label>Alternate Name<input type="text" id="alternateName" name="alternateName"></label></div>
-                        <div class="col-md-6"><label>Specifc ARS Score<input type="text" id="specificArsScore" name="specificArsScore"></label></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6"><label>Bloom Type<input type="text" id="bloomType" name="bloomType"></label></div>
-                        <div class="col-md-6"><label>Breed Code<input type="text" id="breederCode" name="breederCode"></label></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6"><label>Characteristics<input type="text" id="characteristic" name="characteristic" ></label></div>
-                        <div class="col-md-6"><label>Specific Color<input type="text" name="specificColor" id="specificColor"></label></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6"><label>Fragrance<input type="text" id="fragrance" name="fragrance" ></></label></div>
-                        <div class="col-md-6"><label>Height<input type="text" id="height" name="height" </label></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6"><label>Patent #<input type="text" id="patent" name="patent" ></label></div>
-                        <div class="col-md-6"><label>Rebloom<input type="text" id="rebloom" name="rebloom"></label></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6"><label>Shade Tolerant<?php $component->renderOption('shadeTolerant',false, $OPTION_YES_NO, $OPTION_YES_NO_NAME) ?></label></div>
-                        <div class="col-md-6"><label>Width<input type="text" id="width" name="width"></label></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6"><label>Hardiness Zone<input type="text" id="hardinessZone" name="hardinessZone"></label></div>
-                        <div class="col-md-6 col-lg-6"><label>Year<input type="text" id="year" name="year" ></label></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6"><?php echo $component->renderButton('Reset','reset', 'reset',false) ?></div>
-                        <div class="col-md-6"><?php echo $component->renderButton('Submit','submit', 'submit', false) ?></div>
-                    </div>
+                    <div id="txtHint"><b>Product more info will be listed here...</b></div>
                 </form>
             </div>
         </div>

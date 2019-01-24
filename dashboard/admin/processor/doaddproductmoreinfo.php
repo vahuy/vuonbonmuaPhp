@@ -46,8 +46,11 @@ if (isset($_GET["submit"])) {
     $dbConnector->createConnection();
     $result = $dbConnector->insertProductMoreInfo($productInfo);
     $dbConnector->closeConnection();
+
+    $url = "Location: /dashboard/productdetail.php?id=".$productId;
+
     if ($result===QUERY_SUCCESS) {
-        header('Location: /dashboard/admin/addproduct.php');
+        header($url);
     } else {
         echo $result;
     }
