@@ -1,13 +1,13 @@
-/**
- * Created by PhpStorm.
- * User: Brian
- * Date: 1/23/2019
- * Time: 11:02 PM
- */
 <!doctype html>
 <html lang="en">
 <head>
     <?php
+    /**
+     * Created by PhpStorm.
+     * User: Brian
+     * Date: 1/23/2019
+     * Time: 11:02 PM
+     */
     require_once '../objects/CONSTANT.php';
     require_once ("../objects/Util.php");
     $UTIL = new UTIL();
@@ -37,21 +37,20 @@
 
     <?php
     require '../objects/PageContainer.php';
-    require_once '../objects/Component.php';
     require_once '../objects/DatabaseConnector.php';
 
     $dbConnector = new DatabaseConnector();
     $pageContainer = new PageContainer();
-    $component = new Component();
     ?>
     <?php
     $url = $UTIL->getUrl();
     $array = (explode("=",$url));
     $id = ($array[1]);
-    echo "productId $id";
+    $dbConnector->createConnection();
+    $product = $dbConnector->getProductDetail($id);
+    $result = $dbConnector->getProductImages($id);
+    $dbConnector->closeConnection();
     ?>
-    <!--Handle input-->
-    <!--    get image list-->
 </head>
 
 <body class="index">
@@ -71,12 +70,38 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <div class="main-photo">
+                    <img id="mainphoto" src="<?php echo $product['image'] ?>">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <h2>Quản lý hình</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div id="txtHint"><b>Images info will be listed here...</b></div>
+                <?php
+                echo "<table>
+                <tr>
+                <th>Lastname</th>
+                <th>Age</th>
+                <th>&nbsp;</th>
+                </tr>";
+                while ($row = $result->fetch_assoc()) {
+                    $id = $row['id'];
+                    $src = $row['src'];
+                    $productId = $row['product_id'];
+                    echo "<tr>";
+                    echo "<td><img src="."'$src'" ."alt='Smiley face' height='42' width='42'></td>";
+                    echo "<td>$id</td>";
+                    echo "<td><a href='./processor/deleteImage.php?id=$id&product=$productId'>X</a></td>";
+                    echo "</tr>";
+                }
+                echo "</table>";
+                ?>
             </div>
         </div>
     </div>

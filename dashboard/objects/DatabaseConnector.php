@@ -20,10 +20,10 @@ class DatabaseConnector
             $password = "vuonbonmuatx22";
             $dbname = "vuonbonmua";
 
-            $servername = "localhost";
-            $username = "laz87900_huy";
-            $password = "vuonbonmuatx22";
-            $dbname = "laz87900_vuonbonmua";
+//            $servername = "localhost";
+//            $username = "laz87900_huy";
+//            $password = "vuonbonmuatx22";
+//            $dbname = "laz87900_vuonbonmua";
 
 
         // Create connection
@@ -127,8 +127,11 @@ class DatabaseConnector
     }
 
     function  getProductImages($productId){
-        $sql = "SELECT * FROM image WHERE product_id='$productId'";
-        $result = $this->connector->query($sql);
+        $result = null;
+        if (!empty($productId)) {
+            $sql = "SELECT * FROM image WHERE product_id='$productId'";
+            $result = $this->connector->query($sql);
+        }
         return $result;
     }
 

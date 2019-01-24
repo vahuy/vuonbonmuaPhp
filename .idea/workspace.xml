@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php" line="322" />
+    <bookmark url="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php" line="325" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5b4505b-2b1f-4943-8570-1ea6dd8330a6" name="Default Changelist" comment="" />
@@ -27,20 +27,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/deleteImage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+            <state relative-caret-position="374">
+              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashboard/admin/manageProductImage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="70" column="25" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
+            <state relative-caret-position="458">
+              <caret line="93" column="37" lean-forward="true" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+              <folding>
+                <element signature="e#48#54#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/getProductImages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state relative-caret-position="441">
+              <caret line="34" selection-start-line="34" selection-end-line="50" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -66,8 +69,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>set</find>
-      <find>header-navigation</find>
       <find>.container {</find>
       <find>.container</find>
       <find>container</find>
@@ -96,6 +97,8 @@
       <find>deleteImage</find>
       <find>showUser</find>
       <find>getUrl</find>
+      <find>$product</find>
+      <find>echo</find>
     </findStrings>
     <replaceStrings>
       <replace>.</replace>
@@ -157,11 +160,11 @@
         <option value="$PROJECT_DIR$/dashboard/admin/processor/doaddproductmoreinfo.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/login.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/CONSTANT.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/addphoto.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/getProductImages.php" />
-        <option value="$PROJECT_DIR$/dashboard/admin/processor/deleteImage.php" />
-        <option value="$PROJECT_DIR$/dashboard/admin/addphoto.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/manageProductImage.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/processor/deleteImage.php" />
       </list>
     </option>
   </component>
@@ -177,16 +180,14 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="367" />
-    <option name="y" value="2" />
-    <option name="width" value="1077" />
-    <option name="height" value="920" />
+    <option name="width" value="1542" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,6 +205,13 @@
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
               <item name="dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="processor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
@@ -246,19 +254,11 @@
               <item name="dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="processor" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -324,17 +324,18 @@
       <workItem from="1548044265618" duration="7911000" />
       <workItem from="1548140080228" duration="12541000" />
       <workItem from="1548256340152" duration="3221000" />
+      <workItem from="1548297648338" duration="1219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119272000" />
+    <option name="totallyTimeSpent" value="120491000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="367" y="2" width="1077" height="920" extended-state="0" />
+    <frame x="367" y="0" width="1542" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20845625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21390013" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -393,13 +394,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dashboard/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-731">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ec226ad0-df32-4de9-b725-14741b68371a/console.sql" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -565,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/objects/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/objects/PageContainer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="764">
@@ -590,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/updateProduct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/admin/addproduct.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -605,24 +585,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/doGetImageList.php" />
-    <entry file="file://$PROJECT_DIR$/dashboard/productdetail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="104" column="39" lean-forward="true" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_5.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/climbing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="72" column="17" lean-forward="true" selection-start-line="55" selection-start-column="16" selection-end-line="72" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -675,76 +641,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/_types.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="92" column="13" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/climbing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="50" column="33" lean-forward="true" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/objects/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="10" column="20" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        <state relative-caret-position="-273">
+          <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
           <folding>
-            <element signature="e#6#107#0#PHP" />
-            <element signature="e#648#1000#0#PHP" />
-            <element signature="e#845#953#0#PHP" />
             <element signature="n#getConnector#0;n#DatabaseConnector#0;n#!!top" />
             <element signature="n#getAllProduct#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#1249#1910#0#PHP" />
-            <element signature="e#1808#1874#0#PHP" />
-            <element signature="n#getProductDetail#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#2182#2305#0#PHP" />
-            <element signature="e#2264#2305#0#PHP" />
             <element signature="n#getClimbing#0;n#DatabaseConnector#0;n#!!top" />
             <element signature="n#getShrub#0;n#DatabaseConnector#0;n#!!top" />
             <element signature="n#getTreatment#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#2822#2886#0#PHP" />
             <element signature="n#closeConnection#0;n#DatabaseConnector#0;n#!!top" />
             <element signature="n#getNote#0;n#DatabaseConnector#0;n#!!top" />
             <element signature="n#validateUserAccount#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#3444#3567#0#PHP" />
-            <element signature="e#3526#3567#0#PHP" />
             <element signature="n#getProductChild#0;n#DatabaseConnector#0;n#!!top" />
             <element signature="n#getProductMoreInfo#0;n#DatabaseConnector#0;n#!!top" />
             <element signature="n#insertProduct#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#5762#6468#0#PHP" />
-            <element signature="e#6223#6468#0#PHP" />
-            <element signature="e#6478#6661#0#PHP" />
-            <element signature="e#6566#6661#0#PHP" />
             <element signature="n#insertPhoto#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#6808#7166#0#PHP" />
-            <element signature="e#6847#7122#0#PHP" />
-            <element signature="e#7175#7410#0#PHP" />
-            <element signature="e#7315#7410#0#PHP" />
             <element signature="n#insertProductMoreInfo#0;n#DatabaseConnector#0;n#!!top" />
-            <element signature="e#8532#10080#0#PHP" />
-            <element signature="e#9491#10080#0#PHP" />
-            <element signature="e#10089#10324#0#PHP" />
-            <element signature="e#10229#10324#0#PHP" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/getProductImages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/deleteImage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/admin/addphoto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="134" selection-start-line="134" selection-end-line="134" />
+        <state relative-caret-position="801">
+          <caret line="150" column="14" lean-forward="true" selection-start-line="144" selection-start-column="8" selection-end-line="150" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/updateProduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="773">
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/getProductImages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="34" selection-start-line="34" selection-end-line="50" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/productdetail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-571">
+          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/admin/manageProductImage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="70" column="25" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
+        <state relative-caret-position="458">
+          <caret line="93" column="37" lean-forward="true" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+          <folding>
+            <element signature="e#48#54#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/deleteImage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
         </state>
       </provider>
     </entry>

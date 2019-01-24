@@ -32,7 +32,6 @@ $dbConnector = new DatabaseConnector();
 $dbConnector->createConnection();
 $images = $dbConnector->getProductImages($id);
 $dbConnector->closeConnection();
-print_r($images);
 echo "<table>
 <tr>
 <th>Lastname</th>
