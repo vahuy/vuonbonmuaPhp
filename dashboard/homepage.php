@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,19 +16,12 @@
     <link href="./stylesheets/vbm.css" rel="stylesheet" type="text/css" />
     <link href="./stylesheets/modal.css" rel="stylesheet" type="text/css" />
 
-    <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
-
     <?php
-        require_once './objects/DatabaseConnector.php';
         require_once './objects/PageContainer.php';
-        require_once './objects/UserAccount.php';
-        require_once './objects/CONSTANT.php';
 
         $pageContainer = new PageContainer();
-        $dbConnector = new DatabaseConnector();
         session_start();
     ?>
-
 </head>
 
 <body class="index">
@@ -42,35 +34,6 @@
             echo $pageContainer->renderHeaderWithLogin($isLogged);
             echo $pageContainer->renderModalLogin();
         ?>
-        <script>
-            // Get the modal
-            const modal = document.getElementById('myModal');
-
-            // Get the button that opens the modal
-            const btn = document.getElementById("login");
-
-            // Get the <span> element that closes the modal
-            const span = document.getElementsByClassName("close")[0];
-
-            // When the user clicks on the button, open the modal
-            if (btn) {
-                btn.onclick = function () {
-                    modal.style.display = "block";
-                };
-
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function () {
-                    modal.style.display = "none";
-                };
-
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function (event) {
-                    if (event.target === modal) {
-                        modal.style.display = "none";
-                    }
-                }
-            }
-        </script>
     </div>
 
     <div class="wrapper">
@@ -86,15 +49,21 @@
                 </div>
                 <div class="row">
                     <div class="large-12 columns">
-                        <p><?php echo GIOI_THIEU_VBM ?></p>
+                        <div class="search-container">
+                            <input type="text" id="txtInput" onkeyup="verify(this.value)" placeholder="Search..">
+                            <button type="button" id="btnSearch" onclick="search()"><i class="fa fa-search"></i></button>
+                        </div>
                     </div>
                 </div>
+                <div id="txtHint"></div>
             </article>
         </div>
         <div class="footer">
             <?php
                 echo $pageContainer->renderFooter();
             ?>
+            <script src="./js/loggin.js"></script>
+            <script src="./js/product_search_handler.js"></script>
         </div>
     </div>
 </body>

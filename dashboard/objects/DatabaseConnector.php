@@ -142,6 +142,30 @@ class DatabaseConnector
         return $result;
     }
 
+    function getProductByKey($key) {
+        $result = null;
+        if (!empty($key)) {
+            $keys = explode(" ", $key);
+
+            $arrlength = count($keys);
+
+            $condition = "";
+
+            for ($x = 0; $x < $arrlength; $x++) {
+                $condition = $condition." pm.specific_color LIKE '%$keys[$x]%' OR p.name LIKE '%$keys[$x]%' OR";
+            }
+            $condition = rtrim($condition, 'OR');
+
+            $sql = "SELECT p.id, p.name, p.price, p.short_description, p.image
+            FROM product p LEFT JOIN product_more_info pm
+            ON p.id = pm.product_id
+            WHERE".$condition;
+
+            $result = $this->connector->query($sql);
+        }
+        return $result;
+    }
+
     function getProductMoreInfo($productId) {
         $sql = "SELECT * FROM product_more_info WHERE product_id='$productId'";
         $result = $this->connector->query($sql);

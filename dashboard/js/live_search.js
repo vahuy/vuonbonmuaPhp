@@ -38,10 +38,8 @@ function clearSearch() {
 
 function getImageList(str) {
     if (str === "") {
-        document.getElementById("txtHint").innerHTML = "empty";
         return;
     } else {
-        console.log("get list");
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
@@ -61,10 +59,8 @@ function getImageList(str) {
 
 function getProductMoreInfo(str) {
     if (str === "") {
-        document.getElementById("txtHint").innerHTML = "empty";
         return;
     } else {
-        console.log("get list");
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();

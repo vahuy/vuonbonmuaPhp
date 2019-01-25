@@ -122,6 +122,20 @@
     font-weight: 700;
 }
 
+.search-container {
+    display: inline-flex;
+    height: 36px;
+}
+
+.search-container button i{
+    font-size: 20px;
+    padding: 0 10px
+}
+
+.search-container button{
+    width: 25%;
+}
+
 .footer h3 {
     text-align: center;
     display: block;

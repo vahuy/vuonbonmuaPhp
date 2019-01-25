@@ -18,7 +18,6 @@
     <link href="./stylesheets/reset.css" rel="stylesheet" type="text/css" />
     <link href="./stylesheets/vbm.css" rel="stylesheet" type="text/css" />
 
-    <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
     <?php
         require './objects/PageContainer.php';
         require './objects/Product.php';
