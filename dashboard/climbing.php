@@ -70,9 +70,13 @@
                     }
                     $item = null;
                 }
-                $arrlength = count($products);
-                for($x = 0; $x < $arrlength; $x++) {
-                    echo $products[$x]->generateHtml();
+                if ($products) {
+                    $arrlength = count($products);
+                    for ($x = 0; $x < $arrlength; $x++) {
+                        echo $products[$x]->generateHtml();
+                    }
+                } else {
+                    echo "Hiện chưa có sản phẩm nào";
                 }
                 ?>
             </div>

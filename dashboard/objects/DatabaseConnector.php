@@ -18,7 +18,7 @@ class DatabaseConnector
             $servername = "localhost";
             $username = "huy";
             $password = "vuonbonmuatx22";
-            $dbname = "vuonbonmua";
+            $dbname = "laz87900_vuonbonmua";
 
 //            $servername = "localhost";
 //            $username = "laz87900_huy";
@@ -337,10 +337,26 @@ class DatabaseConnector
         }
         $xml->asXML($location);
     }
-
+    
     // SQL DELETE QUERY;
     function deleteById($tableName, $id) {
         $sql = "DELETE FROM $tableName WHERE id='$id'";
+        if ($this->connector->query($sql) === TRUE) {
+            return QUERY_SUCCESS;
+        } else {
+            return "Error deleting record: " . $this->connector->error;
+        }
+    }
+
+    function deleteProduct($id) {
+        $sql = "
+        DELETE product, product_more_info, product_child, image 
+        FROM product
+        LEFT JOIN product_more_info ON product.id = product_more_info.product_id
+        LEFT JOIN image ON product.id = image.product_id
+        LEFT JOIN product_child ON product_child.product_id = product.id
+        WHERE product.id = '$id'
+        ";
         if ($this->connector->query($sql) === TRUE) {
             return QUERY_SUCCESS;
         } else {

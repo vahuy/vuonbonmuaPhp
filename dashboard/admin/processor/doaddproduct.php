@@ -47,3 +47,17 @@ if (empty($_SESSION) || empty($userName)) {
             echo $queryReqult;
         }
     }
+    if (isset($_POST["delete"])) {
+        $id = $_POST["id"];
+        $dbConnector->createConnection();
+        $queryResult = $dbConnector->deleteProduct($id);
+        $products = $dbConnector->getAllProduct();
+        if ($queryResult === QUERY_SUCCESS) {
+            header('Location: /dashboard/admin/addproduct.php');
+            $dbConnector->createXMPProductList($products, '../xml/productname.xml');
+        } else {
+            echo $queryResult;
+        }
+        $dbConnector->closeConnection();
+    }
+

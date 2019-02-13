@@ -105,8 +105,9 @@
                     <div class="col-md-12"><label>Hình chính <input type="text" id="mainphoto" name="main_photo" value="<?php echo $image ?>"></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6"><?php echo $component->renderButton('Reset','reset', 'reset',false) ?></div>
-                    <div class="col-md-6"><?php echo $component->renderButton('Submit','update', 'submit', false) ?></div>
+                    <div class="col-md-4"><?php echo $component->renderButton('Reset','reset', 'reset',false) ?></div>
+                    <div class="col-md-4"><?php echo $component->renderButton('Submit','update', 'submit', false) ?></div>
+                    <div class="col-md-4"><?php echo $component->renderButton('Delete','delete', 'submit', false) ?></div>
                 </div>
             </form>
         </div>

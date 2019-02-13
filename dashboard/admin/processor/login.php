@@ -24,9 +24,21 @@ if (isset($_POST["submit"])) {
 
     $password = base64_encode($password);
     $result = $dbConnector->validateUserAccount($name,$password);
-    $dbConnector->closeConnection();
 
     if ($result!==null) {
+
+        $products = $dbConnector->getAllProduct();
+        $numOfProduct =  count($products);
+
+        $xmlDoc=new DOMDocument();
+        $xmlDoc->load(".\xml\productname.xml");
+        $x=$xmlDoc->getElementsByTagName('product');
+
+        if($numOfProduct !== $x->length) {
+            //create xml file
+            $dbConnector->createXMPProductList($products, XML_PRODUCT_LOCATION);
+        }
+
         $_SESSION["userType"] = $result['type'];
         $_SESSION["userName"] = $result['name'];
         $_SESSION["isLogged"] = true;
@@ -34,6 +46,7 @@ if (isset($_POST["submit"])) {
         echo "to admin";
         return;
     }
+    $dbConnector->closeConnection();
 }
 if (isset($_POST["logout"])) {
     session_unset();
