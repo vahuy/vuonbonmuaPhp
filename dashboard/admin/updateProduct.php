@@ -87,22 +87,22 @@
             </div>
             <form action="./processor/doaddproduct.php" method="post">
                 <div class="row">
-                    <div class="col-md-6"><label>Tên <input type="text" name="id" required value="<?php echo $id ?>"></label></div>
+                    <div class="col-md-6"><label>Tên <input type="text" name="id" required value="<?php echo $id?$id:'' ?>"></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6"><label>Tên <input type="text" name="name" required value="<?php echo $name ?>"></label></div>
+                    <div class="col-md-6"><label>Tên <input type="text" name="name" required value="<?php echo $name?$name:'' ?>"></label></div>
                     <div class="col-md-6"><label>Loại <?php echo $component->renderOptionWithSelected('productType', false, $PRODUCT_TYPE, $PRODUCT_TYPE_NAME, $type) ?></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6"><label>Giá từ <input type="number" id="price" min="1000" step="1000" name="price" value="<?php echo $price ?>"></label></div>
-                    <div class="col-md-6"><label>Xuất xứ <input type="text" id="origin" name="origin" value="<?php echo $origin ?>"></label></div>
+                    <div class="col-md-6"><label>Giá từ <input type="number" id="price" min="1000" step="1000" name="price" value="<?php echo $price?$price:'' ?>"></label></div>
+                    <div class="col-md-6"><label>Xuất xứ <input type="text" id="origin" name="origin" value="<?php echo $origin?$origin:'' ?>"></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6"><label>Mô tả ngắn <textarea id="shortDescription" name="short_description" required rows="4" cols="50"><?php echo $shortDescription ?></textarea></label></div>
-                    <div class="col-md-6"><label>Mô tả <textarea id="description" name="description" rows="10" cols="50" ><?php echo $description ?></textarea></label></div>
+                    <div class="col-md-6"><label>Mô tả ngắn <textarea id="shortDescription" name="short_description" required rows="4" cols="50"><?php echo $shortDescription?$shortDescription:'' ?></textarea></label></div>
+                    <div class="col-md-6"><label>Mô tả <textarea id="description" name="description" rows="10" cols="50" ><?php echo $description?$description:'' ?></textarea></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12"><label>Hình chính <input type="text" id="mainphoto" name="main_photo" value="<?php echo $image ?>"></label></div>
+                    <div class="col-md-12"><label>Hình chính <input type="text" id="mainphoto" name="main_photo" value="<?php echo $image?$image:'' ?>"></label></div>
                 </div>
                 <div class="row">
                     <div class="col-md-4"><?php echo $component->renderButton('Reset','reset', 'reset',false) ?></div>

@@ -54,7 +54,7 @@ if (empty($_SESSION) || empty($userName)) {
         $products = $dbConnector->getAllProduct();
         if ($queryResult === QUERY_SUCCESS) {
             header('Location: /dashboard/admin/addproduct.php');
-            $dbConnector->createXMPProductList($products, '../xml/productname.xml');
+            $dbConnector->createXMPProductList($products, XML_PRODUCT_LOCATION_LV1);
         } else {
             echo $queryResult;
         }

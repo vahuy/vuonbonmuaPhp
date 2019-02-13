@@ -40,7 +40,7 @@
     $numOfProduct =  count($products);
 
     $xmlDoc=new DOMDocument();
-    $xmlDoc->load(".\xml\productname.xml");
+    $xmlDoc->load(XML_PRODUCT_LOCATION);
     $x=$xmlDoc->getElementsByTagName('product');
 
     if($numOfProduct !== $x->length) {

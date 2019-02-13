@@ -14,7 +14,6 @@ if (empty($_SESSION) || empty($userName)) {
 }
 
 require_once ("../../objects/DatabaseConnector.php");
-session_start();
 if (isset($_POST["submit"])) {
     $name = $_POST["name"];
     $password = $_POST["password"];
@@ -27,23 +26,11 @@ if (isset($_POST["submit"])) {
 
     if ($result!==null) {
 
-        $products = $dbConnector->getAllProduct();
-        $numOfProduct =  count($products);
-
-        $xmlDoc=new DOMDocument();
-        $xmlDoc->load(".\xml\productname.xml");
-        $x=$xmlDoc->getElementsByTagName('product');
-
-        if($numOfProduct !== $x->length) {
-            //create xml file
-            $dbConnector->createXMPProductList($products, XML_PRODUCT_LOCATION);
-        }
-
         $_SESSION["userType"] = $result['type'];
         $_SESSION["userName"] = $result['name'];
         $_SESSION["isLogged"] = true;
         header('Location: /dashboard/admin/addproduct.php');
-        echo "to admin";
+
         return;
     }
     $dbConnector->closeConnection();

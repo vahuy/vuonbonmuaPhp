@@ -3,11 +3,30 @@
 <head>
     <?php
     require_once ("../objects/CONSTANT.php");
+    require_once ("../objects/DatabaseConnector.php");
     session_start();
     $userType = $_SESSION['userType'];
     $userName = $_SESSION['userName'];
     if (empty($_SESSION) || empty($userName) || $userType !== ADMIN) {
         header('Location: /dashboard/homepage.php');
+    }
+
+    $dbConnector = new DatabaseConnector();
+    $dbConnector->createConnection();
+
+    $products = $dbConnector->getAllProduct();
+
+    $dbConnector->closeConnection();
+    $numOfProduct =  count($products);
+
+    $xmlDoc=new DOMDocument();
+
+    $xmlDoc->load(XML_PRODUCT_LOCATION);
+    $x=$xmlDoc->getElementsByTagName('product');
+
+    if($numOfProduct !== $x->length) {
+        //create xml file
+        $dbConnector->createXMPProductList($products, XML_PRODUCT_LOCATION);
     }
     ?>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -137,6 +156,25 @@
             </form>
             <div class="col-md-12">
                 <h2>Danh sách sản phẩm</h2>
+            </div>
+            <div class="table-all-product">
+                <table>
+                    <tr>
+                        <td>ID</td>
+                        <td>NAME</td>
+                    </tr>
+                    <?php
+                        for ($i = 0; $i < $numOfProduct; $i++) {
+                            $id = $products[$i]->getId();
+                            $name = $products[$i]->getName();
+
+                            echo "<tr>
+                                    <td>$id</td>
+                                    <td>$name</td>
+                                  </tr>";
+                        }
+                    ?>
+                </table>
             </div>
         </div>
     </div>

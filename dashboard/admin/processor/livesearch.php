@@ -5,9 +5,10 @@
  * Date: 1/18/2019
  * Time: 3:09 PM
  */
+require "../../objects/CONSTANT.php";
 $hint="";
 $xmlDoc=new DOMDocument();
-$xmlDoc->load('../xml/productname.xml');
+$xmlDoc->load(XML_PRODUCT_LOCATION_LV1);
 
 $x=$xmlDoc->getElementsByTagName('product');
 

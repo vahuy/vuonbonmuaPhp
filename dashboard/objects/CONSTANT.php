@@ -19,6 +19,7 @@ $PRODUCT_TYPE_NAME=array("Hồng leo","Hồng bụi","Thuốc hữu cơ");
 $OPTION_YES_NO=array("yes","no");
 $OPTION_YES_NO_NAME=array("Yes","No");
 define("QUERY_SUCCESS", "1");
-define("XML_PRODUCT_LOCATION", ".\xml\productname.xml");
+define("XML_PRODUCT_LOCATION", "./xml/productname.xml");
+define("XML_PRODUCT_LOCATION_LV1", "../xml/productname.xml");
 define("ADMIN", "admin");
 define("TABLE_IMAGE", "image");
