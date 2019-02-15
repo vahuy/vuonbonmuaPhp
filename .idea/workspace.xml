@@ -28,19 +28,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/livesearch.php">
+        <entry file="file://$PROJECT_DIR$/dashboard/admin/addproduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+            <state relative-caret-position="84">
+              <caret line="111" column="25" lean-forward="true" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dashboard/objects/CONSTANT.php">
+        <entry file="file://$PROJECT_DIR$/dashboard/stylesheets/reset.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            <state relative-caret-position="306">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -58,7 +58,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>STOCK</find>
       <find>shade</find>
       <find>: void</find>
       <find>void</find>
@@ -88,6 +87,7 @@
       <find>XML_PRODUCT_LOCATION</find>
       <find>CONSTANT</find>
       <find>feed</find>
+      <find>Thông</find>
     </findStrings>
     <replaceStrings>
       <replace>.</replace>
@@ -105,10 +105,10 @@
       <dir>D:\xampp\htdocs</dir>
       <dir>D:\xampp\htdocs\dashboard\admin</dir>
       <dir>D:\xampp\htdocs\dashboard</dir>
-      <dir>C:\xampp\htdocs\dashboard\admin\processor</dir>
       <dir>XML_PRODUCT_LOCATION_LV1</dir>
       <dir>C:\xampp\htdocs\dashboard\objects</dir>
       <dir>C:\xampp\htdocs\dashboard</dir>
+      <dir>C:\xampp\htdocs\dashboard\admin\processor</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -121,7 +121,6 @@
         <option value="$PROJECT_DIR$/dashboard/homepage.html" />
         <option value="$PROJECT_DIR$/dashboard/notes/phanbiet_giam_chiet_ghep.html" />
         <option value="$PROJECT_DIR$/dashboard/notes/abc.html" />
-        <option value="$PROJECT_DIR$/dashboard/stylesheets/reset.css" />
         <option value="$PROJECT_DIR$/dashboard/objects/SessionHandler.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/UserAccount.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/image.php" />
@@ -163,10 +162,11 @@
         <option value="$PROJECT_DIR$/dashboard/admin/processor/doaddproduct.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/addphoto.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/addproductmoreinfo.php" />
-        <option value="$PROJECT_DIR$/dashboard/admin/addproduct.php" />
         <option value="$PROJECT_DIR$/dashboard/admin/xml/productname.xml" />
         <option value="$PROJECT_DIR$/dashboard/admin/processor/livesearch.php" />
         <option value="$PROJECT_DIR$/dashboard/objects/CONSTANT.php" />
+        <option value="$PROJECT_DIR$/dashboard/admin/addproduct.php" />
+        <option value="$PROJECT_DIR$/dashboard/stylesheets/reset.css" />
       </list>
     </option>
   </component>
@@ -230,42 +230,13 @@
             </path>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
               <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP" type="5114b859:PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="processor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -345,18 +316,19 @@
       <workItem from="1550044418340" duration="5280000" />
       <workItem from="1550049729602" duration="1930000" />
       <workItem from="1550051805234" duration="4453000" />
-      <workItem from="1550114979428" duration="4398000" />
+      <workItem from="1550114979428" duration="4659000" />
+      <workItem from="1550199883528" duration="1193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164246000" />
+    <option name="totallyTimeSpent" value="165700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="717" y="0" width="1208" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20818815" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21167247" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -404,13 +376,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_d.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="304" column="40" lean-forward="true" selection-start-line="304" selection-start-column="40" selection-end-line="304" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/objects/UserAccount.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -697,13 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/addproduct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2635">
-          <caret line="155" column="19" lean-forward="true" selection-start-line="155" selection-start-column="19" selection-end-line="155" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/objects/DatabaseConnector.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -738,17 +696,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/livesearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/objects/CONSTANT.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/processor/livesearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/admin/addproduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="111" column="25" lean-forward="true" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/stylesheets/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
