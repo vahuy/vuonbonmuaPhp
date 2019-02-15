@@ -13,3 +13,12 @@
 .add-photo .main-photo {
     text-align: center;
 }
+
+.admin #livesearch p {
+    cursor: pointer;
+}
+
+.admin #livesearch p:hover {
+    cursor: pointer;
+    background-color: #b0b0b0;
+}

@@ -19,9 +19,11 @@ if (empty($_SESSION) || empty($userName)) {
     $description = $_POST["description"];
     $main_photo = $_POST["main_photo"];
     $origin = $_POST["origin"];
+    $is_instock = $_POST["instock"];
 
     if (isset($_POST["submit"])) {
         $product = new Product(null, $name, $main_photo, $price, $short_description, $type, $description, $origin);
+        $product->setIsInStock($is_instock);
         $product->setId(spl_object_hash($product));
         $dbConnector->createConnection();
         $queryReqult = $dbConnector->insertProduct($product);
@@ -35,8 +37,10 @@ if (empty($_SESSION) || empty($userName)) {
         }
     }
     if (isset($_POST["update"])) {
-        $id = $_POST["id"];
+        $id = $_POST["product_id"];
         $product = new Product($id, $name, $main_photo, $price, $short_description, $type, $description, $origin);
+        $product->setIsInStock($is_instock);
+        print_r($product);
         $dbConnector->createConnection();
         $queryReqult = $dbConnector->insertProduct($product);
         $dbConnector->closeConnection();
@@ -48,7 +52,8 @@ if (empty($_SESSION) || empty($userName)) {
         }
     }
     if (isset($_POST["delete"])) {
-        $id = $_POST["id"];
+        $id = $_POST["product_id"];
+        echo "delete $id";
         $dbConnector->createConnection();
         $queryResult = $dbConnector->deleteProduct($id);
         $products = $dbConnector->getAllProduct();

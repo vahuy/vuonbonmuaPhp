@@ -71,6 +71,7 @@
             $shortDescription = $product['short_description'];
             $description = $product['short_description'];
             $origin = $product['origin'];
+            $instock = $product['is_instock'];
         }
     }
     ?>
@@ -87,11 +88,12 @@
             </div>
             <form action="./processor/doaddproduct.php" method="post">
                 <div class="row">
-                    <div class="col-md-6"><label>Tên <input type="text" name="id" required value="<?php echo $id?$id:'' ?>"></label></div>
+                    <div class="col-md-6"><label>Mã sản phẩm <input type="text" name="product_id" required value="<?php echo $id?$id:'' ?>"></label></div>
+                    <div class="col-md-6"><label>Tên <input type="text" name="name" required value="<?php echo $name?$name:'' ?>"></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6"><label>Tên <input type="text" name="name" required value="<?php echo $name?$name:'' ?>"></label></div>
-                    <div class="col-md-6"><label>Loại <?php echo $component->renderOptionWithSelected('productType', false, $PRODUCT_TYPE, $PRODUCT_TYPE_NAME, $type) ?></label></div>
+                    <div class="col-md-6"><label>Loại <?php echo $component->renderOptionWithSelected('productType', false, $PRODUCT_TYPE, $PRODUCT_TYPE_NAME, $instock) ?></label></div>
+                    <div class="col-md-6"><label>Instock <?php echo $component->renderOption('instock', false, $OPTION_YES_NO, $OPTION_YES_NO_NAME) ?></label></div>
                 </div>
                 <div class="row">
                     <div class="col-md-6"><label>Giá từ <input type="number" id="price" min="1000" step="1000" name="price" value="<?php echo $price?$price:'' ?>"></label></div>
@@ -106,7 +108,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4"><?php echo $component->renderButton('Reset','reset', 'reset',false) ?></div>
-                    <div class="col-md-4"><?php echo $component->renderButton('Submit','update', 'submit', false) ?></div>
+                    <div class="col-md-4"><?php echo $component->renderButton('Update','update', 'submit', false) ?></div>
                     <div class="col-md-4"><?php echo $component->renderButton('Delete','delete', 'submit', false) ?></div>
                 </div>
             </form>

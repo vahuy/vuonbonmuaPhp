@@ -133,7 +133,7 @@
             <div class="col-md-12">
                 <h2>Tạo sản phẩm mới</h2>
             </div>
-            <form action="/processor/doaddproduct.php" method="post">
+            <form action="./processor/doaddproduct.php" method="post">
                 <div class="row">
                     <div class="col-md-6"><label>Tên <input type="text" name="name" required></label></div>
                     <div class="col-md-6"><label>Loại <?php echo $component->renderOption('productType', false, $PRODUCT_TYPE, $PRODUCT_TYPE_NAME) ?></label></div>
@@ -147,7 +147,8 @@
                     <div class="col-md-6"><label>Mô tả <textarea id="description" name="description" rows="10" cols="50" >&nbsp;</textarea></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12"><label>Hình chính <input type="text" id="mainphoto" name="main_photo"></label></div>
+                    <div class="col-md-6"><label>Hình chính <input type="text" id="mainphoto" name="main_photo"></label></div>
+                    <div class="col-md-6"><label>Instock <?php echo $component->renderOption('instock', false, $OPTION_YES_NO, $OPTION_YES_NO_NAME) ?></label></div>
                 </div>
                 <div class="row">
                     <div class="col-md-6"><?php echo $component->renderButton('Reset','reset', 'reset',false) ?></div>
