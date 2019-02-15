@@ -139,7 +139,7 @@
                     <div class="col-md-6"><label>Loại <?php echo $component->renderOption('productType', false, $PRODUCT_TYPE, $PRODUCT_TYPE_NAME) ?></label></div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6"><label>Giá từ <input type="number" id="price" min="1000" step="1000" name="price"></label></div>
+                    <div class="col-md-6"><label>Giá từ <input type="number" id="price" min="10000" step="10000" value="300000" name="price"></label></div>
                     <div class="col-md-6"><label>Xuất xứ <input type="text" id="origin" name="origin"></label></div>
                 </div>
                 <div class="row">

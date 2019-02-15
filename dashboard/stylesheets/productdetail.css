@@ -20,6 +20,10 @@
     margin: 15px 0;
 }
 
+.product-detail .sub-photo a {
+    cursor: pointer;
+}
+
 .product-detail .rose-more-info .row div:first-child {
     font-weight: 600;
 }

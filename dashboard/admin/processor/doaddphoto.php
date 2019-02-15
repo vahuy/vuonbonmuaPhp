@@ -28,7 +28,8 @@ if (isset($_GET["submit"])) {
         if (!empty($arrayPhotoSrc)) {
             $numOfPhoto = count($arrayPhotoSrc);
             for($x = 1; $x < $numOfPhoto; $x++) {
-                $photoInfo = new Image(null, $productId, $arrayPhotoSrc[$x]);
+                $src = 'https://'.trim($arrayPhotoSrc[$x],"\t\r\n");
+                $photoInfo = new Image(null, $productId, $src);
                 $photoInfo->setId(spl_object_hash($photoInfo));
                 if (empty($arrayPhotoObject)){
                     $arrayPhotoObject = array($photoInfo);
