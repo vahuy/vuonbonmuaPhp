@@ -15,9 +15,23 @@
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="./stylesheets/reset.css" rel="stylesheet" type="text/css"/>
     <link href="./stylesheets/vbm.css" rel="stylesheet" type="text/css"/>
-
-    <script src="./javascripts/modernizr.js" type="text/javascript"></script>
-
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#offButton").click(function(){
+                $("p").hide(500);
+                $(this).fadeOut(1000);
+                $("#onButton").fadeIn(1000);
+            });
+        });
+        $(document).ready(function(){
+            $("#onButton").click(function(){
+                $("p").show(1000);
+                $(this).fadeOut(3000);
+                $("#offButton").fadeIn(2000).slideUp(2000).slideDown(2000);;
+            });
+        });
+    </script>
 </head>
 
 <body class="index">
@@ -39,10 +53,11 @@
             <!-- Right Nav Section -->
             <div class="header-navigation">
                 <div class='row'>
-                    <div class='col-md-3'><a href='/dashboard/homepage.php'>Trang chủ</a></div>
+                    <div class='col-md-2'><a href='/dashboard/homepage.php'>Trang chủ</a></div>
                     <div class='col-md-3'><a href='/dashboard/climbing.php'>Climbing - Hồng leo</a></div>
-                    <div class='col-md-3'><a href='/dashboard/shrub.php'>Shrub - Hồng bụi</a></div>
-                    <div class='col-md-3'><a href='/dashboard/treatment.php'>Thuốc hữu cơ</a></div>
+                    <div class='col-md-2'><a href='/dashboard/shrub.php'>Shrub - Hồng bụi</a></div>
+                    <div class='col-md-2'><a href='/dashboard/otherPlants.php'>Cây khác</a></div>
+                    <div class='col-md-2'><a href='/dashboard/treatment.php'>Thuốc hữu cơ</a></div>
                 </div>
             </div>
         </div>
@@ -67,6 +82,11 @@
                     phát triển tự nhiên với phân bón hữu cơ là chính. Không kích thích
                     để nhìn cây xum xuê bán giá cao.</p>
             </div>
+        </div>
+
+        <div>
+            <button id="offButton">Click me to hide paragraphs</button>
+            <button id="onButton">Click me to show paragraphs</button>
         </div>
     </div>
     <div class="footer">

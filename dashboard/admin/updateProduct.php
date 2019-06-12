@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <?php
-    require_once ("../objects/CONSTANT.php");
     session_start();
     $userType = $_SESSION['userType'];
     $userName = $_SESSION['userName'];
@@ -31,6 +30,7 @@
     <?php
     require '../objects/PageContainer.php';
     require_once '../objects/Component.php';
+    require_once "../objects/CONSTANT.php";
     $pageContainer = new PageContainer();
     $component = new Component();
     ?>
@@ -74,6 +74,8 @@
             $instock = $product['is_instock'];
         }
     }
+    $PRODUCT_TYPE = json_decode(PRODUCT_TYPE);
+    $PRODUCT_TYPE_NAME = json_decode(PRODUCT_TYPE_NAME);
     ?>
 </div>
 

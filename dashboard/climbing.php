@@ -50,7 +50,7 @@
                 $products = null;
                 $dbConnector = new DatabaseConnector();
                 $dbConnector->createConnection();
-                $result = $dbConnector->getClimbing();
+                $result = $dbConnector->getProduct("climbing");
                 $dbConnector->closeConnection();
                 while ($row = $result->fetch_assoc()) {
                     $id = $row['id'];

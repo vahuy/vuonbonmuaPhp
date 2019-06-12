@@ -56,7 +56,7 @@
                     $products = null;
                     $dbConnector = new DatabaseConnector();
                     $dbConnector->createConnection();
-                    $result = $dbConnector->getTreatment();
+                    $result = $dbConnector->getProduct("treatment");
                     $dbConnector->closeConnection();
                     while ($row = $result->fetch_assoc()) {
                         $id = $row['id'];
@@ -67,7 +67,6 @@
                         $type = $row['type'];
                         $description = $row['description'];
                         $origin = $row['origin'];
-                        $color = $row['color'];
 
                         $item = new Product($id, $name, $image, $price, $shortDescription, $type, $description, $origin);
                         if ($products === null){

@@ -64,6 +64,8 @@
         $isLogged = $_SESSION["isLogged"];
     }
     echo $pageContainer->renderAdminHeaderWithLogin($isLogged);
+    $PRODUCT_TYPE = json_decode(PRODUCT_TYPE);
+    $PRODUCT_TYPE_NAME = json_decode(PRODUCT_TYPE_NAME);
     ?>
     <script>
         function showResult(str) {
@@ -157,6 +159,10 @@
             </form>
             <div class="col-md-12">
                 <h2>Danh sách sản phẩm</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6"><label>Số lượng</label></div>
+                <div class="col-md-6"><label><?php echo $numOfProduct?></label></div>
             </div>
             <div class="table-all-product">
                 <table>

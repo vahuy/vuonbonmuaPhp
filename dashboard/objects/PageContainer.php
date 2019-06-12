@@ -39,8 +39,9 @@ class PageContainer {
                     <div class='row'>
                         <div class='col-md-2'><a href='/dashboard/homepage.php'>Trang chủ</a></div>
                         <div class='col-md-3'><a href='/dashboard/climbing.php'>Climbing - Hồng leo</a></div>
-                        <div class='col-md-3'><a href='/dashboard/shrub.php'>Shrub - Hồng bụi</a></div>
-                        <div class='col-md-3'><a href='/dashboard/treatment.php'>Thuốc hữu cơ</a></div>
+                        <div class='col-md-2'><a href='/dashboard/shrub.php'>Shrub - Hồng bụi</a></div>
+                        <div class='col-md-2'><a href='/dashboard/otherPlants.php'>Cây khác</a></div>
+                        <div class='col-md-2'><a href='/dashboard/treatment.php'>Thuốc hữu cơ</a></div>
                     </div>
                 </div>
             </div>
@@ -67,8 +68,9 @@ class PageContainer {
                 <div class='header-navigation'>
                     <div class='row'>
                         <div class='col-md-2'><a href='/dashboard/homepage.php'>Trang chủ</a></div>
-                        <div class='col-md-3'><a href='/dashboard/climbing.php'>Climbing - Hồng leo</a></div>
-                        <div class='col-md-3'><a href='/dashboard/shrub.php'>Shrub - Hồng bụi</a></div>
+                        <div class='col-md-2'><a href='/dashboard/climbing.php'>Climbing - Hồng leo</a></div>
+                        <div class='col-md-2'><a href='/dashboard/shrub.php'>Shrub - Hồng bụi</a></div>
+                        <div class='col-md-2'><a href='/dashboard/otherPlants.php'>Cây khác</a></div>
                         <div class='col-md-2'><a href='/dashboard/treatment.php'>Thuốc hữu cơ</a></div>
                         $button
                     </div>
@@ -97,8 +99,9 @@ class PageContainer {
                 <div class='header-navigation'>
                     <div class='row'>
                         <div class='col-md-2'><a href='/dashboard/homepage.php'>Trang chủ</a></div>
-                        <div class='col-md-3'><a href='/dashboard/admin/addproduct.php'>Add Product</a></div>
-                        <div class='col-md-3'><a href='/dashboard/admin/addphoto.php'>Add Photo</a></div>
+                        <div class='col-md-2'><a href='/dashboard/admin/addproduct.php'>Add Product</a></div>
+                        <div class='col-md-2'><a href='/dashboard/admin/addphoto.php'>Add Photo</a></div>
+                        <div class='col-md-2'><a href='/dashboard/otherPlants.php'>Cây khác</a></div>
                         <div class='col-md-2'><a href='/dashboard/admin/addproductmoreinfo.php'>Add more info</a></div>
                         $button
                     </div>

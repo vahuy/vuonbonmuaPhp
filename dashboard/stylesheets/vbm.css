@@ -42,6 +42,7 @@
     font-weight: 600;
     text-transform: uppercase;
     font-size: 25px;
+    margin: 15px 0;
 }
 
 .product-detail img {
@@ -155,6 +156,8 @@
 
 .table-all-product {
     width: 100%;
+    height: 400px;
+    overflow-x: scroll;
 }
 
 .table-all-product table {

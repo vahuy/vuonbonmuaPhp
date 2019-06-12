@@ -43,7 +43,7 @@
         <div class="container">
             <div class="row">
                 <div class="large-12 columns">
-                    <h2>Hoa hồng bụi</h2>
+                    <h2>Những cây khác</h2>
                 </div>
             </div>
             <div class="product-list">
@@ -52,7 +52,7 @@
                         $products = null;
                         $dbConnector = new DatabaseConnector();
                         $dbConnector->createConnection();
-                        $result = $dbConnector->getProduct("shrub");
+                        $result = $dbConnector->getProduct("otherPlants");
                         $dbConnector->closeConnection();
                         while ($row = $result->fetch_assoc()) {
                             $id = $row['id'];

@@ -14,10 +14,11 @@ define("LABEL_MO_TA_NGAN", "Mô tả ngắn");
 define("LABEL_MO_TA", "Mô tả");
 define("LABEL_HINH_CHINH", "Hình chính");
 define("LABEL_XUAT_XU", "Xuất xứ");
-$PRODUCT_TYPE=array("shrub","climbing","treatment");
-$PRODUCT_TYPE_NAME=array("Hồng bụi","Hồng leo","Thuốc hữu cơ");
+define ("PRODUCT_TYPE", json_encode(array("shrub","climbing","otherPlants","treatment")));
+define ("PRODUCT_TYPE_NAME", json_encode(array("Hồng bụi","Hồng leo","Cây Khác","Thuốc hữu cơ")));
 $OPTION_YES_NO=array(TRUE,FALSE);
 $OPTION_YES_NO_NAME=array("Yes","No");
+//Product Type
 define("QUERY_SUCCESS", "1");
 define("XML_PRODUCT_LOCATION", "./xml/productname.xml");
 define("XML_PRODUCT_LOCATION_LV1", "../xml/productname.xml");

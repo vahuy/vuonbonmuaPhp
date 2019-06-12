@@ -8,11 +8,11 @@
  */
 require_once "Product.php";
 require_once "ProductMoreInfo.php";
-require_once "CONSTANT.php";
 
 class DatabaseConnector
 {
     private $connector;
+    private $PRODUCT_TYPE = array("shrub","climbing","otherPlants","treatment");
 
     function createConnection(){
             $servername = "localhost";
@@ -83,21 +83,13 @@ class DatabaseConnector
         }
     }
 
-    function getClimbing(){
-        $sql = "SELECT * FROM product WHERE type='climbing'";
-        $result = $this->connector->query($sql);
-        return $result;
-    }
-
-    function getShrub(){
-        $sql = "SELECT * FROM product WHERE type='shrub'";
-        $result = $this->connector->query($sql);
-        return $result;
-    }
-
-    function getTreatment(){
-        $sql = "SELECT * FROM product WHERE type='treatment'";
-        $result = $this->connector->query($sql);
+    function getProduct($productType){
+        $types = $this->PRODUCT_TYPE;
+        $result = null;
+        if(in_array($productType, $types)) {
+            $sql = "SELECT * FROM product WHERE type='$productType'";
+            $result = $this->connector->query($sql);
+        }
         return $result;
     }
     /**
@@ -242,7 +234,6 @@ class DatabaseConnector
 
     function insertPhoto($arrayPhoto) {
         $sql = "INSERT INTO image (id, product_id, src) VALUE";
-        $sqlEnclose = ")";
         if (!empty($arrayPhoto)) {
             foreach ($arrayPhoto as $value) {
                 $id = $value->getId();
