@@ -1,0 +1,24 @@
+.admin .live-search {
+    margin: 15px;
+}
+
+.admin label {
+    display: grid;
+}
+
+.add-photo .main-photo img {
+    width: 60%;
+}
+
+.add-photo .main-photo {
+    text-align: center;
+}
+
+.admin #livesearch p {
+    cursor: pointer;
+}
+
+.admin #livesearch p:hover {
+    cursor: pointer;
+    background-color: #b0b0b0;
+}
